@@ -1,0 +1,5 @@
+/tour new [Gen 8] LC, elimination
+/tour rules !Obtainable, -Nonexistent, -Past, -Comatose + Sleep Talk, -Arena Trap, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Innards Out, -Libero, -Magnet Pull, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Stakeout, -Water Bubble, -Wonder Guard, +Cherubi, +Corsola-Galar, +Gastly, +Gothita, +Sneasel, +Swirlix, Little Cup
+/tour autostart 10
+/tour autodq 4
+/tour name [Gen 8] Balanced Hackmons Little Cup

@@ -1,0 +1,4 @@
+/tour new gen8balancedhackmons, elimination, 32,1
+/tour rules gen8camomons, !Obtainable Moves, !Obtainable Abilities, !Obtainable Formes, !Obtainable Misc, +Unreleased, +Unobtainable, -Nonexistent, !Dynamax Clause, +Darmanitan-Galar, +Eternatus, +Shedinja, +Zacian, +Zamazenta, +Baton Pass
+/tour setautostart 10
+/tour name [Gen 8] Camomons BH
