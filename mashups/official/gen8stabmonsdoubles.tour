@@ -1,4 +1,4 @@
-/tour new [Gen 8] Doubles OU, round robin
+/tour new [Gen 8] Doubles OU, Elimination
 /tour rules STABmons Move Legality, -Shedinja, -Silvally, -Snorlax, *Acupressure, *Belly Drum, *Bolt Beak, *Decorate, *Double Iron Bash, *Fishious Rend, *Shift Gear, *Shell Smash, *Spore, -Drizzle++Swift Swim
 /tour autostart 10
 /tour autodq 4
