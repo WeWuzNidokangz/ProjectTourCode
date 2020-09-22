@@ -1,5 +1,5 @@
 /tour new inheritance, elim
-/tour rules [Gen 8] Camomons, +Zeraora, +Hydreigon, +Kyurem, +Heracross
+/tour rules [Gen 8] Camomons, +Zeraora, +Hydreigon, +Kyurem, +Heracross, -drizzle, -drought
 /tour autostart 10
 /tour autodq 6
 /tour name [Gen 8] Camo Inheritance
