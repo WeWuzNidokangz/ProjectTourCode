@@ -1,5 +1,5 @@
 /tour new natdex, elim
-/tour rules !Obtainable Abilities, -Arena Trap, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Shedinja, 2 Ability Clause, -dracovish, -dragapult, -zeraora, -keldeo, -slaking, -regigigas, -victini, +greninja-ash, -urshifu-rapid-strike, +tornadus-therian, +metagrossite, +naganadel, +genesect, -hoopa-unbound, -kartana, -dragonite, +darmanitan-galar, +metagross-mega, -victini, -melmetal, -archeops
+/tour rules !Obtainable Abilities, -Arena Trap, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Shedinja, 2 Ability Clause, -dracovish, -dragapult, -zeraora, -keldeo, -slaking, -regigigas, +greninja-ash, -urshifu-rapid-strike, +tornadus-therian, +metagrossite, +naganadel, +genesect, -hoopa-unbound, -kartana, -dragonite, +darmanitan-galar, +metagross-mega, -victini, -melmetal, -archeops
 /tour autostart 10
 /tour autodq 6
 /tour name Natdex Almost Any Ability
