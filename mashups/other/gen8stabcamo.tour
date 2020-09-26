@@ -1,5 +1,5 @@
-/tour new stabmons, elim
-/tour rules gen8camomons, +gengar
+/tour new [Gen 8] STABmons, Elimination
+/tour rules [Gen 8] Camomons, +Gengar
 /tour autostart 10
 /tour autodq 6
-/tour name STABmons Camomons
+/tour name [Gen 8] STABmons Camomons

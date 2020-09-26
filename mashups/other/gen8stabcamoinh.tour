@@ -1,5 +1,5 @@
-/tour new gen8inheritance, elim, 32, 1
-/tour rules STABmons Move Legality, gen8camomons, *Acupressure, *Belly Drum, *Bolt Beak, *Double Iron Bash, *Eruption, *Extreme Speed, *Fishious Rend, *Shell Smash, *Shift Gear, *Spore, *Water Spout, *Wicked Blow, *Fluffy, *Porygon-Z, +Heracross
+/tour new [Gen 8] Inheritance, Elimination
+/tour rules STABmons Move Legality, [Gen 8] Camomons, *Acupressure, *Belly Drum, *Bolt Beak, *Double Iron Bash, *Eruption, *Extreme Speed, *Fishious Rend, *Shell Smash, *Shift Gear, *Spore, *Water Spout, *Wicked Blow, *Fluffy, *Porygon-Z, +Heracross
 /tour autostart 10
 /tour autodq 10
 /tour name [Gen 8] STAB Camo Inheritance

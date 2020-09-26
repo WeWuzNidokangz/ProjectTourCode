@@ -1,4 +1,4 @@
-/tour new godlygift, elim
+/tour new [Gen 8] Godly Gift, Elimination
 /tour rules !Obtainable, -Nonexistent, !Sleep Clause Mod, !Species Clause, !OHKO Clause, !Evasion Moves Clause, !Dynamax Clause, +Uber > 1, +AG + Uber > 1, +Blissey, +Chansey, +Toxapex, +Arena Trap, +Huge Power, +Pure Power, +Shadow Tag, +Baton Pass
 /tour autostart 10
 /tour autodq 10
