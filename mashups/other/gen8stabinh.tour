@@ -1,5 +1,5 @@
 /tour new [Gen 8] Inheritance, Elimination
-/tour rules STABmons Move Legality, *Acupressure, *Belly Drum, *Boomburst, *Double Iron Bash, *Extreme Speed, *Shift Gear, *Spore, *V-create, *Wicked Blow, *Eruption, *Water Spout, *Silvally, -Fluffy
+/tour rules STABmons Move Legality, *Acupressure, *Belly Drum, *Boomburst, *Double Iron Bash, *Extreme Speed, *Shift Gear, *Spore, *V-create, *Wicked Blow, *Eruption, *Water Spout, *Silvally, -Fluffy, *dragon energy
 /tour autostart 10
 /tour autodq 7
 /tour name [Gen 8] STABmons Inheritance
