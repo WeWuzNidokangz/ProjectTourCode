@@ -1,5 +1,5 @@
 /tour new [Gen 8] Doubles OU, Elimination
-/tour rules STABmons Move Legality, -Blissey, -Chansey, -Shedinja, -Silvally, -Snorlax, *Acupressure, *Belly Drum, *Bolt Beak, *Decorate, *Diamond Storm, *Double Iron Bash, *Fishious Rend, *Geomancy, *Lovely Kiss, *Shift Gear, *Shell Smash, *Spore, *Thousand Arrows, -Drizzle++Swift Swim
+/tour rules STABmons Move Legality, -Blissey, -Chansey, -Shedinja, -Silvally, -Snorlax, *Acupressure, *Belly Drum, *Bolt Beak, *Decorate, *Diamond Storm, *Double Iron Bash, *Fishious Rend, *Geomancy, *Glacial Lance, *Lovely Kiss, *Shift Gear, *Shell Smash, *Spore, *Thousand Arrows, -Swift Swim
 /tour autostart 10
 /tour autodq 4
 /tour name [Gen 8] STABmons Doubles
