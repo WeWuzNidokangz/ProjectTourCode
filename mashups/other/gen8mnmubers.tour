@@ -1,5 +1,5 @@
 /tour new [Gen 8] Mix and Mega, Elimination
-/tour rules +Gengar, +Zeraora, +Arena Trap, +Shadow Tag, +Moody, +Darmanitan-Galar, +Dracovish, +Eternatus, +Kyurem-Black, +Kyurem-White, +Lunala, +Marshadow, +Melmetal, +Mewtwo, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Reshiram, +Solgaleo, +Zacian, +Zacian-Crowned, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +dialga, +palkia, +groudon, +kyogre, +yveltal, +xerneas, +calyrex-shadow, +calyrex-ice, +calyrex, +spectrier, +glastrier, +rayquaza, +lugia, +ho-oh
-/tour autodq 7
-/tour autostart 8
+/tour rules +Uber, +Calyrex-Ice, +Calyrex-Shadow, +Dialga, +Eternatus, +Giratina, +Giratina-Origin, +Groudon, +Ho-oh, +Kyogre, +Kyurem-Black, +Kyurem-White, +Lugia, +Lunala, +Marshadow, +Melmetal, +Mewtwo, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Palkia, +Rayquaza, +Regigigas, +Reshiram, +Solgaleo, +Xerneas, +Yveltal, +Zacian, +Zacian-Crowned, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +Zygarde-Complete
+/tour autostart 10
+/tour autodq 4
 /tour name [Gen 8] Mix and Mega Ubers
