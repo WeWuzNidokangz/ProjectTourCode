@@ -1,0 +1,5 @@
+/starttour ubers, elimination
+/tour rules Alphabet Cup Move Legality, -Acupressure, *Astral Barrage, *Bolt Beak, -Double Iron Bash, *Geomancy, *Glacial Lance, *Lovely Kiss, *Shell Smash, *Shift Gear, *Sleep Powder, *Spore, *Surging Strikes, -Thousand Arrows
+/tour autostart 10
+/tour autodq 6
+/tour name ABC Ubers
