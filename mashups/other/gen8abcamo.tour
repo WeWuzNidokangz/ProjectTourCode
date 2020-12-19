@@ -1,5 +1,5 @@
 /tour new gen8camomons, elim
-/tour rules Alphabet Cup Move Legality, -Acupressure, *Astral Barrage, *Bolt Beak, *Double Iron Bash, *Fishious Rend, *Geomancy, *Glacial Lance, *Lovely Kiss, *Shell Smash, *Shift Gear, *Sleep Powder, *Spore, *Surging Strikes, *Thousand Arrows, -cinderace, -spectrier, -pheromosa, -weavile, -dracovish, +zamazenta, +zamazenta-crowned
+/tour rules Gen 8 Alphabet Cup, -Fishious Rend, -Wicked Blow
 /tour autostart 10
 /tour autodq 6
 /tour name [Gen 8] ABCamomons 
