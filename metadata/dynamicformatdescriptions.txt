@@ -12,3 +12,4 @@ gen8stabmonsdoubles:Pokemon can use any move of their typing, in addition to the
 gen8stabmonslittlecup:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Little Cup environment.
 gen8stabmonsubers:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in an Ubers environment.
 gen8stabnmega:Pokemon can use any move of their typing and mega evolve with any stone to gain the respective boosts.
+gen8tsaaa:Pokemon can use any ability, barring the few that are restricted to their natural users. Those below OU get all their stats boosted. UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.
