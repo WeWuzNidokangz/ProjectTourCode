@@ -1,5 +1,5 @@
-/tour new gen8camomons, elim
-/tour rules Gen 8 Alphabet Cup, -Fishious Rend, -Wicked Blow
+/tour new [Gen 8] Camomons, Elimination
+/tour rules Alphabet Cup Move Legality, -Blaziken, -Cinderace, -Dracovish, -Landorus-Base, -Melmetal, -Naganadel, -Pheromosa, -Scolipede, -Spectrier, -Weavile, -Acupressure, -Fishious Rend, -Wicked Blow, *Astral Barrage, *Belly Drum, *Bolt Beak, *Double Iron Bash, *Electrify, *Geomancy, *Glacial Lance, *Lovely Kiss, *Shell Smash, *Shift Gear, *Sleep Powder, *Spore, *Surging Strikes, *Thousand Arrows
 /tour autostart 10
 /tour autodq 6
-/tour name [Gen 8] ABCamomons 
+/tour name [Gen 8] ABCamomons
