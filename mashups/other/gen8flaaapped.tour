@@ -1,0 +1,5 @@
+/tour create gen8almostanyability, elim
+/tour name Flipped Almost Any Ability
+/tour autodq 3
+/tour autostart 10
+/tour rules flippedmod, +Kartana, +Dragapult, +Pheromosa, +Melmetal, +Zeraora, +Zygarde-Base, +Keldeo, +Buzzwole, +Urshifu-Rapid-Strike, +Urshifu-Single-Strike, +Spectrier, -Regice, -Regirock, +Dracovish, +Naganadel, +Marshadow, +Dragonite
