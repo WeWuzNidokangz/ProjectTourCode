@@ -1,0 +1,5 @@
+/tour create gen8monotyperandombattle, elim
+/tour name Monotype Randbats Mayhem
+/tour autodq 2
+/tour autostart 5
+/tour rules [Gen 8] Shared Power, [Gen 8] Camomons, Inverse Mod, Scalemons Mod
