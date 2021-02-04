@@ -1,0 +1,5 @@
+/tour new nature swap, elimination
+/tour rules STABmons Move Legality, *Acupressure, *Belly Drum, *Bolt Beak, *Boomburst, *Double Iron Bash, *Extreme Speed, *Fishious Rend, *Geomancy, *Lovely Kiss, *Shell Smash, *Shift Gear, *Spore, *Thousand Arrows, *Transform, *V-create, *Wicked Blow, *astral barrage
+/tour autostart 10
+/tour autodq 7
+/tour name STAB N Swap
