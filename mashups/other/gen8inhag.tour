@@ -1,0 +1,5 @@
+/tour create gen8inheritance, elim
+/tour name [Gen 8] AG Inheritance
+/tour autostart 10
+/tour autodq 8
+/tour rules +Blissey, +Chansey, +Uber, +Calyrex-Ice, +Calyrex-Shadow, +Dialga, +Eternatus, +Giratina, +Giratina-Origin, +Groudon, +Ho-oh, +Kartana, +Kyogre, +Kyurem-Black, +Kyurem-White, +Lugia, +Lunala, +Marshadow, +Melmetal, +Mewtwo, +Naganadel, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Palkia,  +Pheromosa, +Rayquaza, +Regigigas, +Reshiram, +Solgaleo, +Urshifu-Base, +Xerneas, +Yveltal, +Zacian, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +Zygarde-Complete, +Darmanitan-Galar, +Zacian-Crowned, +Shedinja, +Blaziken, +Toxtricity, +Butterfree, +Spectrier, +baton pass, +bolt beak, +shell smash, !sleepclausemod, !dynamaxclause, !nicknameclause, +dracovish, +torkoal, +combusken, +regieleki, +landorus, +arena trap, +imposter, +huge power, +innards out, +libero, +fishious rend, +simple, +water bubble, !speciesclause, +shadow tag, !OHKO Clause, !Evasion Moves Clause, +moodyclause
