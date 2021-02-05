@@ -1,5 +1,5 @@
 /tour new [Gen 8] Inheritance, Elimination
-/tour rules +Blissey, +Chansey, +Darmanitan-Galar, +Dracovish, +Eternatus, +Kyurem-Black, +Kyurem-White, +Lunala, +Magearna, +Marshadow, +Melmetal, +Mewtwo, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Reshiram, +Shedinja, +Solgaleo, +Urshifu-Base, +Zacian, +Zamazenta, +Zekrom
+/tour rules +Blissey, +Chansey, +Uber, +Calyrex-Ice, +Calyrex-Shadow, *Darmanitan-Galar, +Dialga, +Eternatus, +Giratina, +Giratina-Origin, +Groudon, +Ho-oh, +Kartana, +Kyogre, +Kyurem-Black, +Kyurem-White, +Lugia, +Lunala, +Marshadow, +Melmetal, +Mewtwo, +Naganadel, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Palkia,  +Pheromosa, +Rayquaza, +Regigigas, +Reshiram, +Solgaleo, +Urshifu-Base, +Xerneas, +Yveltal, +Zacian, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +Zygarde-Complete
 /tour name [Gen 8] Ubers Inheritance
 /tour autostart 10
 /tour autodq 8
