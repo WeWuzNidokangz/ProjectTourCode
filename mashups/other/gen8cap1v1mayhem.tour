@@ -1,0 +1,4 @@
+/tour create gen8cap1v1, elim
+/tour autodq 2
+/tour autostart 5
+/tour rules [Gen 8] Shared Power, [Gen 8] Camomons, Inverse Mod, Scalemons Mod
