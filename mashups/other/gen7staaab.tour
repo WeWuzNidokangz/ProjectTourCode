@@ -1,0 +1,6 @@
+/tour new gen7STABmons,elimination,32,1
+/tour autostart 7
+/tour autodq 3.5
+/tour rules -Archeops, -Dragonite, -Hoopa-Unbound, -Keldeo, -Regigigas, -Shedinja, -Slaking, -Terrakion, -Thundurus-Therian, +Tapu Lele, +Porygon Z, +Aerodactyl, +Araquanid, +Aegislash, +Genesect, +Landorus, +Metagrossite, +Naganadel, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Huge Power, -Illusion, -Imposter, -Innards Out, -Parental Bond, -Protean, -Pure Power, -Simple, -Speed Boost, -Stakeout, -Water Bubble, -Wonder Guard, !Obtainable Abilities, Ability Clause
+/tour name [Gen 7] AAA STABmons
+
