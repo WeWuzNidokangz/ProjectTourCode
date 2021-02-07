@@ -1,4 +1,4 @@
-/tour create gen8inheritance, elim
+/tour create [Gen 8] Inheritance, Elimination
 /tour name [Gen 8] AG Inheritance
 /tour autostart 10
 /tour autodq 8
