@@ -2,4 +2,4 @@
 /tour name TS Camo Mix and Mega
 /tour autodq 2
 /tour autostart 10
-/tour rules gen8tiershift, gen8camomons
+/tour rules gen8tiershift, gen8camomons, -archeops, -cresselia
