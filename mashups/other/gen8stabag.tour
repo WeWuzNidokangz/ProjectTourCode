@@ -1,0 +1,5 @@
+/tour create ag, elim
+/tour rules STABmons move legality
+/tour autostart 10
+/tour autodq 5
+/tour name [Gen 8] AG STABmons
