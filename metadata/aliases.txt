@@ -1,0 +1,2 @@
+gen8staaabmons: staaab
+gen8randbatsmayhem: randbtasmayhem, randbtas
