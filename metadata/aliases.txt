@@ -10,3 +10,4 @@ gen8stabmonsdoubles: stabdoubles
 gen8stabmonslittlecup: stablc
 gen8stabmonsubers: stabubers
 gen8randbatsmayhem: randbtasmayhem, randbtas
+gen8nationaldexsuicidecup: natdexsuicidecup, natdexsc
