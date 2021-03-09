@@ -1,0 +1,5 @@
+/tour new natdexag, elim
+/tour name [Gen 8] National Dex Balanced Hackmons
+/tour rules !Obtainable, -Nonexistent, OHKO Clause, Evasion Moves Clause, Forme Clause, Dynamax Clause, Sleep Clause Mod, 2 Ability Clause, CFZ Clause, -Arceus > 1, -Groudon-Primal, -Rayquaza-Mega, *Zacian-Crowned, -Shedinja, -Arena Trap, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Innards Out, -Intrepid Sword, -Libero, -Magnet Pull, -Moody, -Neutralizing Gas, - Parental Bond, - Protean, - Pure Power, - Shadow Tag, - Stakeout, - Water Bubble, - Wonder Guard, -Chatter, -Octolock, -Double Iron Bash, -Bolt Beak, -Belly Drum, -Electrify, -Comatose + Sleep Talk
+/tour autostart 10
+/tour autodq 5
