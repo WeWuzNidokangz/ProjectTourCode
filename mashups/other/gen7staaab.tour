@@ -1,6 +1,5 @@
-/tour new gen7STABmons,elimination,32,1
-/tour autostart 7
-/tour autodq 3.5
+/tour new gen7STABmons, elimination
+/tour autostart 10
+/tour autodq 4
 /tour rules !Obtainable Abilities, 2 Ability Clause, -Comatose, -Contrary, -Fur Coat, -Fluffy, -Huge Power, -Illusion, -Imposter, -Innards Out, -Parental Bond, -Pure Power, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Archeops, -Dragonite, -Hoopa-Unbound, -Kartana, -Keldeo, -Kyurem-Black, -Terrakion, -Regigigas, -Shedinja, -Slaking, -Zygarde-Base, -Weavile, +Genesect, +Landorus, +Metagross-Mega, +Naganadel, STABmons Move Legality, -Aerodactyl, -Blacephalon, -Komala, -Porygon Z, -Silvally, -Tapu Koko, -Tapu Lele, -Thundurus-Base, -King's Rock, -Razor Fang, *Acupressure, *Belly Drum, *Chatter, *Extreme Speed, *Geomancy, *Lovely Kiss, *Shell Smash, *Shift Gear, *Spore, *Thousand Arrows
-/tour name [Gen 7] AAA STABmons
-
+/tour name [Gen 7] STAAABmons
