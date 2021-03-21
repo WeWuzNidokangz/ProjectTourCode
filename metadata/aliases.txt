@@ -1,6 +1,6 @@
 gen8almostanyabilitydoubles: aaadoubles
 gen8almostanyabilitylittlecup: aaalc
-gen8almostanyabilityubers: gen8aaaubers
+gen8almostanyabilityubers: aaaubers
 gen8balancedhackmonsdoubles: bhdoubles
 gen8balancedhackmonslittlecup: bhlc
 gen8camomonsdoubles: camodoubles
@@ -9,6 +9,7 @@ gen8staaabmons: staaab
 gen8stabmonsdoubles: stabdoubles
 gen8stabmonslittlecup: stablc
 gen8stabmonsubers: stabubers
+gen8stabnmega: stabandmega
 gen8randbatsmayhem: randbtasmayhem, randbtas
 gen8nationaldexthelosersgame: natdexsuicidecup, natdexsc
 gen8spaaa: shaaaredpower, sharedpoweraaa, shaaared
