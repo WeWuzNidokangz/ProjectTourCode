@@ -1,6 +1,6 @@
 gen8almostanyabilitydoubles:Pokemon can use almost any ability in a Doubles environment.
 gen8almostanyabilitylittlecup:Pokemon can use any ability, barring the few that are restricted to their natural users, in a Little Cup environment.
-gen8aaaubers:Pokemon can use almost any ability in an Ubers environment.
+gen8almostanyabilityubers:Pokemon can use almost any ability in an Ubers environment.
 gen8balancedhackmonsdoubles:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Doubles environment.
 gen8balancedhackmonslittlecup:Pokemon can use anything that can be hacked in-game and is usable in local battles is allowed in a Little Cup environment.
 gen8caaamomons:Pokemon can use almost any ability and will be the typing of their first two moves.
