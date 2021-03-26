@@ -13,3 +13,4 @@ gen8stabnmega: stabandmega
 gen8randbatsmayhem: randbtasmayhem, randbtas
 gen8nationaldexthelosersgame: natdexsuicidecup, natdexsc
 gen8spaaa: shaaaredpower, sharedpoweraaa, shaaared
+gen8inheritanceag: inhag
