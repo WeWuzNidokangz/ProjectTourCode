@@ -1,0 +1,5 @@
+/tour new [Gen 8] Pokebilities, elim
+/tour rules !Obtainable Abilities, 2 Ability Clause, -Arena Trap, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Poison Heal, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Buzzwole, -Dragapult, -Dragonite, -Kartana, -Keldeo, -Magearna, -Melmetal, -Pheromosa, -Regigigas, -Shedinja, -Spectrier, -Urshifu, -Victini, -Zeraora
+/tour autostart 10
+/tour autodq 5
+/tour name [Gen 8] PokeAAAbilities
