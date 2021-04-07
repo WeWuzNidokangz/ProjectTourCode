@@ -861,13 +861,13 @@ const Formats = {
 			this.add('rule', 'Sleep Clause Mod: Limit one foe put to sleep');
 		},
 		onSetStatus(status, target, source) {
-			if (source && source.side === target.side) {
+			if (source && source.isAlly(target)) {
 				return;
 			}
 			if (status.id === 'slp') {
 				for (const pokemon of target.side.pokemon) {
 					if (pokemon.hp && pokemon.status === 'slp') {
-						if (!pokemon.statusData.source || pokemon.statusData.source.side !== pokemon.side) {
+						if (!pokemon.statusData.source || !pokemon.statusData.source.isAlly(pokemon)) {
 							this.add('-message', 'Sleep Clause Mod activated.');
 							return false;
 						}
@@ -884,7 +884,7 @@ const Formats = {
 			this.add('rule', 'Stadium Sleep Clause: Limit one foe put to sleep');
 		},
 		onSetStatus(status, target, source) {
-			if (source && source.side === target.side) {
+			if (source && source.isAlly(target)) {
 				return;
 			}
 			if (status.id === 'slp') {
@@ -932,7 +932,7 @@ const Formats = {
 			this.add('rule', 'Freeze Clause Mod: Limit one foe frozen');
 		},
 		onSetStatus(status, target, source) {
-			if (source && source.side === target.side) {
+			if (source && source.isAlly(target)) {
 				return;
 			}
 			if (status.id === 'frz') {
@@ -1001,8 +1001,8 @@ const Formats = {
 			}
 		},
 		onBegin() {
-			for (const pokemon of this.getAllPokemon()) {
-				pokemon.canDynamax = false;
+			for (const side of this.sides) {
+				side.dynamaxUsed = true;
 			}
 			this.add('rule', 'Dynamax Clause: You cannot dynamax');
 		},
@@ -1184,6 +1184,7 @@ const Formats = {
 		onBegin() {
 			this.add('rule', '350 Cup Mod: If a Pokemon\'s BST is 350 or lower, all of its stats get doubled.');
 		},
+		onModifySpeciesPriority: 2,
 		onModifySpecies(species) {
 			const newSpecies = this.dex.deepClone(species);
 			if (newSpecies.bst <= 350) {
@@ -1203,6 +1204,7 @@ const Formats = {
 		onBegin() {
 			this.add('rule', 'Flipped Mod: Pokemon have their stats flipped (HP becomes Spe, vice versa).');
 		},
+		onModifySpeciesPriority: 2,
 		onModifySpecies(species) {
 			const newSpecies = this.dex.deepClone(species);
 			const reversedNums = Object.values(newSpecies.baseStats).reverse();
@@ -1219,6 +1221,7 @@ const Formats = {
 		onBegin() {
 			this.add('rule', 'Scalemons Mod: Every Pokemon\'s stats, barring HP, are scaled to come as close to a BST of 600 as possible');
 		},
+		onModifySpeciesPriority: 1,
 		onModifySpecies(species) {
 			const newSpecies = this.dex.deepClone(species);
 			const bstWithoutHp = newSpecies.bst - newSpecies.baseStats['hp'];
