@@ -1,4 +1,4 @@
 /tour new [Gen 8] Balanced Hackmons, Elimination
-/tour rules [Gen 8] Camomons, !Obtainable Moves, !Obtainable Abilities, !Obtainable Formes, !Obtainable Misc, +Unreleased, +Unobtainable, -Nonexistent, !Dynamax Clause, +Darmanitan-Galar, +Eternatus, +Shedinja, +Zacian, +Zamazenta, +Baton Pass
+/tour rules [Gen 8] Camomons, -Nonexistent, !Obtainable, +Calyrex-Ice, +Darmanitan-Galar, +Dialga, +Dracovish, +Dragonite, +Eternatus, +Genesect, +Giratina, +Giratina-Origin, +Groudon, +Ho-Oh, +Kartana, +Kyogre, +Kyurem, +Kyurem-Black, +Kyurem-White, +Landorus-Base, +Lugia, +Lunala, +Marshadow, +Mewtwo, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Palkia, +Rayquaza, +Reshiram, +Solgaleo, +Xerneas, +Yveltal, +Zacian, +Zacian-Crowned, *Zacian-Crowned, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +Zygarde-Base
 /tour setautostart 10
 /tour name [Gen 8] Camomons BH
