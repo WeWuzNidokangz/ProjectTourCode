@@ -1,0 +1,5 @@
+/tour new natdex, elim
+/tour rules *Transform,*No Retreat,*V-create,-Hypnosis,-Sing,-Sleep Powder,-Porygon-Z,*Wicked Blow,-Electrify,*Glacial Lance,*Oblivion Wing,-Kartana,STABmons Move Legality,*Acupressure,*Belly Drum,*Bolt Beak,*Double Iron Bash,*Extreme Speed,*Fishious Rend,*Shell Smash,*Shift Gear,*Spore,-Slaking,-Regigigas,-Araquanid,-Clangorous Soul,-Thundurus, *Chatter, *Geomancy, *Thousand Arrows, -Aerodactylite, -Kings Rock, -Razor Fang
+/tour autostart 10
+/tour autodq 4
+/tour name [Gen 8] NatDex STABmons
