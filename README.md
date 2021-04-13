@@ -1,7 +1,7 @@
 # Operation Tour Code
-========================================================================
 
-Introduction
+**Introduction**
+
 ------------------------------------------------------------------------
 
 This is a project for managing and distributing tour codes that specify dynamic (off-server) formats for [Pokémon Showdown][1], such as those used for [OM Mashups][2] metagames.
