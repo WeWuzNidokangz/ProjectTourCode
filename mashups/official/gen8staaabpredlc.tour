@@ -1,4 +1,4 @@
-/tour new STABmons, elim
+/tour new [Gen 8] STABmons, elim
 /tour rules !Obtainable Abilities, -Arena Trap, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Shedinja, 2 Ability Clause, *Transform, *No Retreat, *V-create, -Hypnosis, -Sing, -Sleep Powder, +Darmanitan, +Darmanitan-Galar, +Dracovish, +Gengar, -Electrify, +Mamoswine, +Clangorous Soul, *Glacial Lance, *Wicked Blow, *Surging Strikes, *Thunder Cage, *Dragon Energy, *Thunderous Kick, *Fiery Wrath, *Eerie Spell, *Freezing Glare, -Expanding Force, -Steel Roller, -Scale Shot, -Meteor Beam, -Misty Explosion, -Grassy Glide, -Rising Voltage, -Terrain Pulse, -Skitter Smack, -Burning Jealousy, -Lash Out, -Poltergeist, -Corrosive Gas, -Coaching, -Flip Turn, -Triple Axel, -Dual Wingbeat, -Scorching Sands, Galar Pokedex, *Oblivion Wing, *Aeroblast, *Sacred Fire, *Dragon Ascent, *Precipice Blades, *Origin Pulse, *Spacial Rend, *Roar of Time
 /tour autostart 7
 /tour autodq 7

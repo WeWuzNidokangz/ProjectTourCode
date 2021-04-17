@@ -1,5 +1,5 @@
-/tour create natdexag, elim
-/tour rules STABmons move legality, !Obtainable Abilities
+/tour create [Gen 8] National Dex AG, elim
+/tour rules STABmons Move Legality, !Obtainable Abilities
 /tour autostart 10
 /tour autodq 5
 /tour name [Gen 8] NatDex AG STAAABmons
