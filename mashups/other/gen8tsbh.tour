@@ -1,0 +1,4 @@
+/tour new Gen8Tier Shift, Elimination,,,[Gen 8] Tier Shift Balanced Hackmons
+/tour rules -Calyrex-Shadow, -Darmanitan-Galar-Zen, -Eternatus-Eternamax, -Regigigas, -Shedinja, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Innards Out, -Libero, -Magnet Pull, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Stakeout, -Water Bubble, -Wonder Guard, -Comatose + Sleep Talk, -Bolt Beak, -Double Iron Bash, -Octolock, -Shell Smash, *Zacian-Crowned, Forme Clause, !Species Clause, !Obtainable Moves, !Obtainable Abilities, !Obtainable Formes, !Obtainable Misc, +Uber, +Damp Rock, +Heat Rock
+/tour autostart 10
+/tour autodq 4
