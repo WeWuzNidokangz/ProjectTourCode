@@ -41,6 +41,7 @@ gen8ndmegamons
 gen8ndbh
 gen8ndstaaab
 gen8ndstaaabag
+gen8ndstabag
 gen8nscale
 gen8randbatsmayhem
 gen8sp24v24
