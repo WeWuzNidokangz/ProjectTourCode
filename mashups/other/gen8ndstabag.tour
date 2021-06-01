@@ -1,0 +1,4 @@
+/tour create [Gen 8] National Dex AG, elim,,,[Gen 8] NatDex AG STABmons
+/tour rules STABmons Move Legality
+/tour autostart 10
+/tour autodq 5
