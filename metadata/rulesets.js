@@ -24,7 +24,7 @@ const Rulesets = {
 		effectType: 'ValidatorRule',
 		name: 'Flat Rules',
 		desc: "The in-game Flat Rules: Adjust Level Down 50, Species Clause, Item Clause, -Mythical, -Restricted Legendary, Bring 6 Pick 3-6 depending on game type.",
-		ruleset: ['Obtainable', 'Team Preview', 'Species Clause', 'Nickname Clause', 'Item Clause', 'Adjust Level Down = 50', 'Picked Team Size = Flat Rules Team Size'],
+		ruleset: ['Obtainable', 'Team Preview', 'Species Clause', 'Nickname Clause', 'Item Clause', 'Adjust Level Down = 50', 'Picked Team Size = Auto', 'Cancel Mod'],
 		banlist: ['Mythical', 'Restricted Legendary'],
 	},
 	limittworestricted: {
@@ -104,7 +104,7 @@ const Rulesets = {
 		effectType: 'ValidatorRule',
 		name: 'Obtainable',
 		desc: "Makes sure the team is possible to obtain in-game.",
-		ruleset: ['Obtainable Moves', 'Obtainable Abilities', 'Obtainable Formes', 'Obtainable Misc'],
+		ruleset: ['Obtainable Moves', 'Obtainable Abilities', 'Obtainable Formes', 'EV Limit = Auto', 'Obtainable Misc'],
 		banlist: ['Unreleased', 'Unobtainable', 'Nonexistent'],
 		// Mostly hardcoded in team-validator.ts
 		onValidateTeam(team, format) {
@@ -174,7 +174,7 @@ const Rulesets = {
 	obtainablemisc: {
 		effectType: 'ValidatorRule',
 		name: 'Obtainable Misc',
-		desc: "Validate all obtainability things that aren't moves/abilities (Hidden Power type, gender, stats, etc).",
+		desc: "Validate all obtainability things that aren't moves/abilities (Hidden Power type, gender, IVs, events, duplicate moves).",
 		// Mostly hardcoded in team-validator.ts
 		onChangeSet(set) {
 			const species = this.dex.species.get(set.species);
@@ -190,6 +190,8 @@ const Rulesets = {
 			}
 
 			// limit one of each move
+			// repealing this will not actually let you USE multiple moves, because of a cart bug:
+			// https://twitter.com/DaWoblefet/status/1396217830006132737
 			if (set.moves) {
 				const hasMove = {};
 				for (const moveId of set.moves) {
@@ -226,6 +228,34 @@ const Rulesets = {
 			const species = this.dex.species.get(set.species || set.name);
 			if ((!sinnohDex.includes(species.baseSpecies) || species.gen > 4) && !this.ruleTable.has('+' + species.id)) {
 				return [`${species.name} is not in the Sinnoh Pokédex.`];
+			}
+		},
+	},
+	oldunovapokedex: {
+		effectType: 'ValidatorRule',
+		name: 'Old Unova Pokedex',
+		desc: "Only allows Pok&eacute;mon native to the Unova region as of the original Black/White games",
+		onValidateSet(set, format) {
+			const species = this.dex.species.get(set.species || set.name);
+			const isUnova = (species.num >= 494 && species.num <= 649) &&
+				!['Black', 'White', 'Therian', 'Resolute'].includes(species.forme) && species.gen <= 5;
+			if (!isUnova && !this.ruleTable.has('+' + species.id)) {
+				return [`${species.baseSpecies} is not in the Old Unova Pokédex.`];
+			}
+		},
+	},
+	newunovapokedex: {
+		effectType: 'ValidatorRule',
+		name: 'New Unova Pokedex',
+		desc: "Only allows Pok&eacute;mon native to the Unova region as of the Black 2/White 2 games",
+		onValidateSet(set, format) {
+			const unovaDex = [
+				"Victini", "Snivy", "Servine", "Serperior", "Tepig", "Pignite", "Emboar", "Oshawott", "Dewott", "Samurott", "Patrat", "Watchog", "Purrloin", "Liepard", "Pidove", "Tranquill", "Unfezant", "Unfezant", "Sewaddle", "Swadloon", "Leavanny", "Sunkern", "Sunflora", "Lillipup", "Herdier", "Stoutland", "Mareep", "Flaaffy", "Ampharos", "Psyduck", "Golduck", "Azurill", "Marill", "Azumarill", "Riolu", "Lucario", "Dunsparce", "Audino", "Pansage", "Simisage", "Pansear", "Simisear", "Panpour", "Simipour", "Venipede", "Whirlipede", "Scolipede", "Koffing", "Weezing", "Magnemite", "Magneton", "Magnezone", "Growlithe", "Arcanine", "Magby", "Magmar", "Magmortar", "Elekid", "Electabuzz", "Electivire", "Rattata", "Raticate", "Zubat", "Golbat", "Crobat", "Grimer", "Muk", "Woobat", "Swoobat", "Roggenrola", "Boldore", "Gigalith", "Onix", "Steelix", "Timburr", "Gurdurr", "Conkeldurr", "Drilbur", "Excadrill", "Skitty", "Delcatty", "Buneary", "Lopunny", "Cottonee", "Whimsicott", "Petilil", "Lilligant", "Munna", "Musharna", "Cleffa", "Clefairy", "Clefable", "Eevee", "Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sandile", "Krokorok", "Krookodile", "Darumaka", "Darmanitan", "Basculin", "Basculin", "Trubbish", "Garbodor", "Minccino", "Cinccino", "Rufflet", "Braviary", "Vullaby", "Mandibuzz", "Sandshrew", "Sandslash", "Dwebble", "Crustle", "Scraggy", "Scrafty", "Maractus", "Sigilyph", "Trapinch", "Vibrava", "Flygon", "Yamask", "Cofagrigus", "Tirtouga", "Carracosta", "Archen", "Archeops", "Klink", "Klang", "Klinklang", "Budew", "Roselia", "Roserade", "Gothita", "Gothorita", "Gothitelle", "Solosis", "Duosion", "Reuniclus", "Combee", "Vespiquen", "Emolga", "Heracross", "Pinsir", "Blitzle", "Zebstrika", "Buizel", "Floatzel", "Zorua", "Zoroark", "Ducklett", "Swanna", "Karrablast", "Escavalier", "Shelmet", "Accelgor", "Deerling", "Sawsbuck", "Foongus", "Amoonguss", "Castform", "Nosepass", "Probopass", "Aron", "Lairon", "Aggron", "Baltoy", "Claydol", "Larvesta", "Volcarona", "Joltik", "Galvantula", "Ferroseed", "Ferrothorn", "Tynamo", "Eelektrik", "Eelektross", "Frillish", "Jellicent", "Alomomola", "Axew", "Fraxure", "Haxorus", "Zangoose", "Seviper", "Elgyem", "Beheeyem", "Litwick", "Lampent", "Chandelure", "Heatmor", "Durant", "Cubchoo", "Beartic", "Cryogonal", "Tornadus", "Thundurus", "Landorus", "Skorupi", "Drapion", "Skarmory", "Numel", "Camerupt", "Spoink", "Grumpig", "Drifloon", "Drifblim", "Shuppet", "Banette", "Wingull", "Pelipper", "Lunatone", "Solrock", "Absol", "Tangela", "Tangrowth", "Mienfoo", "Mienshao", "Gligar", "Gliscor", "Pawniard", "Bisharp", "Cobalion", "Terrakion", "Virizion", "Tympole", "Palpitoad", "Seismitoad", "Stunfisk", "Shuckle", "Mantyke", "Mantine", "Remoraid", "Octillery", "Corsola", "Staryu", "Starmie", "Wailmer", "Wailord", "Lapras", "Spheal", "Sealeo", "Walrein", "Swablu", "Altaria", "Vulpix", "Ninetales", "Bronzor", "Bronzong", "Sneasel", "Weavile", "Delibird", "Vanillite", "Vanillish", "Vanilluxe", "Swinub", "Piloswine", "Mamoswine", "Ditto", "Beldum", "Metang", "Metagross", "Seel", "Dewgong", "Throh", "Sawk", "Bouffalant", "Druddigon", "Golett", "Golurk", "Deino", "Zweilous", "Hydreigon", "Slakoth", "Vigoroth", "Slaking", "Corphish", "Crawdaunt", "Igglybuff", "Jigglypuff", "Wigglytuff", "Lickitung", "Lickilicky", "Yanma", "Yanmega", "Tropius", "Carnivine", "Croagunk", "Toxicroak", "Larvitar", "Pupitar", "Tyranitar", "Reshiram", "Zekrom", "Kyurem", "Keldeo", "Meloetta", "Genesect",
+			];
+			const species = this.dex.species.get(set.species || set.name);
+			const isUnova = unovaDex.includes(species.baseSpecies) && species.gen <= 5;
+			if (!isUnova && !this.ruleTable.has('+' + species.id)) {
+				return [`${species.baseSpecies} is not in the New Unova Pokédex.`];
 			}
 		},
 	},
@@ -362,7 +392,7 @@ const Rulesets = {
 				if (parts.length !== 4 || !UINT_REGEX.test(low) || hyphen !== '-' || !UINT_REGEX.test(high)) {
 					throw new Error(`EV limits should be in the format "EV Limits = Atk 0-124 / Def 100-252"`);
 				}
-				const statid = toID(stat) ;
+				const statid = this.dex.toID(stat) ;
 				if (!this.dex.stats.ids().includes(statid)) {
 					throw new Error(`Unrecognized stat name "${stat}" in "${value}"`);
 				}
@@ -389,15 +419,13 @@ const Rulesets = {
 		effectType: 'Rule',
 		name: 'Team Preview',
 		desc: "Allows each player to see the Pok&eacute;mon on their opponent's team before they choose their lead Pok&eacute;mon",
-		onBegin() {
+		onTeamPreview() {
 			this.add('clearpoke');
 			for (const pokemon of this.getAllPokemon()) {
 				const details = pokemon.details.replace(', shiny', '')
-					.replace(/(Arceus|Gourgeist|Pumpkaboo|Silvally|Urshifu)(-[a-zA-Z?-]+)?/g, '$1-*');
+					.replace(/(Arceus|Gourgeist|Pumpkaboo|Xerneas|Silvally|Zacian|Zamazenta|Urshifu)(-[a-zA-Z?-]+)?/g, '$1-*');
 				this.add('poke', pokemon.side.id, details, '');
 			}
-		},
-		onFieldTeamPreview() {
 			this.makeRequest('teampreview');
 		},
 	},
@@ -1090,6 +1118,35 @@ const Rulesets = {
 			return this.checkCanLearn(move, species, setSources, set);
 		},
 	},
+	sketchmonsmovelegality: {
+		effectType: 'ValidatorRule',
+		name: 'Sketchmons Move Legality',
+		desc: "Pok&eacute;mon can learn one of any move they don't normally learn.",
+		checkCanLearn(move, species, lsetData, set) {
+			const problem = this.checkCanLearn(move, species, lsetData, set);
+			if (!problem) return null;
+			if (move.isZ || move.isMax || this.ruleTable.isRestricted(`move:${move.id}`)) return problem;
+			if ((set ).sketchMove) {
+				return ` already has ${(set ).sketchMove} as a sketched move.\n(${species.name} doesn't learn ${move.name}.)`;
+			}
+			(set ).sketchMove = move.name;
+			return null;
+		},
+		onValidateTeam(team) {
+			const sketches = new _lib.Utils.Multiset();
+			for (const set of team) {
+				if ((set ).sketchMove) {
+					sketches.add((set ).sketchMove);
+				}
+			}
+			const overSketched = [...sketches.entries()].filter(([moveName, count]) => count > 1);
+			if (overSketched.length) {
+				return overSketched.map(([moveName, count]) => (
+					`You are limited to 1 of ${moveName} by Sketch Clause.\n(You have sketched ${moveName} ${count} times.)`
+				));
+			}
+		},
+	},
 	allowtradeback: {
 		effectType: 'ValidatorRule',
 		name: 'Allow Tradeback',
@@ -1218,7 +1275,7 @@ const Rulesets = {
 		effectType: 'Rule',
 		name: 'Team Type Preview',
 		desc: "Allows each player to see the Pok&eacute;mon on their opponent's team and those Pok&eacute;mon's types before they choose their lead Pok&eacute;mon",
-		onBegin() {
+		onTeamPreview() {
 			for (const side of this.sides) {
 				for (const pokemon of side.pokemon) {
 					const details = pokemon.details.replace(', shiny', '')
@@ -1235,8 +1292,6 @@ const Rulesets = {
 				}
 				this.add(`${buf}</span>`);
 			}
-		},
-		onFieldTeamPreview() {
 			this.makeRequest('teampreview');
 		},
 	},
@@ -1295,7 +1350,7 @@ const Rulesets = {
 	pickedteamsize: {
 		effectType: 'Rule',
 		name: 'Picked Team Size',
-		desc: "Team size that can be brought out of Team Preview",
+		desc: "Team size (number of pokemon) that can be brought out of Team Preview",
 		hasValue: 'positive-integer',
 		// hardcoded in sim/side
 		onValidateRule() {
@@ -1307,14 +1362,28 @@ const Rulesets = {
 	minteamsize: {
 		effectType: 'ValidatorRule',
 		name: "Min Team Size",
-		desc: "Minimum team size that can be brought into Team Preview (or into the battle, in formats without Team Preview)",
+		desc: "Minimum team size (number of pokemon) that can be brought into Team Preview (or into the battle, in formats without Team Preview)",
 		hasValue: 'positive-integer',
+		// hardcoded in sim/team-validator
+	},
+	evlimit: {
+		effectType: 'ValidatorRule',
+		name: "EV Limit",
+		desc: "Maximum total EVs on each pokemon.",
+		hasValue: 'integer',
 		// hardcoded in sim/team-validator
 	},
 	maxteamsize: {
 		effectType: 'ValidatorRule',
 		name: "Max Team Size",
-		desc: "Maximum team size that can be brought into Team Preview (or into the battle, in formats without Team Preview)",
+		desc: "Maximum team size (number of pokemon) that can be brought into Team Preview (or into the battle, in formats without Team Preview)",
+		hasValue: 'positive-integer',
+		// hardcoded in sim/team-validator
+	},
+	maxmovecount: {
+		effectType: 'ValidatorRule',
+		name: "Max Move Count",
+		desc: "Max number of moves allowed on a single pokemon (defaults to 4 in a normal game)",
 		hasValue: 'positive-integer',
 		// hardcoded in sim/team-validator
 	},
@@ -1394,7 +1463,7 @@ const Rulesets = {
 	adjustlevel: {
 		effectType: 'ValidatorRule',
 		name: 'Adjust Level',
-		desc: "All Pokémon will be set to exactly this level (but unlike Max Level and Min Level, it will still be able to learn moves from above this level)",
+		desc: "All Pokémon will be set to exactly this level (but unlike Max Level and Min Level, it will still be able to learn moves from above this level) (when using this, Max Level is the level of the pokemon before it's level-adjusted down)",
 		hasValue: 'positive-integer',
 		mutuallyExclusiveWith: 'adjustleveldown',
 		// hardcoded in sim/team-validator
