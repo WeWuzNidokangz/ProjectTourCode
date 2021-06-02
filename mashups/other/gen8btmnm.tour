@@ -1,0 +1,5 @@
+/tour new mixandmega, elim,,, Bonus Type Mix and Mega
+/tour rules gen8bonustype, +Calyrex-Ice, *Calyrex-Ice, +Darmanitan-Galar, +Dialga, *Dialga, +Dracovish, *Dragapult, +Dragonite, +Eternatus, *Eternatus, +Genesect, *Genesect, +Giratina, *Giratina, +Giratina-Origin, *Giratina-Origin, +Groudon, *Groudon, +Ho-oh, *Ho-Oh, +Kyurem-Black, *Kyurem-Black, +Kyurem-White, *Kyurem-White, +Landorus-Base, +Lugia, *Lugia, +Lunala, *Lunala, +Magearna, +Marshadow, *Marshadow, +Mewtwo, *Mewtwo, +Necrozma-Dawn-Wings, *Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, *Necrozma-Dusk-Mane, +Palkia, *Palkia, +Pheromosa, +Rayquaza, *Rayquaza, +Reshiram, *Reshiram, +Shedinja, +Solgaleo, +Xerneas, *Xerneas, +Yveltal, *Yveltal, +Zacian, *Zacian, +Zamazenta, +Zamazenta-Crowned, +Zekrom, *Zekrom, +Zygarde-Base
+/tour autostart 10
+/tour autodq 4
+/wall Your Pokemon has the bonus type, it may not be displayed by the User Interface. Mega Stones that change secondary types will still change the secondary type. 
