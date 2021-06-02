@@ -1,4 +1,4 @@
-/tour create gen8sketchmons, elim,,, [Gen 8] Sketchmons AG
-/tour rules +Calyrex-Ice, +Calyrex-Shadow, +Cinderace, +Darmanitan-Galar, +Dialga, +Dracovish, +Dragapult, +Eternatus, +Genesect, +Giratina, +Giratina-Origin, +Groudon, +Ho-Oh, +Kartana, +Kyogre, +Kyurem-Black, +Kyurem-White, +Landorus-Base, +Lugia, +Lunala, +Marshadow, +Mewtwo, +Naganadel, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Urshifu, +Palkia, +Pheromosa, +Porygon-Z, +Rayquaza, +Regieleki, +Reshiram, +Rillaboom, +Shedinja, +Solgaleo, +Spectrier, +Swoobat, +Urshifu-Single-Strike, +Xerneas, +Yveltal, +Zacian, +Zacian-Crowned, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +Zeraora, +Zygarde-Base, +Arena Trap, +Moody, +Power Construct, +Shadow Tag, +King's Rock, +Baton Pass, +Acupressure, +Astral Barrage, +Belly Drum, +Bolt Beak, +Clangorous Soul, +Double Iron Bash, +Electrify, +Extreme Speed, +Fishious Rend, +Geomancy, +Glacial Lance, +Lovely Kiss, +Octolock, +Quiver Dance, +Secret Sword, +Shell Smash, +Shift Gear, +Sleep Powder, +Spore, +Thousand Arrows, +V-create, +Wicked Blow, !Dynamax Clause, !Species Clause, !Evasion Moves Clause, !Sleep Clause Mod, !OHKO Clause
-/tour autostart 10
-/tour autodq 5
+/tour new anythinggoes, elim,,, Sketch AG
+/tour autostart 7
+/tour autodq 4
+/tour rules Sketchmons Move Legality
