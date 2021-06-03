@@ -1,4 +1,4 @@
 /tour create [Gen 8] 1v1, rr,,,[Gen 8] Sketchmons 1v1
-/tour rules Sketchmons Move Legality, *Disable, *Sing, *Hypnosis, *Strength Sap, +Clangorous Soul
+/tour rules Sketchmons Move Legality, *Acupressure, *Astral Barrage, *Belly Drum, *Bolt Beak, *Disable, *Double Iron Bash, *Electrify, *Extreme Speed, *Fishious Rend, *Geomancy, *Glacial Lance, *Hypnosis, *Lovely Kiss, *Octolock, *Quiver Dance, *Secret Sword, *Shell Smash, *Shift Gear, *Sing, *Sleep Powder, *Spore, *Strength Sap, *Thousand Arrows, *V-create, *Wicked Blow
 /tour autostart 7
 /tour autodq 4
