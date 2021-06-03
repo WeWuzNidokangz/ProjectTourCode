@@ -1,4 +1,4 @@
-/tour create Nature Swap, elim,,, Godly Swap
+/tour create [Gen 8] Nature Swap, elim,,,[Gen 8] Godly Swap
 /tour rules Godly Gift,+Calyrex-Ice,+Calyrex-Shadow,+Cinderace,+Darmanitan-Galar,+Dialga,+Dracovish,+Dragapult,+Eternatus,+Genesect,+Giratina,+Giratina-Origin,+Groudon,+Ho-Oh,+Kartana,+Kyogre,+Kyurem-Black,+Kyurem-White,+Landorus-Base,+Lugia,+Lunala,+Marshadow,+Mewtwo,+Naganadel,+Necrozma-Dawn-Wings,+Necrozma-Dusk-Mane,+Urshifu,+Palkia,+Pheromosa,+Porygon-Z,+Rayquaza,+Regieleki,+Reshiram,+Rillaboom,+Shedinja,+Solgaleo,+Spectrier,+Swoobat,+Urshifu-Base,+Xerneas,+Yveltal,+Zamazenta,+Zamazenta-Crowned,+Zekrom,+Zeraora,+Zygarde-Base,+Power Construct
 /tour autostart 10
 /tour autodq 5

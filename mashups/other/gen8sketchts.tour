@@ -1,4 +1,4 @@
-/tour create Sketchmons, elim,,, TSketch
-/tour rules Gen8tiershift
+/tour create [Gen 8] Tier Shift, elim,,,[Gen 8] TSketch
+/tour rules Sketchmons Move Legality
 /tour autostart 10
 /tour autodq 5
