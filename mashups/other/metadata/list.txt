@@ -94,6 +94,5 @@ gen8btsketch
 gen8btag
 gen8btstab
 gen8btmnm
-gen8btcamo
 gen8btgg
 gen8btts
