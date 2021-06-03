@@ -79,7 +79,6 @@ gen8tsbh
 gen8tmubers
 gen8tsstab
 gen8ultramix
-gen8pokeaaabilities
 gen8ndstab
 gen8skaaatch
 gen8sketchag
