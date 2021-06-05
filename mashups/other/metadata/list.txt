@@ -96,3 +96,4 @@ gen8btstab
 gen8btmnm
 gen8btgg
 gen8btts
+gen8btcamo
