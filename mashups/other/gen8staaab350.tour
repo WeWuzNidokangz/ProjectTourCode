@@ -1,5 +1,4 @@
-/tour new [Gen 8] STABmons, Elimination
+/tour new [Gen 8] STABmons, Elimination,,,[Gen 8] STABmons + Almost Any Ability 350 Cup
 /tour rules !Obtainable Abilities, -Arena Trap, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Shedinja, 2 Ability Clause, *Transform, *No Retreat, *V-create, -Hypnosis, -Sing, -Sleep Powder, *Wicked Blow, *Glacial Lance, 350 Cup Mod, -Eviolite, -Light Ball, +Calyrex-Ice, +Calyrex-Shadow, +Darmanitan-Galar, +Dialga, +Dracovish, +Dragapult, +Eternatus, +Genesect, +Giratina, +Giratina-Origin, +Groudon, +Ho-Oh, +Kartana, +Kyogre, +Kyurem-Black, +Kyurem-White, +Landorus-Base, +Lugia, +Lunala, +Mamoswine, +Marshadow, +Mewtwo, +Naganadel, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Palkia, +Pheromosa, +Porygon-Z, +Rayquaza, +Reshiram, +Silvally, +Solgaleo, +Thundurus-Base, +Urshifu-Base, +Xerneas, +Yveltal, +Zacian, +Zacian-Crowned, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +Zygarde-Base, -Tinted Lens, +Precipice Blades
 /tour autostart 10
 /tour autodq 4
-/tour name [Gen 8] STABmons + Almost Any Ability 350 Cup

@@ -1,5 +1,4 @@
-/tour create gen8godlygift, elim
-/tour name [Gen 8] STABmons Godly Gift
+/tour create [Gen 8] Godly Gift, Elimination,,,[Gen 8] STABmons Godly Gift
 /tour autostart 10
 /tour autodq 5
 /tour rules STABmons move legality, *Acupressure, *Astral Barrage, *Belly Drum, *Bolt Beak, *Double Iron Bash, *Electrify, *Extreme Speed, *Fishious Rend, *Geomancy, *Lovely Kiss, *Shell Smash, *Shift Gear, *Spore, *Thousand Arrows, *V-create, *Wicked Blow
