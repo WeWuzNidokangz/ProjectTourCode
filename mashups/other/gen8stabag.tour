@@ -1,5 +1,4 @@
-/tour create [Gen 8] Anything Goes, elim
+/tour create [Gen 8] Anything Goes, Elimination,,,[Gen 8] AG STABmons
 /tour rules STABmons Move Legality
 /tour autostart 10
 /tour autodq 5
-/tour name [Gen 8] AG STABmons

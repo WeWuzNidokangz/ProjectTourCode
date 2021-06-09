@@ -1,5 +1,4 @@
-/tour create gen8natureswap
+/tour new [Gen 8] Nature Swap, Elimination,,,[Gen 8] Tier Shift Nature Swap
 /tour autostart 10
 /tour autodq 3
-/tour name [Gen 8] Tier Shift Nature Swap
 /tour rules -regigigas, -light ball, gen8tiershift

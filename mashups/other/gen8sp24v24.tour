@@ -1,4 +1,4 @@
-/tour create gen8sharedpower, elimination,,, [Gen 8] 24v24 Shared Power
+/tour create gen8sharedpower, Elimination,,, [Gen 8] 24v24 Shared Power
 /tour rules Max Team Size = 24, -Water Absorb, -Dry Skin, -Water Compaction, -Storm Drain, -Poison Heal, -Regenerator, -Filter, -Prism Armor, -Solid Rock, -Volt Absorb, -Lightning Rod, -Motor Drive, -Thick Fat, -Flash Fire, -Heatproof, -Sap Sipper, -Trace, -Steam Engine, -Soundproof, -Bulletproof, -Flame Body, -Static, -Effect Spore, -Drizzle ++ Rain Dish,-Pressure, -Ice Scales, -Fluffy ++ Stamina, -Stamina ++ Multiscale, -Rough Skin ++ Iron Barbs, -Beat Up
 /tour autostart 10
 /tour autodq 4
