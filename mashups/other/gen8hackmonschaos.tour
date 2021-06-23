@@ -1,5 +1,4 @@
-/tour create [Gen 8] Hackmons Cup, elim
-/tour name [Gen 8] Hackmons Chaos Cup
+/tour create [Gen 8] Hackmons Cup, elim,,,[Gen 8] Hackmons Chaos Cup
 /tour autodq 2
 /tour autostart 5
-/tour rules [Gen 8] Shared Power, [Gen 8] Camomons, Inverse Mod, Scalemons Mod, !Dynamax Clause
+/tour rules [Gen 8] Shared Power, [Gen 8] Camomons, Inverse Mod, Scalemons Mod, !Dynamax Clause, !Sleep Clause
