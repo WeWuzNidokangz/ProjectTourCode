@@ -1,4 +1,4 @@
-/tour new [Gen 8] Bonus Type, elim,,,[Gen 8] Bonus Type Godly Gift
+/tour new [Gen 8] Godly Gift, elim,,,[Gen 8] Bonus Type Godly Gift
 /tour autostart 7
 /tour autodq 4
-/tour rules [Gen 8] Godly Gift, +Calyrex-Ice, +Darmanitan-Galar, +Dialga, +Dracovish, +Dragonite, +Eternatus, +Genesect, +Giratina, +Giratina-Origin, +Groudon, +Ho-Oh, +Kyogre, +Kyurem-Black, +Kyurem-White, +Landorus-Base, +Lugia, +Lunala, +Magearna, +Marshadow, +Mewtwo, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Palkia, +Pheromosa, +Rayquaza, +Reshiram, +Solgaleo, +Xerneas, +Yveltal, +Zamazenta, +Zamazenta-Crowned, +Zekrom, +Zygarde-Base
+/tour rules Bonus Type Rule, !Nickname Clause

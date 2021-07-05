@@ -1,4 +1,4 @@
-/tour new [Gen 8] Bonus Type, elim,,,[Gen 8] Bonus Type STABmons
+/tour new [Gen 8] STABmons, elim,,,[Gen 8] Bonus Type STABmons
 /tour autostart 7
 /tour autodq 4
-/tour rules STABmons Move Legality, *Acupressure, *Astral Barrage, *Belly Drum, *Bolt Beak, *Double Iron Bash, *Electrify, *Extreme Speed, *Fishious Rend, *Geomancy, *Glacial Lance,  *Lovely Kiss, *Shell Smash, *Shift Gear, *Spore, *Thousand Arrows, *V-create, *Wicked Blow, -Dragapult, -Kartana, -Landorus, -Landorus-Therian, -Naganadel, -Pheromosa, -Porygon-Z, -Silvally, -Urshifu-Base, -King's Rock
+/tour rules Bonus Type Rule, !Nickname Clause
