@@ -1,5 +1,4 @@
-/tour create gen8natureswap, elim
-/tour autodq 3
+/tour create [Gen 8] Nature Swap, elim,,,[Gen 8] Scalemons Nature Swap
+/tour autodq 7
 /tour autostart 10
-/tour rules -batonpass, +allpokemon, scalemonsmod, -eviolite, overflowstatmod
-/tour name [Gen 8] Scalemons Nature Swap
+/tour rules -Baton Pass, +All Pokemon, Scalemons Mod, -Eviolite, Overflow Stat Mod
