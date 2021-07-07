@@ -1,4 +1,4 @@
-/tour new [Gen 8] Bonus Type, elim,,,[Gen 8] Bonus Type AAA
+/tour new [Gen 8] Almost Any Ability, elim,,,[Gen 8] Bonus Type AAA
 /tour autostart 7
 /tour autodq 4
-/tour rules !Obtainable Abilities, 2 Ability Clause, -Buzzwole, -Dragapult, -Gengar, -Kartana, -Keldeo, -Kyurem, -Melmetal, -Naganadel, -Regigigas, -Spectrier, -Urshifu-Base, -Urshifu-Rapid-Strike, -Victini, -Zeraora, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Neutralizing Gas, -Parental Bond, -Poison Heal, -Protean, -Pure Power, -Simple, -Speed Boost, -Stakeout, -Tinted Lens, -Water Bubble, -Wonder Guard
+/tour rules Bonus Type Rule, !Nickname Clause, +Archeops, +Keldeo
