@@ -30,6 +30,7 @@ gen8mashupsmayhem
 gen8mnm1v1
 gen8mnm350
 gen8mnmag
+gen8mnmlc
 gen8mnmubers
 gen8mnmts
 gen8monomayhem
