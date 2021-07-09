@@ -9,7 +9,7 @@ gen8staaabmons: staaab
 gen8stabmonsdoubles: stabdoubles
 gen8stabmonslittlecup: stablc
 gen8stabmonsubers: stabubers
-gen8stabnmega: stabandmega, stabnmega, snm
+gen8stabnmega: stabandmega, snm
 gen8randbatsmayhem: randbtasmayhem, randbtas
 gen8nationaldexthelosersgame: natdexsuicidecup, natdexsc
 gen8spaaa: shaaaredpower, sharedpoweraaa, shaaared
