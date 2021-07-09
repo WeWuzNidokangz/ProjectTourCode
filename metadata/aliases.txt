@@ -16,3 +16,4 @@ gen8spaaa: shaaaredpower, sharedpoweraaa, shaaared
 gen8inheritanceag: inhag
 gen8pokeaaabilities: pokeaaa
 gen8stabgg: godslayer
+gen8randbatsmayhemsuddendeath: randbtassuddendeath, randbtassd, randbtasfirstblood
