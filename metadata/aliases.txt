@@ -3,6 +3,7 @@ gen8almostanyabilitylittlecup: aaalc
 gen8almostanyabilityubers: aaaubers
 gen8balancedhackmonsdoubles: bhdoubles
 gen8balancedhackmonslittlecup: bhlc
+gen8caaamomons: caaamo
 gen8camomonsdoubles: camodoubles
 gen8camomonslittlecup: camolc
 gen8staaabmons: staaab
