@@ -1,4 +1,4 @@
 /tour new [Gen 8] Mix and Mega, elim,,,[Gen 8] Mix and Mega Little Cup
-/tour rules Little Cup, *Archen, *Corsola-Galar, *Dratini, *Gastly, *Scyther, *Sneasel, *Tangela
+/tour rules Little Cup, *Archen, *Corsola-Galar, *Dratini, *Gastly, *Scyther, *Sneasel, *Tangela, -Chlorophyll
 /tour autodq 10
 /tour autostart 5
