@@ -103,3 +103,4 @@ gen8btts
 gen8btcamo
 gen8chimerarandbats24
 gen8randbatsmayhemsuddendeath
+gen8caprandbatsmayhem
