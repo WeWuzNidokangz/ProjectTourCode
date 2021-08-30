@@ -1,0 +1,4 @@
+/tour create [Gen 8] Ubers, Elimination,,,[Gen 8] Sketchmons Ubers
+/tour rules Sketchmons Move Legality, *Acupressure, *Astral Barrage, *Belly Drum, *Bolt Beak, *Clangorous Soul, *Double Iron Bash, *Electrify, *Extreme Speed, *Fishious Rend, *Geomancy, *Glacial Lance,  *Lovely Kiss, *Octolock, *Quiver Dance, *Secret Sword, *Shell Smash, *Shift Gear, *Sleep Powder, *Spore, *Thousand Arrows, *V-create, *Wicked Blow, -Calyrex-Shadow
+/tour autostart 10
+/tour autodq 7
