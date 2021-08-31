@@ -6,6 +6,7 @@ gen8aaabc
 gen8abcamo
 gen8abcubers
 gen8ag1v1
+gen8aagsp
 gen8agsp
 gen8agspnomoldy
 gen8bhmayhem
@@ -104,3 +105,5 @@ gen8btcamo
 gen8chimerarandbats24
 gen8randbatsmayhemsuddendeath
 gen8caprandbatsmayhem
+gen8monotypegodlygift
+gen8sketchmonsubers

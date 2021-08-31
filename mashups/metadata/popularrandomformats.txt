@@ -2,5 +2,5 @@ gen8randbatsmayhem:2
 gen8staaabmons
 gen8stabnmega
 gen8tsaaa
-gen8agsp
+gen8aagsp
 spotlight
