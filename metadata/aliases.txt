@@ -20,4 +20,4 @@ gen8stabgg: godslayer
 gen8randbatsmayhemsuddendeath: randbtassuddendeath, randbtassd, randbtasfirstblood
 gen8stabnmegalcotm: stabandmegalcotm, snmlcotm
 gen8aaabc: aaalphabetcup
-gen8sketchmonsubers: sketchubers, michelangelo, scoobers, skubers
+gen8sketchmonsubers: sketchubers, michelangelo, scoobers, skubers, uberkek
