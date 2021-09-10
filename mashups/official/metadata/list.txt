@@ -19,3 +19,5 @@ gen8staaabru
 gen8staaabpredlc
 gen8staaabubers
 gen8stabnmegalcotm
+gen5staaab
+gen7staaab
