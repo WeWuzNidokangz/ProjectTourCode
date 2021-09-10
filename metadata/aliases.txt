@@ -21,3 +21,5 @@ gen8randbatsmayhemsuddendeath: randbtassuddendeath, randbtassd, randbtasfirstblo
 gen8stabnmegalcotm: stabandmegalcotm, snmlcotm
 gen8aaabc: aaalphabetcup
 gen8sketchmonsubers: sketchubers, michelangelo, scoobers, skubers, uberkek
+gen7staaab: gen7staaabmons
+gen5staaab: gen5staaabmons
