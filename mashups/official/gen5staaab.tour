@@ -1,4 +1,4 @@
 /tour new [Gen 5] OU, elim,,,[Gen 5] STAAABmons
 /tour rules STABmons Move Legality, 2 Ability Clause, !Obtainable Abilities, -Porygon-Z, *Acupressure, *Belly Drum, *Chatter, *Dark Void, *Extreme Speed, *Lovely Kiss, *Shell Smash, *Shift Gear, *Spore, *Transform, -Contrary, -Huge Power, -Illusion, -Imposter, -No Guard, -Pure Power, -Simple, -Speed Boost, -Wonder Guard, -Archeops, -Bisharp, -Keldeo, -Mamoswine, -Regigigas, -Shedinja, -Slaking, -Snorlax, -Suicune, -Terrakion, +Deoxys-Defense, +Deoxys-Speed, +Landorus-Base, -Latios, -Latias, -Dragonite, -Garchomp, -Hydreigon, -Salamence, -Haxorus, -Kyurem, -Tyranitar
 /tour autostart 10
-/tour autodq 4
+/tour autodq 6
