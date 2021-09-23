@@ -1,4 +1,4 @@
 /tour new [Gen 8] Nature Swap, Elimination,,,[Gen 8] Tier Shift Nature Swap
+/tour rules [Gen 8] Tier Shift, -Regigigas, -Light Ball
 /tour autostart 10
-/tour autodq 3
-/tour rules -regigigas, -light ball, gen8tiershift
+/tour autodq 6

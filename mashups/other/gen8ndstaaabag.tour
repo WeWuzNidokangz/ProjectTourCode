@@ -1,5 +1,4 @@
-/tour create [Gen 8] National Dex AG, elim
+/tour new [Gen 8] National Dex AG, Elimination,,,[Gen 8] National Dex AG STAAABmons
 /tour rules STABmons Move Legality, !Obtainable Abilities
 /tour autostart 10
-/tour autodq 5
-/tour name [Gen 8] NatDex AG STAAABmons
+/tour autodq 6

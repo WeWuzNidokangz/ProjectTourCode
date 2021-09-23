@@ -1,4 +1,4 @@
-/tour create [Gen 8] The Loser's Game, elim,,,[Gen 8] Pure Loser
+/tour new [Gen 8] The Loser's Game, Elimination,,,[Gen 8] Pure Loser
 /tour rules !Obtainable, -Nonexistent, !Sleep Clause Mod, !Nickname Clause, !Evasion Moves Clause, +Sandshrew-Alola, +Shedinja, +Infiltrator, +Magic Guard, +Choice Scarf, +Explosion, +Final Gambit, +Healing Wish, +Lunar Dance, +Magic Room, +Memento, +Misty Explosion, +Self-Destruct
 /tour autostart 7
 /tour autodq 4

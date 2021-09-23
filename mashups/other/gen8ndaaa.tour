@@ -1,5 +1,4 @@
-/tour new [Gen 8] National Dex, Elimination
+/tour new [Gen 8] National Dex, Elimination,,,[Gen 8] National Dex Almost Any Ability
 /tour rules !Obtainable Abilities, -Arena Trap, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Shedinja, 2 Ability Clause, -Dracovish, -Dragapult, -Zeraora, -Keldeo, -Slaking, -Regigigas, +Greninja-Ash, -Urshifu-Rapid-Strike, +Tornadus-Therian, +Metagrossite, +Naganadel, +Genesect, -Hoopa-Unbound, -Kartana, -Dragonite, +Darmanitan-Galar, +Metagross-Mega, -Victini, -Melmetal, -Archeops
 /tour autostart 10
 /tour autodq 6
-/tour name [Gen 8] NatDex Almost Any Ability

@@ -1,5 +1,4 @@
-/tour create [Gen 8] Inheritance, Elimination
-/tour name [Gen 8] Inheritance AG
-/tour autostart 10
-/tour autodq 8
+/tour new [Gen 8] Inheritance, Elimination,,,[Gen 8] Inheritance AG
 /tour rules !Dynamax Clause, !Sleep Clause Mod, !Species Clause, !Nickname Clause, !OHKO Clause, !Evasion Moves Clause, +AG, +Uber, +Blacephalon, +Blaziken, +Blissey, +Butterfree, +Calyrex-Ice, +Calyrex-Shadow, +Chansey, +Combusken, +Cresselia, +Dialga, +Darmanitan-Galar, +Dracovish, +Eternatus, +Giratina, +Giratina-Origin, +Groudon, +Ho-Oh, +Kartana, +Kyogre, +Kyurem-Black, +Kyurem-White, +Landorus-Base, +Lugia, +Lunala, +Marshadow, +Melmetal, +Mewtwo, +Naganadel, +Natu, +Necrozma-Dawn-Wings, +Necrozma-Dusk-Mane, +Palkia, +Pheromosa, +Rayquaza, +Regieleki, +Regigigas, +Reshiram, +Sableye, +Shedinja, +Solgaleo, +Spectrier, +Tapu Koko, +Toxtricity, +Torkoal, +Urshifu-Base, +Xatu, +Xerneas, +Yveltal, +Zacian, +Zacian-Crowned, +Zamazenta, +Zamazenta-Crowned, +Zeraora, +Zekrom, +Zygarde-Complete, +Arena Trap, +Contrary, +Drizzle, +Huge Power, +Imposter, +Innards Out, +Libero, +Moody, +Power Construct, +Pure Power, +Shadow Tag, +Simple, +Unaware, +Unburden, +Water Bubble, +Baton Pass, +Bolt Beak, +Fishious Rend, +Shell Smash
+/tour autostart 10
+/tour autodq 6

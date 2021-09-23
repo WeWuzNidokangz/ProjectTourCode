@@ -1,5 +1,4 @@
-/tour create gen8almostanyability, elim
-/tour name [Gen 8] Flipped Almost Any Ability
-/tour autodq 3
+/tour new [Gen 8] Almost Any Ability, Elimination,,,[Gen 8] Flipped Almost Any Ability
+/tour rules Flipped Mod, +Kartana, +Dragapult, +Pheromosa, +Melmetal, +Zeraora, +Zygarde-Base, +Keldeo, +Buzzwole, +Urshifu-Rapid-Strike, +Urshifu-Single-Strike, +Spectrier, -Regice, -Regirock, +Dracovish, +Naganadel, +Marshadow, +Dragonite, +Yveltal, +Zacian, +Zamazenta, +Magearna, +Kyurem, +Victini
 /tour autostart 10
-/tour rules flippedmod, +Kartana, +Dragapult, +Pheromosa, +Melmetal, +Zeraora, +Zygarde-Base, +Keldeo, +Buzzwole, +Urshifu-Rapid-Strike, +Urshifu-Single-Strike, +Spectrier, -Regice, -Regirock, +Dracovish, +Naganadel, +Marshadow, +Dragonite, +Yveltal, +Zacian, +Zamazenta, +Magearna, +Kyurem, +Victini
+/tour autodq 6

@@ -1,5 +1,4 @@
-/tour new [Gen 8] The Loser’s Game, Elimination
+/tour new [Gen 8] The Loser’s Game, Elimination,,,[Gen 8] National Dex Loser's Game
 /tour rules Standard NatDex, -Steel Beam, +Sandshrew-Alola
 /tour autostart 10
-/tour autodq 10
-/tour name [Gen 8] National Dex Loser's Game
+/tour autodq 6

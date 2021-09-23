@@ -1,4 +1,4 @@
-/tour new [Gen 8] STABmons, elim,,,[Gen 8] Bonus Type STABmons
+/tour new [Gen 8] STABmons, Elimination,,,[Gen 8] Bonus Type STABmons
+/tour rules Bonus Type Rule, !Nickname Clause
 /tour autostart 7
 /tour autodq 4
-/tour rules Bonus Type Rule, !Nickname Clause

@@ -1,5 +1,4 @@
-/tour new [Gen 8] Mix and Mega, Elimination
-/tour rules [Gen 8] Tier Shift, +Uber, +Damp Rock, +Heat Rock, -Arctovish, -Arctozolt
+/tour new [Gen 8] Mix and Mega, Elimination,,,[Gen 8] Mix and Mega Tier Shift
+/tour rules [Gen 8] Tier Shift, +Uber, +Damp Rock, +Heat Rock, -Arctovish
 /tour autostart 10
-/tour autodq 4
-/tour name [Gen 8] Mix and Mega Tier Shift
+/tour autodq 6

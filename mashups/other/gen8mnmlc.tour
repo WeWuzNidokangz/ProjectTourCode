@@ -1,4 +1,5 @@
-/tour new [Gen 8] Mix and Mega, elim,,,[Gen 8] Mix and Mega Little Cup
+/tour new [Gen 8] Mix and Mega, Elimination,,,[Gen 8] Mix and Mega Little Cup
 /tour rules Little Cup, *Archen, *Corsola-Galar, *Dratini, *Gastly, *Scyther, *Sneasel, *Tangela, -Chlorophyll
-/tour autodq 10
-/tour autostart 5
+/tour autostart 10
+/tour autodq 6
+/wall This format uses **Level 5 Pokemon**, so be sure to adjust your EVs to be in line with LCs after Mega Evolution (this is achievable through the calc on Showdown)
