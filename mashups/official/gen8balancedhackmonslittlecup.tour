@@ -1,5 +1,5 @@
 /tour new [Gen 8] LC, Elimination
-/tour rules !Obtainable, -Nonexistent, -Past, -Comatose + Sleep Talk, -Arena Trap, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Innards Out, -Intrepid Sword, -Libero, -Magnet Pull, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Stakeout, -Water Bubble, -Wonder Guard, +Chlorophyll, -Bolt Beak, -Double Iron Bash, -Shell Smash, +Cherubi, +Corsola-Galar, +Cutiefly, +Drifloon, +Gastly, +Gothita, +Rufflet, +Swirlix, +Tangela, +Vullaby, +Vulpix-Alola, +Woobat, -Type: Null
+/tour rules !Obtainable, -Nonexistent, -Past, -Comatose + Sleep Talk, -Arena Trap, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Innards Out, -Intrepid Sword, -Libero, -Magnet Pull, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Stakeout, -Water Bubble, -Wonder Guard, +Chlorophyll, -Bolt Beak, -Double Iron Bash, -Shell Smash, +Sticky Web, +Cherubi, +Corsola-Galar, +Cutiefly, +Drifloon, +Gastly, +Gothita, +Rufflet, +Scraggy, +Swirlix, +Tangela, +Vullaby, +Vulpix-Alola, +Woobat, -Type: Null
 /tour autostart 7
 /tour autodq 4
 /tour name [Gen 8] Balanced Hackmons Little Cup
