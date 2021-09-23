@@ -1,5 +1,4 @@
-/tour new Gen8 Tier Shift, Elimination
-/tour rules gen8godlygift, -Giratina, -Giratina-Origin, -Eternatus, +Uber, -Arctovish,-Arctozolt, -Wishiwashi, +Zacian-Crowned
+/tour new [Gen 8] Tier Shift, Elimination,,,[Gen 8] Godly Shift (Tier Shift + Godly Gift)
+/tour rules [Gen 8] Godly Gift, -Giratina, -Giratina-Origin, -Eternatus, +Uber, -Arctovish,-Arctozolt, -Wishiwashi, +Zacian-Crowned
 /tour autostart 10
-/tour autodq 4
-/tour name [Gen 8] Godly Shift (Tier Shift + Godly Gift)
+/tour autodq 6

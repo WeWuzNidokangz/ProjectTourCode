@@ -1,4 +1,4 @@
-/tour new [Gen 8] National Dex, elim,,,[Gen 8] NatDex STABmons
+/tour new [Gen 8] National Dex, Elimination,,,[Gen 8] National Dex STABmons
 /tour rules *V-create,*Hypnosis,*Sing,*Sleep Powder,-Porygon-Z,*Wicked Blow,-Electrify,*Glacial Lance,-Kartana,STABmons Move Legality,*Acupressure,*Belly Drum,*Bolt Beak,*Double Iron Bash,*Extreme Speed,*Fishious Rend,*Shell Smash,*Shift Gear,*Spore,-Araquanid,*Clangorous Soul,-Thundurus,*Chatter,*Geomancy,*Thousand Arrows,-Aerodactylite,-Kings Rock,-Razor Fang,*Astral Barrage,-Komala,-Silvally
 /tour autostart 10
-/tour autodq 4
+/tour autodq 6

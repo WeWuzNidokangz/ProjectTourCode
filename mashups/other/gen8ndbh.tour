@@ -1,5 +1,4 @@
-/tour new [Gen 8] Balanced Hackmons, elim
+/tour new [Gen 8] Balanced Hackmons, Elimination,,,[Gen 8] National Dex Balanced Hackmons
 /tour rules Standard NatDex, 2 Ability Clause, +All Pokemon, !Obtainable, CFZ Clause, -Arceus > 1, +Calyrex-Shadow, *Groudon-Primal, -Rayquaza-Mega, -Belly Drum, -Electrify, -Chatter, -Gengarite, +Darmanitan-Galar-Zen, +Aloraichium Z, +Buginium Z, +Darkinium Z, +Decidium Z, +Dragonium Z, +Eevium Z, +Electrium Z, +Fairium Z, +Fightinium Z, +Firium Z, +Flyinium Z, +Ghostium Z, +Grassium Z, +Groundium Z, +Incinium Z, +Icium Z, +Kommonium Z, +Lunalium Z, +Lycanium Z, +Marshadium Z, +Mewnium Z, +Mimikium Z, +Normalium Z, +Pikanium Z, +Pikashunium Z, +Primarium Z, +Poisonium Z, +Psychium Z, +Rockium Z, +Snorlium Z, +Solganium Z, +Steelium Z, +Tapunium Z, +Ultranecrozium Z, +Waterium Z
 /tour autostart 10
-/tour autodq 5
-/tour name [Gen 8] NatDex Balanced Hackmons
+/tour autodq 6

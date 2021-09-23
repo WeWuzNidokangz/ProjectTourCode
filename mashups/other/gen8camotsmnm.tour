@@ -1,5 +1,4 @@
-/tour create gen8mixandmega, elim
-/tour name TS Camo Mix and Mega
-/tour autodq 2
+/tour new [Gen 8] Balanced Hackmons, Elimination,,,[Gen 8] TS Camo Mix and Mega
+/tour rules [Gen 8] Tier Shift, [Gen 8] Camomons, -Archeops, -Cresselia
 /tour autostart 10
-/tour rules gen8tiershift, gen8camomons, -archeops, -cresselia
+/tour autodq 6

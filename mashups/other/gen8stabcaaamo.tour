@@ -1,5 +1,4 @@
 /tour new [Gen 8] STABmons, Elimination,,,[Gen 8] STABCAAAmons
 /tour rules [Gen 8] Camomons, !Obtainable Abilities, -Comatose, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, 2 Ability Clause, *V-Create, -Hypnosis, -Sing, -Sleep Powder, +Darmanitan, +Darmanitan-Galar, -Keldeo, -Terrakion, +Dracovish, -Blacephalon, -Archeops, -Regigigas
 /tour autostart 10
-/tour autodq 4
-/tour name 
+/tour autodq 6

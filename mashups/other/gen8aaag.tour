@@ -1,4 +1,4 @@
-/tour create [Gen 8] Anything Goes, elim,,,[Gen 8] Any Ability Anything Goes
+/tour create [Gen 8] Anything Goes, Elimination,,,[Gen 8] Any Ability Anything Goes
 /tour rules !Obtainable Abilities, 2 Ability Clause
 /tour autostart 10
-/tour autodq 5
+/tour autodq 6

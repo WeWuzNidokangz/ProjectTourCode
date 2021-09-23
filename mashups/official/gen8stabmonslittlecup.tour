@@ -1,5 +1,4 @@
-/tour new [Gen 8] LC, Elimination
+/tour new [Gen 8] LC, Elimination,,,[Gen 8] STABmons Little Cup
 /tour rules STABmons Move Legality, *Acupressure, *Belly Drum, *Bolt Beak, *Double Iron Bash, *Electrify, *Extreme Speed, *Fishious Rend, *Geomancy, *Glacial Lance, *Lovely Kiss, *Shell Smash, *Shift Gear, *Spore, *Thousand Arrows, *V-create, *Wicked Blow, -Porygon
 /tour autostart 7
 /tour autodq 4
-/tour name [Gen 8] STABmons Little Cup
