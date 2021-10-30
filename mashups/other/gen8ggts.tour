@@ -1,4 +1,4 @@
-/tour new [Gen 8] Tier Shift, Elimination,,,[Gen 8] Godly Shift (Tier Shift + Godly Gift)
-/tour rules [Gen 8] Godly Gift, -Giratina, -Giratina-Origin, -Eternatus, +Uber, -Arctovish,-Arctozolt, -Wishiwashi, +Zacian-Crowned
+/tour new [Gen 8] Godly Gift, Elimination,,,[Gen 8] Godly Shift (Tier Shift + Godly Gift)
+/tour rules Tier Shift Mod, +Uber, -Arctovish, -Arctozolt, -Eternatus, -Giratina, -Giratina-Origin, -Wishiwashi, +Zacian-Crowned, -Damp Rock, -Eviolite, -Heat Rock
 /tour autostart 10
 /tour autodq 6
