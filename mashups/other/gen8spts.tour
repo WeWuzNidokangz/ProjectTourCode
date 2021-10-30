@@ -1,4 +1,4 @@
-/tour new [Gen 8] Tier Shift, Elimination,,,[Gen 8] Shared Power Tier Shift
-/tour rules [Gen 8] Shared Power
+/tour new [Gen 8] Shared Power, Elimination,,,[Gen 8] Shared Power Tier Shift
+/tour rules Tier Shift Mod, -Damp Rock, -Eviolite, -Heat Rock
 /tour autostart 10
 /tour autodq 6

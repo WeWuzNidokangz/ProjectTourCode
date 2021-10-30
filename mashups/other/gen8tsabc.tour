@@ -1,4 +1,4 @@
-/tour new [Gen 8] Tier Shift, Elimination,,,[Gen 8] TS ABC
-/tour rules Alphabet Cup Move Legality
+/tour new [Gen 8] OU, Elimination,,,[Gen 8] TS ABC
+/tour rules Alphabet Cup Move Legality, Tier Shift Mod, -Damp Rock, -Eviolite, -Heat Rock 
 /tour autostart 10
 /tour autodq 6
