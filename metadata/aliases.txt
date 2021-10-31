@@ -18,7 +18,6 @@ gen8inheritanceag: inhag
 gen8pokeaaabilities: pokeaaa
 gen8stabgg: godslayer
 gen8randbatsmayhemsuddendeath: randbtassuddendeath, randbtassd, randbtasfirstblood
-gen8stabnmegalcotm: stabandmegalcotm, snmlcotm
 gen8aaabc: aaalphabetcup
 gen8sketchmonsubers: sketchubers, michelangelo, scoobers, skubers, uberkek
 gen7staaab: gen7staaabmons
