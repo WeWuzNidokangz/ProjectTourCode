@@ -108,3 +108,5 @@ gen8sketchmonsubers
 gen8ggsp
 gen8bdspaaa
 gen8bdspstaaab
+gen8revaaa
+gen8revbt
