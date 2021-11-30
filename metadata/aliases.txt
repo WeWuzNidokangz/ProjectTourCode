@@ -24,4 +24,4 @@ gen7staaab: gen7staaabmons
 gen5staaab: gen5staaabmons
 gen8aaadoublesbuiltin: aaadoubleslcotm
 gen5staaab: gen5staaabmons
-gen8bdspstaaab: gen8bdspstaaabmons
+bdspstaaab: bdspstaaabmons
