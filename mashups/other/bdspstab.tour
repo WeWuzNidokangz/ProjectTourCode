@@ -1,0 +1,5 @@
+/tour new [BDSP] Ubers, Elimination,,,[BDSP] STABmons
+/tour ruleset Stabmons Move Legality, Sleep Moves Clause, !Sleep Clause Mod, -Baton Pass, *Acupressure, *Belly Drum, *Extreme Speed, *Shell Smash, -King's Rock, -Razor Fang, -Arena Trap, -Drizzle, -Moody, -Shadow Tag, -Dialga, -Giratina, -Giratina-Origin, -Groudon, -Ho-Oh, -Kyogre, -Lugia, -Mewtwo, -Palkia, -Porygon-Z, -Rayquaza
+/tour autostart 10
+/tour autodq 10
+/wall **SAMPLE TEAMS: https://www.smogon.com/forums/threads/bdsp-om-megathread.3694118/#post-9043087**
