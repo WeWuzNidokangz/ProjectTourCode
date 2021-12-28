@@ -33,6 +33,7 @@ gen8mnmag
 gen8mnmlc
 gen8mnmubers
 gen8mnmts
+gen8monobh
 gen8monomayhem
 gen8natdexag1v1
 gen8natdexgodlygift
