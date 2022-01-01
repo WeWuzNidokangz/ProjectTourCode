@@ -45,6 +45,7 @@ gen8ndstaaab
 gen8ndstaaabag
 gen8ndstabag
 gen8nscale
+gen8pokeaaabilities
 gen8randbatsmayhem
 gen8sp24v24
 gen8spaaa
