@@ -1,19 +1,19 @@
-gen8almostanyabilitydoubles:Pokemon can use almost any ability in a Doubles environment.
-gen8almostanyabilitylittlecup:Pokemon can use any ability, barring the few that are restricted to their natural users, in a Little Cup environment.
-gen8almostanyabilityubers:Pokemon can use almost any ability in an Ubers environment.
-gen8balancedhackmonsdoubles:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Doubles environment.
-gen8balancedhackmonslittlecup:Pokemon can use anything that can be hacked in-game and is usable in local battles is allowed in a Little Cup environment.
-gen8caaamomons:Pokemon can use almost any ability and will be the typing of their first two moves.
-gen8camomonsbh:Pokemon can use anything that can be hacked in-game and is usable in local battles and will be the typing of their first two moves.
-gen8camomonsdoubles:Pokemon change type to match their first two moves in a Doubles environment.
-gen8camomonslittlecup:Pokemon change type to match their first two moves in a Little Cup environment.
-gen8staaabmons:Pokemon can use almost any ability and any move of their typing. Teams: https://www.smogon.com/forums/threads/staaabmons.3680144/#post-8787305
-gen8stabmonsdoubles:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Doubles environment.
-gen8stabmonslittlecup:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Little Cup environment.
-gen8stabmonsubers:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in an Ubers environment.
-gen8stabnmega:Pokemon can use any move of their typing and mega evolve with any stone to gain the respective boosts. 
+gen8aaadoubles:Pokemon can use almost any ability in a Doubles environment.
+gen8aaalc:Pokemon can use any ability, barring the few that are restricted to their natural users, in a Little Cup environment.
+gen8aaaubers:Pokemon can use almost any ability in an Ubers environment.
+gen8bhdoubles:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Doubles environment.
+gen8bhlc:Pokemon can use anything that can be hacked in-game and is usable in local battles is allowed in a Little Cup environment.
+gen8camoaaa:Pokemon can use almost any ability and will be the typing of their first two moves.
+gen8camobh:Pokemon can use anything that can be hacked in-game and is usable in local battles and will be the typing of their first two moves.
+gen8camodoubles:Pokemon change type to match their first two moves in a Doubles environment.
+gen8camolc:Pokemon change type to match their first two moves in a Little Cup environment.
+gen8staaab:Pokemon can use almost any ability and any move of their typing. Teams: https://www.smogon.com/forums/threads/staaabmons.3680144/#post-8787305
+gen8stabdoubles:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Doubles environment.
+gen8stablc:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Little Cup environment.
+gen8stabubers:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in an Ubers environment.
+gen8stabmnm:Pokemon can use any move of their typing and mega evolve with any stone to gain the respective boosts. 
 gen8tsaaa:Pokemon can use any ability, barring the few that are restricted to their natural users. Those below OU get all their stats, excluding HP, boosted. UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.
-gen8abcamo:Pokemon gain access to moves that share the same starting letter as their name or the name of a pre-evolution, and change type to match their first two moves.
-gen8nationaldexlosersgame:The first player to lose all of their Pokemon wins. Combination of [Gen 7] Suicide Cup and "The Loser's Game". Vanilla samples: https://pokepast.es/bef93965053a9b89 https://pokepast.es/44fb834b0b4e4348 https://pokepast.es/6e81a23e4dd33dd5 https://pokepast.es/2242790ff0c1adf4
+gen8abccamo:Pokemon gain access to moves that share the same starting letter as their name or the name of a pre-evolution, and change type to match their first two moves.
+gen8ndlg:The first player to lose all of their Pokemon wins. Combination of [Gen 7] Suicide Cup and "The Loser's Game". Vanilla samples: https://pokepast.es/bef93965053a9b89 https://pokepast.es/44fb834b0b4e4348 https://pokepast.es/6e81a23e4dd33dd5 https://pokepast.es/2242790ff0c1adf4
 mixandmegadreammatch:Gen 8 Pokemon and moves, Primal Orbs, Steel Aggronite and Dragon Ascent are all here in this dream crossover of Gen 7 and Gen 8 Mix and Mega! ([Gen 7] Mix and Mega is the base format.) Example team: https://pokepast.es/9de0f8e09f206a2f
-gen8pokeaaabilities:Pokémon have all of their released abilities simultaneously AND get one more ability of your choice, set in the builder.
+gen8pokeaaa:Pokémon have all of their released abilities simultaneously AND get one more ability of your choice, set in the builder.
