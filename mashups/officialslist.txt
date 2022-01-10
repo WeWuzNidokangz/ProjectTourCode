@@ -6,7 +6,7 @@ gen8bhlc
 gen8camoaaa
 gen8camodoubles
 gen8camolc
-gen8staaabmons
+gen8staaab
 gen8staaabbl
 gen8stabdoubles
 gen8stablc
