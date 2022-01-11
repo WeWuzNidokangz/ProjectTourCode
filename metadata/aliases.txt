@@ -13,3 +13,4 @@ gen7staaab: gen7staaabmons
 gen5staaab: gen5staaabmons
 gen8bdspstaaab: gen8bdspstaaabmons
 gen8abccamo: abcamo
+gen8hcchaosnightmarefrontier: nightmarefrontier
