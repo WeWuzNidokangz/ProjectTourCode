@@ -26,3 +26,4 @@ gen8aaadoublesbuiltin: aaadoubleslcotm
 gen5staaab: gen5staaabmons
 bdspstaaab: bdspstaaabmons
 gen8hcchaosnightmarefrontier: nightmarefrontier
+gen8randbatsmayhembuiltin: randbtasbuiltin
