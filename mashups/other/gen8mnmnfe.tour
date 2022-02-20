@@ -1,5 +1,5 @@
 /tour new [Gen 8] Mix and Mega, Elimination,,,[Gen 8] NFE Mix and Mega
-/tour rules -All Pokemon, +LC, +NFE, *Chansey, *Doublade, *Haunter, *Magneton, *Pawniard, *Porygon2, *Rhydon, *Scyther, *Sneasel, *Type: Null, -Arena Trap, -Shadow Tag
+/tour rules Not Fully Evolved, *Doublade, *Dragonair, *Haunter, *Magneton, *Pawniard, *Porygon2, *Rhydon, *Scyther, *Sneasel, *Type: Null, -Arena Trap, -Shadow Tag, -Chansey
 /tour autostart 7
 /tour autodq 4
 /wall **SAMPLE TEAMS: https://www.smogon.com/forums/threads/om-mashup-megathread.3657159/page-28#post-9117496
