@@ -11,7 +11,7 @@ gen8stabmonsdoubles: stabdoubles
 gen8stabmonslittlecup: stablc
 gen8stabmonsubers: stabubers
 gen8stabnmega: stabandmega, snm
-gen8randbatsmayhem: randbtasmayhem, randbtas
+gen8randbatsmayhem: mayhemclassic, randbtasclassic
 gen8nationaldexthelosersgame: natdexsuicidecup, natdexsc
 gen8spaaa: shaaaredpower, sharedpoweraaa, shaaared
 gen8inheritanceag: inhag
@@ -26,5 +26,5 @@ gen8aaadoublesbuiltin: aaadoubleslcotm
 gen5staaab: gen5staaabmons
 bdspstaaab: bdspstaaabmons
 gen8hcchaosnightmarefrontier: nightmarefrontier
-gen8randbatsmayhembuiltin: randbtasbuiltin
+gen8randbatsmayhembuiltin: randbtasbuiltin, randbtasmayhem, randbtas
 gen8ggaaa: gaaadlygift
