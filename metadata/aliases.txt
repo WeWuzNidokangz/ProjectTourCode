@@ -28,3 +28,4 @@ bdspstaaab: bdspstaaabmons
 gen8hcchaosnightmarefrontier: nightmarefrontier
 gen8randbatsmayhembuiltin: randbtasbuiltin, randbtasmayhem, randbtas
 gen8ggaaa: gaaadlygift
+gen8stabnmegasuspect: snmsus, susnm
