@@ -117,3 +117,4 @@ gen8hcchaosnightmarefrontier
 gen8metronomemayhem
 gen8mnmnfe
 gen8randbatsmayhembuiltin
+gen8pokemnm
