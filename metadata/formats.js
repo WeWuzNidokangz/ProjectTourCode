@@ -187,7 +187,7 @@
 		],
 		banlist: [
 			'Calyrex-Ice', 'Calyrex-Shadow', 'Cinderace', 'Dialga', 'Dragonite', 'Eternatus', 'Genesect', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Jirachi',
-			'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Magearna', 'Marshadow', 'Melmetal', 'Mew', 'Mewtwo', 'Mimikyu', 'Necrozma-Dawn-Wings',
+			'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Magearna', 'Marshadow', 'Melmetal', 'Mew', 'Mewtwo', 'Mimikyu', 'Necrozma', 'Necrozma-Dawn-Wings',
 			'Necrozma-Dusk-Mane', 'Palkia', 'Rayquaza', 'Reshiram', 'Sableye', 'Snorlax', 'Solgaleo', 'Victini', 'Xerneas', 'Yveltal', 'Zacian', 'Zacian-Crowned',
 			'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Moody', 'Power Construct', 'Bright Powder', 'Focus Band', 'Focus Sash', 'Lax Incense', 'Quick Claw', 'Perish Song',
 		],
@@ -387,7 +387,7 @@
 			'Calyrex-Ice', 'Calyrex-Shadow', 'Dialga', 'Eternatus', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Jirachi', 'Kyogre',
 			'Kyurem-White', 'Lugia', 'Lunala', 'Magearna', 'Marshadow', 'Melmetal', 'Mewtwo', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Palkia',
 			'Rayquaza', 'Reshiram', 'Solgaleo', 'Urshifu-Base', 'Xerneas', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned',
-			'Zekrom', 'Power Construct', 'Focus Sash', 'Ally Switch', 'Final Gambit', 'Perish Song', 'Swagger',
+			'Zekrom', 'Moody', 'Power Construct', 'Focus Sash', 'Ally Switch', 'Final Gambit', 'Perish Song', 'Swagger',
 		],
 	},
 	{
@@ -462,7 +462,7 @@
 		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Species Clause', 'Dynamax Clause', 'Sleep Clause Mod'],
 		banlist: [
 			'Alakazam-Mega', 'Arceus', 'Blastoise-Mega', 'Blaziken-Mega', 'Calyrex-Ice', 'Calyrex-Shadow', 'Cinderace', 'Darkrai',
-			'Darmanitan-Galar', 'Deoxys-Attack', 'Deoxys-Base', 'Deoxys-Speed', 'Dialga', 'Dracovish', 'Eternatus',
+			'Darmanitan-Galar', 'Deoxys-Attack', 'Deoxys-Base', 'Deoxys-Speed', 'Dialga', 'Dracovish', 'Dragapult', 'Eternatus',
 			'Genesect', 'Gengar-Mega', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kangaskhan-Mega', 'Kyogre', 'Kyurem-Black',
 			'Kyurem-White', 'Landorus-Base', 'Lucario-Mega', 'Lugia', 'Lunala', 'Magearna', 'Marshadow', 'Metagross-Mega', 'Mewtwo',
 			'Naganadel', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Palkia', 'Pheromosa', 'Rayquaza', 'Reshiram',
@@ -492,16 +492,14 @@
 			'Drizzle', 'Drought',
 			// Slowbronite is banned so it doesn't validate on Galarian Slowbro
 			'Slowbronite',
-			// NDOU suspect
-			'Dragapult',
 		],
 		// Used to distinguish UU from below UU in the client
 		restricted: [
-			'Aegislash', 'Alakazam-Base', 'Altaria-Mega', 'Amoonguss', 'Azumarill', 'Beedrill-Mega', 'Blaziken-Base', 'Breloom', 'Celesteela',
-			'Chandelure', 'Donphan', 'Dracozolt', 'Dragonite', 'Feraligatr', 'Gastrodon', 'Hatterene', 'Hippowdon', 'Infernape', 'Keldeo',
-			'Krookodile', 'Mamoswine', 'Mandibuzz', 'Manectric-Mega', 'Melmetal', 'Mienshao', 'Moltres-Base', 'Nidoking', 'Nidoqueen', 'Nihilego',
-			'Quagsire', 'Regieleki', 'Ribombee', 'Rotom-Heat', 'Rotom-Wash', 'Salamence', 'Scizor', 'Skarmory', 'Slowking-Base', 'Swampert-Base',
-			'Talonflame', 'Tangrowth', 'Tornadus-Base', 'Umbreon', 'Urshifu-Rapid-Strike',
+			'Aegislash', 'Altaria-Mega', 'Amoonguss', 'Azumarill', 'Beedrill-Mega', 'Breloom', 'Celesteela', 'Chandelure', 'Donphan', 'Dracozolt',
+			'Dragonite', 'Feraligatr', 'Gastrodon', 'Hatterene', 'Hippowdon', 'Infernape', 'Keldeo', 'Krookodile', 'Mamoswine', 'Mandibuzz',
+			'Manectric-Mega', 'Melmetal', 'Mienshao', 'Moltres-Base', 'Nidoking', 'Nidoqueen', 'Nihilego', 'Quagsire', 'Regieleki', 'Ribombee',
+			'Rotom-Heat', 'Rotom-Wash', 'Salamence', 'Scizor', 'Skarmory', 'Slowking-Base', 'Swampert-Base', 'Talonflame', 'Tangrowth', 'Tornadus-Base',
+			'Umbreon', 'Urshifu-Rapid-Strike',
 		],
 	},
 	{
@@ -689,7 +687,7 @@
 
 		mod: 'gen8',
 		// searchShow: false,
-		ruleset: ['Standard', 'Overflow Stat Mod', 'Dynamax Clause'],
+		ruleset: ['Standard', 'Overflow Stat Mod', 'Dynamax Clause', '2 Ability Clause'],
 		banlist: ['Corsola-Galar', 'Sneasel', 'Type: Null', 'Arena Trap', 'Ice Scales', 'Moody', 'King\'s Rock', 'Baton Pass'],
 		restricted: ['Chansey', 'Lunala', 'Shedinja', 'Solgaleo', 'Gorilla Tactics', 'Huge Power', 'Pure Power', 'Shadow Tag'],
 		onValidateTeam(team) {
@@ -754,6 +752,12 @@
 				return [
 					`${species.name} cannot cross evolve into ${crossSpecies.name} because they are not consecutive evolution stages.`,
 				];
+			}
+			const item = this.dex.items.get(set.item);
+			if (_optionalChain([item, 'access', _12 => _12.itemUser, 'optionalAccess', _13 => _13.length])) {
+				if (!item.itemUser.includes(crossSpecies.name) || crossSpecies.name !== species.name) {
+					return [`${species.name} cannot use ${item.name} because it is cross evolved into ${crossSpecies.name}.`];
+				}
 			}
 			const ability = this.dex.abilities.get(set.ability);
 			if (!this.ruleTable.isRestricted(`ability:${ability.id}`) || Object.values(species.abilities).includes(ability.name)) {
@@ -896,12 +900,12 @@
 		mod: 'mixandmega',
 		ruleset: ['Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Overflow Stat Mod', 'Dynamax Clause', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
-			'Calyrex-Shadow', 'Kyogre', 'Zacian',
+			'Calyrex-Shadow', 'Eternatus', 'Kyogre', 'Zacian',
 			'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite', 'Pidgeotite',
 			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify',
 		],
 		restricted: [
-			'Calyrex-Ice', 'Dialga', 'Eternatus', 'Gengar', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyurem-Black', 'Kyurem-White',
+			'Calyrex-Ice', 'Dialga', 'Gengar', 'Giratina', 'Groudon', 'Ho-Oh', 'Kyurem-Black', 'Kyurem-White',
 			'Lugia', 'Lunala', 'Marshadow', 'Melmetal', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane',
 			'Palkia', 'Pheromosa', 'Rayquaza', 'Regigigas', 'Reshiram', 'Urshifu', 'Urshifu-Rapid-Strike', 'Xerneas',
 			'Yveltal', 'Zekrom', 'Zygarde-Complete',
@@ -996,9 +1000,10 @@
 		mod: 'gen8',
 		ruleset: ['Standard', 'Dynamax Clause', 'Sleep Moves Clause'],
 		banlist: [
-			'Blissey', 'Calyrex-Shadow', 'Chansey', 'Dragapult', 'Hawlucha', 'Marowak-Alola', 'Melmetal', 'Pikachu', 'Toxapex',
-			'Xerneas', 'Zacian', 'Zacian-Crowned', 'Uber > 1', 'AG ++ Uber > 1', 'Arena Trap', 'Huge Power', 'Moody', 'Pure Power',
-			'Shadow Tag', 'Swift Swim', 'Bright Powder', 'Focus Band', 'King\'s Rock', 'Lax Incense', 'Quick Claw', 'Baton Pass',
+			'Blissey', 'Calyrex-Shadow', 'Chansey', 'Dragapult', 'Eternatus', 'Hawlucha', 'Marowak-Alola', 'Melmetal', 'Pikachu',
+			'Toxapex', 'Xerneas', 'Zacian', 'Zacian-Crowned', 'Uber > 1', 'AG ++ Uber > 1', 'Arena Trap', 'Huge Power', 'Moody',
+			'Pure Power', 'Shadow Tag', 'Swift Swim', 'Bright Powder', 'Focus Band', 'King\'s Rock', 'Lax Incense', 'Quick Claw',
+			'Baton Pass',
 		],
 		onValidateTeam(team) {
 			const gods = new Set();
@@ -1015,7 +1020,7 @@
 		},
 		onModifySpeciesPriority: 3,
 		onModifySpecies(species, target, source) {
-			if (source || !_optionalChain([target, 'optionalAccess', _12 => _12.side])) return;
+			if (source || !_optionalChain([target, 'optionalAccess', _14 => _14.side])) return;
 			const god = target.side.team.find(set => {
 				let godSpecies = this.dex.species.get(set.species);
 				const validator = this.dex.formats.getRuleTable(this.dex.formats.get(`gen${this.gen}ou`));
@@ -1128,7 +1133,7 @@
 
 		mod: 'gen8bdsp',
 		ruleset: ['[Gen 8 BDSP] RU'],
-		banlist: ['RU', 'NUBL'],
+		banlist: ['RU', 'NUBL', 'Damp Rock', 'Heat Rock'],
 	},
 	{
 		name: "[Gen 8 BDSP] LC",
@@ -1138,7 +1143,7 @@
 
 		mod: 'gen8bdsp',
 		ruleset: ['Little Cup', 'Standard'],
-		banlist: ['Gligar', 'Meditite', 'Misdreavus', 'Murkrow', 'Scyther', 'Sneasel', 'Tangela', 'Vulpix', 'Yanma', 'Moody', 'Baton Pass'],
+		banlist: ['Gligar', 'Meditite', 'Misdreavus', 'Murkrow', 'Scyther', 'Sneasel', 'Tangela', 'Vulpix', 'Yanma', 'Moody', 'Baton Pass', 'Sticky Web'],
 	},
 	{
 		name: "[Gen 8 BDSP] Monotype",
@@ -1149,7 +1154,7 @@
 		mod: 'gen8bdsp',
 		ruleset: ['Standard', 'Same Type Clause'],
 		banlist: [
-			'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kyogre', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza',
+			'Arceus', 'Dialga', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kyogre', 'Lugia', 'Mewtwo', 'Palkia', 'Rayquaza',
 			'Arena Trap', 'Moody', 'Shadow Tag', 'Damp Rock', 'King\'s Rock', 'Razor Fang', 'Baton Pass',
 		],
 	},
@@ -1220,10 +1225,10 @@
 		ruleset: ['Standard', 'Dynamax Clause', 'Camomons Mod'],
 		banlist: [
 			'Calyrex-Ice', 'Calyrex-Shadow', 'Darmanitan-Galar', 'Dialga', 'Dracovish', 'Dragonite', 'Eternatus', 'Genesect', 'Giratina', 'Giratina-Origin',
-			'Groudon', 'Ho-Oh', 'Hydreigon', 'Kartana', 'Kyogre', 'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Landorus-Base', 'Latias', 'Latios', 'Lugia',
-			'Lunala', 'Marshadow', 'Mew', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Palkia', 'Pheromosa', 'Rayquaza', 'Reshiram',
-			'Reuniclus', 'Shedinja', 'Slowking-Galar', 'Solgaleo', 'Spectrier', 'Tornadus-Therian', 'Volcarona', 'Xerneas', 'Yveltal', 'Zacian', 'Zacian-Crowned',
-			'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Zeraora', 'Zygarde-Base', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass',
+			'Groudon', 'Ho-Oh', 'Hydreigon', 'Kartana', 'Kyogre', 'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Landorus-Base', 'Lugia', 'Lunala', 'Marshadow',
+			'Mew', 'Mewtwo', 'Naganadel', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Palkia', 'Pheromosa', 'Rayquaza', 'Reshiram', 'Shedinja', 'Solgaleo',
+			'Spectrier', 'Tornadus-Therian', 'Volcarona', 'Xerneas', 'Yveltal', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Zeraora',
+			'Zygarde-Base', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Calm Mind',
 		],
 	},
 	{
@@ -1367,7 +1372,7 @@
 			// Donor Clause
 			const evoFamilyLists = [];
 			for (const set of team) {
-				const abilitySources = _optionalChain([teamHas, 'access', _13 => _13.abilitySources, 'optionalAccess', _14 => _14[this.dex.toID(set.species)]]);
+				const abilitySources = _optionalChain([teamHas, 'access', _15 => _15.abilitySources, 'optionalAccess', _16 => _16[this.dex.toID(set.species)]]);
 				if (!abilitySources) continue;
 				let format = this.format;
 				if (!format.getEvoFamily) format = this.dex.formats.get('gen8inheritance');
@@ -1487,7 +1492,7 @@
 			const itemStr = set.item;
 			set.item = '';
 			const problem = this.validateSet(set, teamHas);
-			if (_optionalChain([problem, 'optionalAccess', _15 => _15.length])) problems.push(...problem);
+			if (_optionalChain([problem, 'optionalAccess', _17 => _17.length])) problems.push(...problem);
 			set.item = itemStr;
 			return problems;
 		},
@@ -2091,7 +2096,7 @@
 			}
 			// Add the mon's status effect to it as a volatile.
 			const status = this.dex.conditions.get(name);
-			if (_optionalChain([status, 'optionalAccess', _16 => _16.exists])) {
+			if (_optionalChain([status, 'optionalAccess', _18 => _18.exists])) {
 				pokemon.addVolatile(name, pokemon);
 			}
 			if (pokemon.m.hasBounty) this.add('-start', pokemon, 'bounty', '[silent]');
@@ -2100,7 +2105,7 @@
 			if (pokemon.m.nowShiny) this.add('replace', pokemon, details);
 		},
 		onFaint(target, source, effect) {
-			if (_optionalChain([effect, 'optionalAccess', _17 => _17.effectType]) !== 'Move') return;
+			if (_optionalChain([effect, 'optionalAccess', _19 => _19.effectType]) !== 'Move') return;
 			if (!target.m.hasBounty) return;
 			if (source) {
 				this.add('-message', `${source.name} received the bounty!`);
@@ -2508,7 +2513,7 @@
 			const species = this.dex.species.get(set.species);
 			const item = this.dex.items.get(set.item);
 			if (!item.megaEvolves && !item.onPrimal && item.id !== 'ultranecroziumz') return;
-			if (species.baseSpecies === item.megaEvolves || (item.onPrimal && _optionalChain([item, 'access', _18 => _18.itemUser, 'optionalAccess', _19 => _19.includes, 'call', _20 => _20(species.baseSpecies)])) ||
+			if (species.baseSpecies === item.megaEvolves || (item.onPrimal && _optionalChain([item, 'access', _20 => _20.itemUser, 'optionalAccess', _21 => _21.includes, 'call', _22 => _22(species.baseSpecies)])) ||
 				(species.name.startsWith('Necrozma-') && item.id === 'ultranecroziumz')) {
 				return;
 			}
