@@ -20,4 +20,3 @@ gen8staaabpredlc
 gen8staaabubers
 gen5staaab
 gen7staaab
-gen8stabnmegasuspect
