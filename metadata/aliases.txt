@@ -25,7 +25,7 @@ gen5staaab: gen5staaabmons
 gen8aaadoublesbuiltin: aaadoubleslcotm
 gen5staaab: gen5staaabmons
 bdspstaaab: bdspstaaabmons
-gen8hcchaosnightmarefrontier: nightmarefrontier
+gen8hcchaosnightmarefrontier: nightmarefrontier, hccnm
 gen8randbatsmayhembuiltin: randbtasbuiltin, randbtasmayhem, randbtas
 gen8ggaaa: gaaadlygift
 gen8stabnmegasuspect: snmsus, susnm, susnmega
