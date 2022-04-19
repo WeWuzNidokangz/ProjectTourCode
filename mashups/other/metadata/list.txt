@@ -82,6 +82,7 @@ gen8tmubers
 gen8tmstab
 gen8tsstab
 gen8ultramix
+gen8ultramixsuspect
 gen8ndstab
 gen8skaaatch
 gen8sketchag
