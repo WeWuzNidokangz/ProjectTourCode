@@ -1,4 +1,4 @@
 /tour new [Gen 8] STABmons, Elimination,,,[Gen 8] Tier Shift STABmons 
-/tour rules Tier Shift Mod, -Damp Rock, -Eviolite, -Heat Rock
+/tour rules Tier Shift Mod, -Damp Rock, -Eviolite, -Heat Rock, +Aegislash
 /tour autostart 7
 /tour autodq 4

@@ -1,4 +1,4 @@
 /tour new [Gen 8] STABmons, Elimination,,,[Gen 8] STABmons Camomons
-/tour rules Camomons Mod, -Kyurem, -Shedinja, -Volcarona, +Dragonite, +Magearna, +Spectrier, -Calm Mind
+/tour rules Camomons Mod, -Kyurem, -Shedinja, -Volcarona, +Aegislash, +Dragonite, +Magearna, +Spectrier, -Calm Mind
 /tour autostart 10
 /tour autodq 6
