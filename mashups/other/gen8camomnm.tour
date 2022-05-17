@@ -1,5 +1,5 @@
-/tour new [Gen 8] Mix and Mega, Elimination,,,[Gen 8] Camo Mix and Mega
-/tour rules Camomons Mod, -Shedinja, *Zygarde-Base
+/tour new [Gen 8] Mix and Mega, Elimination,,,[Gen 8] Camomons Mix and Mega
+/tour rules Camomons Mod, -Shedinja, +Eternatus, +Urshifu-Rapid-Strike, *Eternatus, *Mew, *Zygarde-Base
 /tour autostart 10
 /tour autodq 6
 /wall Camomons overrides Mega Stone types changes.
