@@ -32,3 +32,5 @@ gen8stabnmegasuspect: snmsus, susnm, susnmega
 gen8mnmnfe: nfemnm
 gen8mnmlc: lcmnm
 gen8camomonsbh: camobh, bhcamo
+gen8camosketchmons: camosketch
+gen8pokeaaabuiltin: pokeaaalcotm
