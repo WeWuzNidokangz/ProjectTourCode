@@ -29,3 +29,6 @@ gen8hcchaosnightmarefrontier: nightmarefrontier, hccnm
 gen8randbatsmayhembuiltin: randbtasbuiltin, randbtasmayhem, randbtas
 gen8ggaaa: gaaadlygift
 gen8stabnmegasuspect: snmsus, susnm, susnmega
+gen8mnmnfe: nfemnm
+gen8mnmlc: lcmnm
+gen8camomonsbh: camobh, bhcamo
