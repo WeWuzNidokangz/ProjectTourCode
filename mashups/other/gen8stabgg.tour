@@ -1,4 +1,4 @@
 /tour new [Gen 8] Godly Gift, Elimination,,,[Gen 8] STABmons Godly Gift
-/tour rules STABmons Move Legality, *Acupressure, *Astral Barrage, *Belly Drum, *Bolt Beak, *Double Iron Bash, *Electrify, *Extreme Speed, *Fishious Rend, *Geomancy, *Lovely Kiss, *Shell Smash, *Shift Gear, *Spore, *Thousand Arrows, *V-create, *Wicked Blow
+/tour rules STABmons Move Legality, *Acupressure, *Astral Barrage, *Belly Drum, *Bolt Beak, *Clangorous Soul, *Double Iron Bash, *Electrify, *Extreme Speed, *Fishious Rend, *Geomancy, *Glacial Lance, *Oblivion Wing, *Precipice Blades, *Shell Smash, *Shift Gear, *Thousand Arrows, *Thunderous Kick, *V-create, *Wicked Blow, -Aegislash, -Blacephalon, -Dracovish, -Dragonite, -Garchomp, -Kartana, -Landorus-Therian, -Porygon-Z, -Silvally, -Tapu Bulu, -Tapu Koko, -Tapu Lele, -Thundurus-Base, -Zapdos-Galar, -Magnet Pull
 /tour autostart 10
 /tour autodq 6
