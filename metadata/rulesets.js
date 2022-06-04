@@ -440,7 +440,8 @@
 			this.add('clearpoke');
 			for (const pokemon of this.getAllPokemon()) {
 				const details = pokemon.details.replace(', shiny', '')
-					.replace(/(Arceus|Gourgeist|Pumpkaboo|Xerneas|Silvally|Zacian|Zamazenta|Urshifu)(-[a-zA-Z?-]+)?/g, '$1-*');
+					.replace(/(Arceus|Gourgeist|Pumpkaboo|Xerneas|Silvally|Urshifu)(-[a-zA-Z?-]+)?/g, '$1-*')
+					.replace(/(Zacian|Zamazenta)(?!-Crowned)/g, '$1-*'); // Hacked-in Crowned formes will be revealed
 				this.add('poke', pokemon.side.id, details, '');
 			}
 			this.makeRequest('teampreview');
@@ -1140,11 +1141,7 @@
 									if (prevo.evos.includes(formeName)) continue;
 								}
 								const forme = dex.species.get(formeName);
-								if (
-									forme.changesFrom === originalForme.name && !forme.battleOnly &&
-									// Temporary workaround
-									forme.forme !== 'Crowned'
-								) {
+								if (forme.changesFrom === originalForme.name && !forme.battleOnly) {
 									speciesTypes.push(...forme.types);
 								}
 							}
