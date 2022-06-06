@@ -119,3 +119,4 @@ gen8mnmnfe
 gen8randbatsmayhembuiltin
 gen8pokemnm
 gen8camomnm
+gen8foxonlyfd
