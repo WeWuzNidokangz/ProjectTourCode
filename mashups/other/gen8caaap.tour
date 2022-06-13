@@ -1,4 +1,4 @@
-/tour new [Gen 8] CAP, Elimination,,,[Gen 8] CAAAP
-/tour rules 2 Ability Clause, !Obtainable Abilities, -Arena Trap, -Contrary, -Fluffy, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Moody, -Neutralizing Gas, -Parental Bond, -Poison Heal, -Protean, -Pure Power, -Quick Draw, -Sand Veil, -Shadow Tag, -Simple, -Snow Cloak, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Archeops, -Blacephalon, -Buzzwole, -Cawmodore, -Dragapult, -Dragonite, -Gengar, -Kartana, -Keldeo, -Melmetal, -Noivern, -Regigigas, -Shedinja, -Urshifu-Rapid-Strike, -Victini, -Weavile, -Zeraora, +Cinderace, +Darmanitan-Galar, +Genesect, +Landorus, +Zamazenta-Crowned
-/tour autostart 10
-/tour autodq 6
+/tour new [Gen 8] Almost Any Ability, Elimination,,,[Gen 8] CAAAP
+/tour rules +CAP, -Cawmodore, -Chromera, -Necturna, -Crucibellite
+/tour autostart 7
+/tour autodq 4
