@@ -30,3 +30,4 @@ gen8randbatsmayhembuiltin: randbtasbuiltin, randbtasmayhem, randbtas
 gen8ggaaa: gaaadlygift
 gen8camosketchmons: camosketch
 gen8pokeaaabuiltin: pokeaaalcotm
+gen8stabnmegasuspect: susnmega, snmsus, susnm
