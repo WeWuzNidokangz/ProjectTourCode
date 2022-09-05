@@ -127,3 +127,4 @@ gen8monomnm
 gen8monostab
 gen8csgg
 gen8picaaa
+gen8pokeabccs
