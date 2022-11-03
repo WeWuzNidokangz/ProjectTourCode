@@ -110,7 +110,7 @@ gen8sketchag
 gen8sketchdoubles
 gen8camosketch
 gen8sketchts
-gen8ggswap
+gen8ggns
 gen8sketch1v1
 gen8ggsketch
 gen8phlg
@@ -152,4 +152,4 @@ gen8picaaa
 gen8pokeabccs
 gen8distortionworld
 gen8ungodlygift
-gen8natdexchimera1v1
+gen8ndchimera1v1
