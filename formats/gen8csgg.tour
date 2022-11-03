@@ -1,0 +1,4 @@
+/tour create [Gen 8] Godly Gift, Elimination,,,[Gen 8] Category Swap Godly Gift
+/tour rules Category Swap Mod, +Calyrex-Shadow, +Crawdaunt, +Eternatus, +Hawlucha, +Marowak-Alola, +Melmetal, +Xerneas, +Zacian, -Draco Meteor, -Overheat
+/tour autostart 10
+/tour autodq 6

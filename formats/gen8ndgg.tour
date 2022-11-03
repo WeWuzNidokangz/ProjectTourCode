@@ -1,4 +1,4 @@
 /tour new [Gen 8] Godly Gift, Elimination,,,[Gen 8] Godly Gift National Dex
-/tour rules Standard NatDex, -AG ++ Uber ++ Alakazam-Mega ++ Arceus ++ Blastoise-Mega ++ Blaziken-Mega ++ Darkrai ++ Deoxys-Attack ++ Deoxys-Base ++ Deoxys-Speed ++ Dragapult ++ Gengar-Mega ++ Giratina ++ Kangaskhan-Mega ++ Lucario-Mega ++ Metagross-Mega ++ Salamence-Mega ++ Shaymin-Sky ++ Tornadus-Therian ++ Power Construct > 1, -Rayquaza-Mega, Mega Rayquaza Clause
+/tour rules Standard NatDex, +Dragapult, -Deoxys-Attack, -Gengar-Mega, -Mawile-Mega, -Medicham-Mega, -Sableye-Mega
 /tour autostart 10
 /tour autodq 6

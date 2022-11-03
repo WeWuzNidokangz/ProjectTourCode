@@ -1,4 +1,5 @@
 /tour new [Gen 8] Mix and Mega, Elimination,,,[Gen 8] TS Camo Mix and Mega
-/tour rules Tier Shift Mod, [Gen 8] Camomons, -Archeops, -Cresselia, -Damp Rock, -Eviolite, -Heat Rock, +Darmanitan-Galar, +Dracovish, +Dragonite, +Genesect, +Hydreigon, +Kartana, +Kyurem, +Landorus-Base, +Latias, +Latios, +Mew, +Naganadel, +Pheromosa, +Reuniclus, +Slowking-Galar, +Solgaleo, +Spectrier, +Tornadus-Therian, +Zamazenta, +Zamazenta-Crowned, +Zeraora, +Zygarde-Base, +Arena Trap, +Power Construct
+/tour rules Tier Shift Mod, Camomons Mod, -Archeops, -Cresselia, -Damp Rock, -Eviolite, -Heat Rock, +Naganadel, +Pheromosa, +Solgaleo
 /tour autostart 10
 /tour autodq 6
+/wall Camomons overrides Mega Stone types changes.
