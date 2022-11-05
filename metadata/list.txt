@@ -141,7 +141,7 @@ gen8stabubers
 gen8tmstab
 gen8tmubers
 gen8tsaaa
-gen8tsaaabc
+gen8tsaaaabc
 gen8tsabc
 gen8tsbh
 gen8tsinh
