@@ -1,5 +1,3 @@
-gen8camoaaa: caaamo
-gen8staaab: staaabmons
 gen8stabmnm: stabnmega, stabandmega, snm
 gen8randbtas: randbatsmayhem, randbtasmayhem, randbtas
 gen8ndlg: ndsuicidecup, ndsc
@@ -9,9 +7,6 @@ gen8stabgg: godslayer
 gen8randbtassuddendeath: randbtassd, randbtasfirstblood
 gen8aaaabc: aaabc, aaalphabetcup
 gen8sketchubers: michelangelo, scoobers, skubers, uberkek
-gen7staaab: gen7staaabmons
-gen5staaab: gen5staaabmons
-gen8bdspstaaab: gen8bdspstaaabmons
 gen8abccamo: abcamo
 gen8hcchaosnightmarefrontier: nightmarefrontier
 gen8randbtasbuiltin: randbtasmayhem, randbtas

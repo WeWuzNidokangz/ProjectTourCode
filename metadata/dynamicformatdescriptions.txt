@@ -7,7 +7,7 @@ gen8camoaaa:Pokemon can use almost any ability and will be the typing of their f
 gen8camobh:Pokemon can use anything that can be hacked in-game and is usable in local battles and will be the typing of their first two moves.
 gen8camodoubles:Pokemon change type to match their first two moves in a Doubles environment.
 gen8camolc:Pokemon change type to match their first two moves in a Little Cup environment.
-gen8staaab:Pokemon can use almost any ability and any move of their typing. Teams: https://www.smogon.com/forums/threads/staaabmons.3680144/#post-8787305
+gen8stabaaa:Pokemon can use almost any ability and any move of their typing. Teams: https://www.smogon.com/forums/threads/staaabmons.3680144/#post-8787305
 gen8stabdoubles:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Doubles environment.
 gen8stablc:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Little Cup environment.
 gen8stabubers:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in an Ubers environment.
