@@ -12,6 +12,6 @@ gen8hcchaosnightmarefrontier: nightmarefrontier
 gen8randbtasbuiltin: randbtasmayhem, randbtas
 gen8ggaaa: gaaadlygift
 gen8pokeaaabuiltin: pokeaaalcotm
-gen8stabmnm: susnmega, snmsus, susnm
+gen8stabmnmsuspect: susnmega, snmsus, susnm
 gen8csgg: csgo, counterstrike, globaloffensive
 gen8tsaaa: ricemanschoice
