@@ -1,0 +1,4 @@
+/tour new [Gen 8] National Dex AG, Elimination,,,[Gen 8] National Dex MegAAAmons
+/tour rules !Obtainable Formes, !Obtainable Abilities, 2 Ability Clause, Dynamax Clause, OHKO Clause, Evasion Items Clause, Evasion Moves Clause, Species Clause, -Calyrex-Shadow, -Cramorant-Gorging, -Marshadow, -Rayquaza-Mega, -Shedinja, -Urshifu-Single-Strike, -Zacian-Crowned, -Arena Trap, -Comatose, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Imposter, -Innards Out, -Intrepid Sword, -Libero, -Magic Bounce, -Magnet Pull, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Unburden, -Water Bubble, -Wonder Guard, -King's Rock, -Ultranecrozium Z, -Baton Pass
+/tour autostart 10
+/tour autodq 6
