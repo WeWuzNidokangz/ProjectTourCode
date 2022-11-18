@@ -1,35 +1,17 @@
-gen8almostanyabilitydoubles: aaadoubles
-gen8almostanyabilitylittlecup: aaalc
-gen8almostanyabilityubers: aaaubers
-gen8balancedhackmonsdoubles: bhdoubles
-gen8balancedhackmonslittlecup: bhlc
-gen8caaamomons: caaamo
-gen8camomonsdoubles: camodoubles
-gen8camomonslittlecup: camolc
-gen8staaabmons: staaab
-gen8stabmonsdoubles: stabdoubles
-gen8stabmonslittlecup: stablc
-gen8stabmonsubers: stabubers
-gen8stabnmega: stabandmega, snm
-gen8randbatsmayhem: mayhemclassic, randbtasclassic
-gen8nationaldexthelosersgame: natdexsuicidecup, natdexsc
+gen8stabmnm: stabnmega, stabandmega, snm
+gen8randbtas: randbatsmayhem, randbtasmayhem, randbtas
+gen8ndlg: ndsuicidecup, ndsc
 gen8spaaa: shaaaredpower, sharedpoweraaa, shaaared
-gen8inheritanceag: inhag
-gen8pokeaaabilities: pokeaaa
+gen8pokeaaa: pokeaaabilities
 gen8stabgg: godslayer
-gen8randbatsmayhemsuddendeath: randbtassuddendeath, randbtassd, randbtasfirstblood
-gen8aaabc: aaalphabetcup
-gen8sketchmonsubers: sketchubers, michelangelo, scoobers, skubers, uberkek
-gen7staaab: gen7staaabmons
-gen5staaab: gen5staaabmons
-gen8aaadoublesbuiltin: aaadoubleslcotm
-gen5staaab: gen5staaabmons
-bdspstaaab: bdspstaaabmons
-gen8hcchaosnightmarefrontier: nightmarefrontier, hccnm
-gen8randbatsmayhembuiltin: randbtasbuiltin, randbtasmayhem, randbtas
+gen8randbtassuddendeath: randbtassd, randbtasfirstblood
+gen8aaaabc: aaabc, aaalphabetcup
+gen8sketchubers: michelangelo, scoobers, skubers, uberkek
+gen8abccamo: abcamo
+gen8hcchaosnightmarefrontier: nightmarefrontier
+gen8randbtasbuiltin: randbtasmayhem, randbtas
 gen8ggaaa: gaaadlygift
-gen8camosketchmons: camosketch
 gen8pokeaaabuiltin: pokeaaalcotm
-gen8stabnmegasuspect: susnmega, snmsus, susnm
-gen8csgg: csgo, counterstrike,globaloffensive
+gen8stabmnmsuspect: susnmega, snmsus, susnm
+gen8csgg: csgo, counterstrike, globaloffensive
 gen8tsaaa: ricemanschoice
