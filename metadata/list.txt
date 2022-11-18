@@ -52,6 +52,7 @@ gen8dppstabaaa
 gen8flippedaaa
 gen8foxonlyfd
 gen8ggaaa
+gen8ggmnm
 gen8ggns
 gen8ggph
 gen8ggsketch
@@ -83,6 +84,7 @@ gen8ndchimera1v1
 gen8ndgg
 gen8ndlg
 gen8ndmegamons
+gen8ndmegamonsaaa
 gen8ndstab
 gen8ndstabaaa
 gen8ndstabaaaag
