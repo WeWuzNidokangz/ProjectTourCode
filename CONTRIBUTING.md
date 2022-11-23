@@ -46,7 +46,7 @@ Good example:-
 > Added restrictions - Transform, No Retreat, Glacial Lance, Oblivion
 > Wing
 > 
-> Added rules - 2 Ability Clause
+> Added rules - Ability Clause = 2
 > 
 > Removed rules - Obtainable Abilities
 
