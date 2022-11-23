@@ -31,7 +31,7 @@
 
 		mod: 'gen9',
 		ruleset: ['Little Cup', 'Standard'],
-		banlist: ['Scyther', 'Sneasel', 'Tandemaus', 'Baton Pass'],
+		banlist: ['Dunsparce', 'Meditite', 'Murkrow', 'Scyther', 'Sneasel', 'Tandemaus', 'Moody', 'Baton Pass'],
 	},
 	{
 		name: "[Gen 9] Monotype",
@@ -41,7 +41,7 @@
 
 		mod: 'gen9',
 		ruleset: ['Same Type Clause', 'Enforce Same Tera Type', 'Standard'],
-		banlist: ['Koraidon', 'Miraidon'],
+		banlist: ['Koraidon', 'Miraidon', 'Moody', 'Shadow Tag', 'Damp Rock', 'Focus Band', 'King\'s Rock', 'Quick Claw', 'Baton Pass'],
 	},
 	{
 		name: "[Gen 9] 1v1",
@@ -52,10 +52,10 @@
 
 		mod: 'gen9',
 		ruleset: [
-			'Picked Team Size = 1', 'Max Team Size = 3', 'Min Source Gen = 9',
-			'Obtainable', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Items Clause', 'Accuracy Moves Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
+			'Picked Team Size = 1', 'Max Team Size = 3',
+			'Standard', 'Terastal Clause', 'Accuracy Moves Clause', '!Sleep Clause Mod',
 		],
-		banlist: ['Koraidon', 'Miraidon', 'Moody', 'Focus Band', 'Focus Sash', 'Quick Claw', 'Acupressure', 'Hypnosis', 'Perish Song', 'Sing'],
+		banlist: ['Dragonite', 'Koraidon', 'Miraidon', 'Moody', 'Focus Band', 'Focus Sash', 'King\'s Rock', 'Quick Claw', 'Acupressure', 'Hypnosis', 'Perish Song', 'Sing'],
 	},
 	{
 		name: "[Gen 9] Anything Goes",
@@ -111,9 +111,9 @@
 		gameType: 'doubles',
 		ruleset: [
 			'Picked Team Size = 2', 'Max Team Size = 4',
-			'Standard Doubles', 'Accuracy Moves Clause', 'Terastal Clause', 'Sleep Clause Mod',
+			'Standard Doubles', 'Accuracy Moves Clause', 'Terastal Clause', 'Sleep Clause Mod', 'Evasion Items Clause',
 		],
-		banlist: ['Koraidon', 'Miraidon', 'Focus Sash', 'Ally Switch', 'Perish Song', 'Swagger'],
+		banlist: ['Koraidon', 'Miraidon', 'Commander', 'Focus Sash', 'King\'s Rock', 'Ally Switch', 'Final Gambit', 'Perish Song', 'Swagger'],
 	},
 	{
 		name: "[Gen 9] Doubles Custom Game",
@@ -164,7 +164,7 @@
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3672423/">National Dex AG</a>`,
 		],
 
-		mod: 'gen8',
+		mod: 'gen9',
 		ruleset: ['Standard NatDex'],
 	},
 	{
@@ -180,6 +180,16 @@
 		banlist: ['ND OU', 'ND UUBL', 'Drizzle', 'Drought', 'Light Clay', 'Slowbronite'],
 		unbanlist: ['Hydreigon'],
 	},
+	{
+		name: "[Gen 8] National Dex AG",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3672423/">National Dex AG</a>`,
+		],
+
+		mod: 'gen8',
+		searchShow: false,
+		ruleset: ['Standard NatDex'],
+	},
 
 	// Pet Mods
 	///////////////////////////////////////////////////////////////////
@@ -194,7 +204,7 @@
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3658587/">National Dex Balanced Hackmons</a>`,
 		],
 		mod: 'gen8',
-		ruleset: ['-Nonexistent', 'Standard NatDex', 'Forme Clause', 'Sleep Moves Clause', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Dynamax Clause', 'CFZ Clause', '!Obtainable'],
+		ruleset: ['-Nonexistent', 'Standard NatDex', 'Forme Clause', 'Sleep Moves Clause', 'Ability Clause = 2', 'OHKO Clause', 'Evasion Moves Clause', 'Dynamax Clause', 'CFZ Clause', '!Obtainable'],
 		banlist: [
 			// Pokemon
 			'Eternatus-Eternamax', 'Groudon-Primal', 'Rayquaza-Mega', 'Shedinja', 'Cramorant-Gorging', 'Calyrex-Shadow', 'Darmanitan-Galar-Zen',
@@ -287,7 +297,7 @@
 
 		mod: 'gen9',
 		searchShow: false,
-		ruleset: ['Draft', '+Past'],
+		ruleset: ['Draft', '+Unobtainable', '+Past'],
 	},
 	{
 		name: "[Gen 9] NatDex 6v6 Doubles Draft",
@@ -295,7 +305,7 @@
 		mod: 'gen9',
 		gameType: 'doubles',
 		searchShow: false,
-		ruleset: ['[Gen 9] 6v6 Doubles Draft', '+Past'],
+		ruleset: ['[Gen 9] 6v6 Doubles Draft', '+Unobtainable', '+Past'],
 	},
 	{
 		name: "[Gen 9] NatDex 4v4 Doubles Draft",
@@ -303,7 +313,7 @@
 		mod: 'gen9',
 		gameType: 'doubles',
 		searchShow: false,
-		ruleset: ['[Gen 9] 4v4 Doubles Draft', '+Past'],
+		ruleset: ['[Gen 9] 4v4 Doubles Draft', '+Unobtainable', '+Past'],
 	},
 	{
 		name: "[Gen 9] LC NDex Draft",
@@ -388,11 +398,11 @@
 		],
 
 		mod: 'gen9',
-		ruleset: ['Standard OMs', '!Obtainable Abilities', 'Ability Clause', 'Sleep Moves Clause', 'Min Source Gen = 9'],
+		ruleset: ['Standard OMs', '!Obtainable Abilities', 'Ability Clause = 1', 'Sleep Moves Clause', 'Min Source Gen = 9'],
 		banlist: [
-			'Koraidon', 'Miraidon', 'Arena Trap', 'Comatose', 'Contrary', 'Gorilla Tactics', 'Huge Power', 'Illusion', 'Imposter',
-			'Innards Out', 'Magnet Pull', 'Moody', 'Neutralizing Gas', 'Parental Bond', 'Pure Power', 'Shadow Tag', 'Simple',
-			'Speed Boost', 'Water Bubble', 'Wonder Guard', 'King\'s Rock', 'Baton Pass',
+			'Annihilape', 'Koraidon', 'Miraidon', 'Slaking', 'Arena Trap', 'Comatose', 'Contrary', 'Gorilla Tactics', 'Huge Power',
+			'Illusion', 'Imposter', 'Innards Out', 'Magnet Pull', 'Moody', 'Neutralizing Gas', 'Parental Bond', 'Pure Power',
+			'Shadow Tag', 'Simple', 'Speed Boost', 'Water Bubble', 'Wonder Guard', 'King\'s Rock', 'Baton Pass',
 		],
 	},
 	{
@@ -422,7 +432,10 @@
 
 		mod: 'gen9',
 		ruleset: ['-Nonexistent', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Moves Clause', 'Endless Battle Clause'],
-		banlist: ['Arena Trap', 'Huge Power', 'Illusion', 'Innards Out', 'Magnet Pull', 'Neutralizing Gas', 'Parental Bond', 'Pure Power', 'Shadow Tag', 'Stakeout', 'Water Bubble', 'Wonder Guard', 'Comatose + Sleep Talk'],
+		banlist: [
+			'Arena Trap', 'Huge Power', 'Illusion', 'Innards Out', 'Magnet Pull', 'Neutralizing Gas', 'Parental Bond', 'Pure Power',
+			'Shadow Tag', 'Stakeout', 'Water Bubble', 'Wonder Guard', 'Comatose + Sleep Talk', 'Shell Smash', 'Rage Fist',
+		],
 	},
 	{
 		name: "[Gen 9] Mix and Mega",
@@ -508,8 +521,8 @@
 
 		mod: 'gen9',
 		ruleset: ['Standard OMs', 'STABmons Move Legality', 'Sleep Moves Clause', 'Min Source Gen = 9'],
-		banlist: ['Komala', 'Koraidon', 'Miraidon', 'Arena Trap', 'Moody', 'Shadow Tag', 'King\'s Rock', 'Baton Pass'],
-		restricted: ['Acupressure', 'Astral Barrage', 'Belly Drum', 'Glacial Lance', 'Shell Smash', 'V-create'],
+		banlist: ['Dragapult', 'Flutter Mane', 'Komala', 'Koraidon', 'Miraidon', 'Arena Trap', 'Moody', 'Shadow Tag', 'Booster Energy', 'King\'s Rock', 'Baton Pass'],
+		restricted: ['Acupressure', 'Astral Barrage', 'Belly Drum', 'No Retreat', 'Shed Tail', 'Shell Smash', 'V-create', 'Victory Dance', 'Wicked Blow'],
 	},
 	{
 		name: "[Gen 9] NFE",
@@ -520,7 +533,7 @@
 
 		mod: 'gen9',
 		ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Moves Clause', 'Min Source Gen = 9'],
-		banlist: ['Magneton', 'Scyther', 'Arena Trap', 'Shadow Tag', 'Baton Pass'],
+		banlist: ['Bisharp', 'Chansey', 'Haunter', 'Magneton', 'Primeape', 'Scyther', 'Arena Trap', 'Shadow Tag', 'Baton Pass'],
 	},
 
 	// Challengeable OMs
@@ -557,7 +570,7 @@
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['Standard OMs', '2 Ability Clause', 'Sleep Clause Mod'],
+		ruleset: ['Standard OMs', 'Ability Clause = 2', 'Sleep Clause Mod'],
 		banlist: ['Corsola-Galar', 'Sneasel', 'Type: Null', 'Arena Trap', 'Ice Scales', 'Moody', 'King\'s Rock', 'Baton Pass'],
 		restricted: ['Chansey', 'Lunala', 'Shedinja', 'Solgaleo', 'Gorilla Tactics', 'Huge Power', 'Pure Power', 'Shadow Tag'],
 		onValidateTeam(team) {
@@ -694,7 +707,7 @@
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['Standard OMs', '2 Ability Clause', 'Sleep Moves Clause'],
+		ruleset: ['Standard OMs', 'Ability Clause = 2', 'Sleep Moves Clause'],
 		banlist: [
 			'Blacephalon', 'Blaziken', 'Butterfree', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chansey', 'Combusken', 'Cresselia', 'Darmanitan-Galar', 'Dialga',
 			'Dracovish', 'Eternatus', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kartana', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia',
@@ -790,7 +803,7 @@
 			return null;
 		},
 		onValidateTeam(team, f, teamHas) {
-			if (this.ruleTable.has('2abilityclause')) {
+			if (this.ruleTable.has('abilityclause')) {
 				const abilityTable = new Map();
 				const base = {
 					airlock: 'cloudnine',
@@ -810,14 +823,15 @@
 					teravolt: 'moldbreaker',
 					turboblaze: 'moldbreaker',
 				};
+				const num = parseInt(this.ruleTable.valueRules.get('abilityclause'));
 				for (const set of team) {
 					let ability = this.toID(set.ability.split('0')[0]);
 					if (!ability) continue;
 					if (ability in base) ability = base[ability] ;
-					if ((abilityTable.get(ability) || 0) >= 2) {
+					if ((abilityTable.get(ability) || 0) >= num) {
 						return [
-							`You are limited to two of each ability by 2 Ability Clause.`,
-							`(You have more than two ${this.dex.abilities.get(ability).name} variants)`,
+							`You are limited to ${num} of each ability by ${num} Ability Clause.`,
+							`(You have more than ${num} ${this.dex.abilities.get(ability).name} variants)`,
 						];
 					}
 					abilityTable.set(ability, (abilityTable.get(ability) || 0) + 1);
@@ -910,7 +924,7 @@
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['Standard OMs', '2 Ability Clause', 'Sleep Moves Clause'],
+		ruleset: ['Standard OMs', 'Ability Clause = 2', 'Sleep Moves Clause'],
 		banlist: [
 			'Calyrex-Ice', 'Calyrex-Shadow', 'Cinderace', 'Darmanitan-Galar', 'Dialga', 'Dracovish', 'Dragonite', 'Eternatus',
 			'Genesect', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kartana', 'Kyogre', 'Kyurem-Black', 'Kyurem-White',
@@ -952,7 +966,7 @@
 			return problems;
 		},
 		onValidateTeam(team) {
-			if (!this.ruleTable.has('2abilityclause')) return;
+			if (!this.ruleTable.has('abilityclause')) return;
 			const abilityTable = new Map();
 			const base = {
 				airlock: 'cloudnine',
@@ -972,6 +986,7 @@
 				teravolt: 'moldbreaker',
 				turboblaze: 'moldbreaker',
 			};
+			const num = parseInt(this.ruleTable.valueRules.get('abilityclause'));
 			const abilities = [];
 			for (const set of team) {
 				abilities.push([set.ability, set.item].map((abil) => {
@@ -986,10 +1001,10 @@
 				if (item.exists) abilityTable.set(item.id, (abilityTable.get(item.id) || 0) + 1);
 			}
 			for (const [abilityid, size] of abilityTable) {
-				if (size > 2) {
+				if (size > num) {
 					return [
-						`You are limited to two of each ability by 2 Ability Clause.`,
-						`(You have more than two ${this.dex.abilities.get(abilityid).name} variants)`,
+						`You are limited to ${num} of each ability by ${num} Ability Clause.`,
+						`(You have more than ${num} ${this.dex.abilities.get(abilityid).name} variants)`,
 					];
 				}
 			}
@@ -1692,7 +1707,7 @@
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['Standard OMs', '!Obtainable Abilities', '2 Ability Clause', 'Sleep Moves Clause'],
+		ruleset: ['Standard OMs', '!Obtainable Abilities', 'Ability Clause = 2', 'Sleep Moves Clause'],
 		banlist: [
 			'Archeops', 'Blacephalon', 'Buzzwole', 'Calyrex-Ice', 'Calyrex-Shadow', 'Dialga', 'Dracovish', 'Dragapult', 'Dragonite', 'Eternatus', 'Genesect',
 			'Gengar', 'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Kartana', 'Keldeo', 'Kyogre', 'Kyurem', 'Kyurem-Black', 'Kyurem-White', 'Lugia',
@@ -1860,7 +1875,7 @@
 		],
 
 		mod: 'gen7',
-		ruleset: ['-Nonexistent', '2 Ability Clause', 'OHKO Clause', 'Evasion Moves Clause', 'Forme Clause', 'CFZ Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
+		ruleset: ['-Nonexistent', 'Ability Clause = 2', 'OHKO Clause', 'Evasion Moves Clause', 'Forme Clause', 'CFZ Clause', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Endless Battle Clause'],
 		banlist: [
 			'Groudon-Primal', 'Rayquaza-Mega', 'Gengarite', 'Comatose + Sleep Talk', 'Chatter',
 			'Arena Trap', 'Contrary', 'Huge Power', 'Illusion', 'Innards Out', 'Magnet Pull', 'Moody', 'Parental Bond', 'Protean', 'Psychic Surge', 'Pure Power', 'Shadow Tag', 'Stakeout', 'Water Bubble', 'Wonder Guard',
@@ -1956,7 +1971,7 @@
 
 		mod: 'gen6',
 		searchShow: false,
-		ruleset: ['[Gen 6] OU', '2 Ability Clause', 'AAA Restricted Abilities', '!Obtainable Abilities'],
+		ruleset: ['[Gen 6] OU', 'Ability Clause = 2', 'AAA Restricted Abilities', '!Obtainable Abilities'],
 		banlist: ['Archeops', 'Bisharp', 'Chatot', 'Dragonite', 'Keldeo', 'Kyurem-Black', 'Mamoswine', 'Regigigas', 'Shedinja', 'Slaking', 'Smeargle', 'Snorlax', 'Suicune', 'Terrakion', 'Weavile', 'Dynamic Punch', 'Zap Cannon'],
 		unbanlist: ['Aegislash', 'Blaziken', 'Deoxys-Defense', 'Deoxys-Speed', 'Genesect', 'Greninja', 'Landorus'],
 		restricted: ['Arena Trap', 'Contrary', 'Fur Coat', 'Huge Power', 'Illusion', 'Imposter', 'Parental Bond', 'Protean', 'Pure Power', 'Simple', 'Speed Boost', 'Wonder Guard'],
@@ -2309,6 +2324,7 @@
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3675374/">Information and Suggestions Thread</a>`,
 		],
 
+		mod: 'gen8',
 		team: 'randomBSSFactory',
 		ruleset: ['Flat Rules'],
 	},
