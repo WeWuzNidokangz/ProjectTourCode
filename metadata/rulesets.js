@@ -81,7 +81,7 @@
 		name: 'Standard NatDex',
 		desc: "The standard ruleset for all National Dex tiers",
 		ruleset: [
-			'Obtainable', '+Unobtainable', '+Past', 'Sketch Gen 8 Moves', 'Team Preview', 'Nickname Clause', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
+			'Obtainable', '+Unobtainable', '+Past', 'Sketch Post-Gen 7 Moves', 'Team Preview', 'Nickname Clause', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause',
 		],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
@@ -100,7 +100,10 @@
 			if (!set.item) return;
 			const item = this.dex.items.get(set.item);
 			if (!item.isNonstandard) return;
-			if (['Past', 'Unobtainable'].includes(item.isNonstandard) && !item.zMove && !item.itemUser && !item.forcedForme) {
+			if (
+				['Past', 'Unobtainable'].includes(item.isNonstandard) &&
+				!item.zMove && !item.itemUser && !item.forcedForme && !item.isBerry
+			) {
 				if (this.ruleTable.has(`+item:${item.id}`)) return;
 				return [`${set.name}'s item ${item.name} does not exist in Gen ${this.dex.gen}.`];
 			}
@@ -382,6 +385,22 @@
 			}
 		},
 	},
+	paldeapokedex: {
+		effectType: 'ValidatorRule',
+		name: 'Paldea Pokedex',
+		desc: "Only allows Pok&eacute;mon native to the Paldea region (SV)",
+		banlist: ['Meowth-Galar', 'Tauros-Base', 'Wooper-Base'],
+		onValidateSet(set, format) {
+			const paldeaDex = [
+				"Sprigatito", "Floragato", "Meowscarada", "Fuecoco", "Crocalor", "Skeledirge", "Quaxly", "Quaxwell", "Quaquaval", "Lechonk", "Oinkologne", "Tarountula", "Spidops", "Nymble", "Lokix", "Hoppip", "Skiploom", "Jumpluff", "Fletchling", "Fletchinder", "Talonflame", "Pawmi", "Pawmo", "Pawmot", "Houndour", "Houndoom", "Yungoos", "Gumshoos", "Skwovet", "Greedent", "Sunkern", "Sunflora", "Kricketot", "Kricketune", "Scatterbug", "Spewpa", "Vivillon", "Combee", "Vespiquen", "Rookidee", "Corvisquire", "Corviknight", "Happiny", "Chansey", "Blissey", "Azurill", "Marill", "Azumarill", "Surskit", "Masquerain", "Buizel", "Floatzel", "Wooper", "Clodsire", "Psyduck", "Golduck", "Chewtle", "Drednaw", "Igglybuff", "Jigglypuff", "Wigglytuff", "Ralts", "Kirlia", "Gardevoir", "Gallade", "Drowzee", "Hypno", "Gastly", "Haunter", "Gengar", "Tandemaus", "Maushold", "Pichu", "Pikachu", "Raichu", "Fidough", "Dachsbun", "Slakoth", "Vigoroth", "Slaking", "Bounsweet", "Steenee", "Tsareena", "Smoliv", "Dolliv", "Arboliva", "Bonsly", "Sudowoodo", "Rockruff", "Lycanroc", "Rolycoly", "Carkol", "Coalossal", "Shinx", "Luxio", "Luxray", "Starly", "Staravia", "Staraptor", "Oricorio", "Mareep", "Flaaffy", "Ampharos", "Petilil", "Lilligant", "Shroomish", "Breloom", "Applin", "Flapple", "Appletun", "Spoink", "Grumpig", "Squawkabilly", "Misdreavus", "Mismagius", "Makuhita", "Hariyama", "Crabrawler", "Crabominable", "Salandit", "Salazzle", "Phanpy", "Donphan", "Cufant", "Copperajah", "Gible", "Gabite", "Garchomp", "Nacli", "Naclstack", "Garganacl", "Wingull", "Pelipper", "Magikarp", "Gyarados", "Arrokuda", "Barraskewda", "Basculin", "Gulpin", "Swalot", "Meowth", "Persian", "Drifloon", "Drifblim", "Flabebe", "Floette", "Florges", "Diglett", "Dugtrio", "Torkoal", "Numel", "Camerupt", "Bronzor", "Bronzong", "Axew", "Fraxure", "Haxorus", "Mankey", "Primeape", "Annihilape", "Meditite", "Medicham", "Riolu", "Lucario", "Charcadet", "Armarouge", "Ceruledge", "Barboach", "Whiscash", "Tadbulb", "Bellibolt", "Goomy", "Sliggoo", "Goodra", "Croagunk", "Toxicroak", "Wattrel", "Kilowattrel", "Eevee", "Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon", "Leafeon", "Glaceon", "Sylveon", "Dunsparce", "Dudunsparce", "Deerling", "Sawsbuck", "Girafarig", "Farigiraf", "Grimer", "Muk", "Maschiff", "Mabosstiff", "Toxel", "Toxtricity", "Dedenne", "Pachirisu", "Shroodle", "Grafaiai", "Stantler", "Foongus", "Amoonguss", "Voltorb", "Electrode", "Magnemite", "Magneton", "Magnezone", "Ditto", "Growlithe", "Arcanine", "Teddiursa", "Ursaring", "Zangoose", "Seviper", "Swablu", "Altaria", "Skiddo", "Gogoat", "Tauros", "Litleo", "Pyroar", "Stunky", "Skuntank", "Zorua", "Zoroark", "Sneasel", "Weavile", "Murkrow", "Honchkrow", "Gothita", "Gothorita", "Gothitelle", "Sinistea", "Polteageist", "Mimikyu", "Klefki", "Indeedee", "Bramblin", "Brambleghast", "Toedscool", "Toedscruel", "Tropius", "Fomantis", "Lurantis", "Klawf", "Capsakid", "Scovillain", "Cacnea", "Cacturne", "Rellor", "Rabsca", "Venonat", "Venomoth", "Pineco", "Forretress", "Scyther", "Scizor", "Heracross", "Flittle", "Espathra", "Hippopotas", "Hippowdon", "Sandile", "Krokorok", "Krookodile", "Silicobra", "Sandaconda", "Mudbray", "Mudsdale", "Larvesta", "Volcarona", "Bagon", "Shelgon", "Salamence", "Tinkatink", "Tinkatuff", "Tinkaton", "Hatenna", "Hattrem", "Hatterene", "Impidimp", "Morgrem", "Grimmsnarl", "Wiglett", "Wugtrio", "Bombirdier", "Finizen", "Palafin", "Varoom", "Revavroom", "Cyclizar", "Orthworm", "Sableye", "Shuppet", "Banette", "Falinks", "Hawlucha", "Spiritomb", "Noibat", "Noivern", "Dreepy", "Drakloak", "Dragapult", "Glimmet", "Glimmora", "Rotom", "Greavard", "Houndstone", "Oranguru", "Passimian", "Komala", "Larvitar", "Pupitar", "Tyranitar", "Stonjourner", "Eiscue", "Pincurchin", "Sandygast", "Palossand", "Slowpoke", "Slowbro", "Slowking", "Shellos", "Gastrodon", "Shellder", "Cloyster", "Qwilfish", "Luvdisc", "Finneon", "Lumineon", "Bruxish", "Alomomola", "Skrelp", "Dragalge", "Clauncher", "Clawitzer", "Tynamo", "Eelektrik", "Eelektross", "Mareanie", "Toxapex", "Flamigo", "Dratini", "Dragonair", "Dragonite", "Snom", "Frosmoth", "Snover", "Abomasnow", "Delibird", "Cubchoo", "Beartic", "Snorunt", "Glalie", "Froslass", "Cryogonal", "Cetoddle", "Cetitan", "Bergmite", "Avalugg", "Rufflet", "Braviary", "Pawniard", "Bisharp", "Kingambit", "Deino", "Zweilous", "Hydreigon", "Veluza", "Dondozo", "Tatsugiri", "Great Tusk", "Scream Tail", "Brute Bonnet", "Flutter Mane", "Slither Wing", "Sandy Shocks", "Iron Treads", "Iron Bundle", "Iron Hands", "Iron Jugulis", "Iron Moth", "Iron Thorns", "Frigibax", "Arctibax", "Baxcalibur", "Gimmighoul", "Gholdengo", "Wo-Chien", "Chien-Pao", "Ting-Lu", "Chi-Yu", "Roaring Moon", "Iron Valiant", "Koraidon", "Miraidon",
+			];
+			const species = this.dex.species.get(set.species || set.name);
+			if (!paldeaDex.includes(species.baseSpecies) && !paldeaDex.includes(species.name) &&
+				!this.ruleTable.has('+' + species.id)) {
+				return [`${species.baseSpecies} is not in the Paldea Pokédex.`];
+			}
+		},
+	},
 	potd: {
 		effectType: 'Rule',
 		name: 'PotD',
@@ -502,6 +521,7 @@
 		name: 'Little Cup',
 		desc: "Only allows Pok&eacute;mon that can evolve and don't have any prior evolutions",
 		ruleset: ['Max Level = 5'],
+		banlist: ['Stantler'],
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species || set.name);
 			if (species.prevo && this.dex.species.get(species.prevo).gen <= this.gen) {
@@ -1226,10 +1246,22 @@
 		},
 	},
 
+	omunobtainablemoves: {
+		effectType: 'ValidatorRule',
+		name: 'OM Unobtainable Moves',
+		desc: "Allows special move legality rules to allow moves which are otherwise unobtainable without hacking or glitches",
+		// Hardcoded in team-validator.ts
+		onValidateRule() {
+			if (!_optionalChain([this, 'access', _3 => _3.ruleTable, 'access', _4 => _4.checkCanLearn, 'optionalAccess', _5 => _5[0]])) {
+				throw new Error(`A format with the "OM Unobtainable Moves"${this.ruleTable.blame('omunobtainablemoves')} rule must also have a special move legality rule.`);
+			}
+		},
+	},
 	stabmonsmovelegality: {
 		effectType: 'ValidatorRule',
 		name: 'STABmons Move Legality',
 		desc: "Allows Pok&eacute;mon to use any move that they or a previous evolution/out-of-battle forme share a type with",
+		ruleset: ['OM Unobtainable Moves'],
 		checkCanLearn(move, species, setSources, set) {
 			const nonstandard = move.isNonstandard === 'Past' && !this.ruleTable.has('standardnatdex');
 			if (!nonstandard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
@@ -1279,6 +1311,7 @@
 		effectType: 'ValidatorRule',
 		name: 'Alphabet Cup Move Legality',
 		desc: "Allows Pok&eacute;mon to use any move that shares the same first letter as their name or a previous evolution's name.",
+		ruleset: ['OM Unobtainable Moves'],
 		checkCanLearn(move, species, setSources, set) {
 			const nonstandard = move.isNonstandard === 'Past' && !this.ruleTable.has('standardnatdex');
 			if (!nonstandard && !move.isZ && !move.isMax && !this.ruleTable.isRestricted(`move:${move.id}`)) {
@@ -1299,6 +1332,7 @@
 		effectType: 'ValidatorRule',
 		name: 'Sketchmons Move Legality',
 		desc: "Pok&eacute;mon can learn one of any move they don't normally learn.",
+		ruleset: ['OM Unobtainable Moves'],
 		checkCanLearn(move, species, lsetData, set) {
 			const problem = this.checkCanLearn(move, species, lsetData, set);
 			if (!problem) return null;
@@ -1382,10 +1416,10 @@
 			}
 		},
 	},
-	'sketchgen8moves': {
+	'sketchpostgen7moves': {
 		effectType: 'ValidatorRule',
-		name: 'Sketch Gen 8 Moves',
-		desc: "Allows Pokémon who learn Sketch to learn any Gen 8 move (normally, Sketch is not usable in Gen 8).",
+		name: 'Sketch Post-Gen 7 Moves',
+		desc: "Allows Pokémon who learn Sketch to learn any Gen 8+ move (normally, Sketch is not usable in Gen 8+).",
 		// Implemented in sim/team-validator.ts
 	},
 	mimicglitch: {
@@ -1539,11 +1573,11 @@
 		},
 		onValidateSet(set) {
 			const species = this.dex.species.get(set.species);
-			const learnsetData = {...(_optionalChain([this, 'access', _3 => _3.dex, 'access', _4 => _4.data, 'access', _5 => _5.Learnsets, 'access', _6 => _6[species.id], 'optionalAccess', _7 => _7.learnset]) || {})};
+			const learnsetData = {...(_optionalChain([this, 'access', _6 => _6.dex, 'access', _7 => _7.data, 'access', _8 => _8.Learnsets, 'access', _9 => _9[species.id], 'optionalAccess', _10 => _10.learnset]) || {})};
 			let prevo = species.prevo;
 			while (prevo) {
 				const prevoSpecies = this.dex.species.get(prevo);
-				const prevoLsetData = _optionalChain([this, 'access', _8 => _8.dex, 'access', _9 => _9.data, 'access', _10 => _10.Learnsets, 'access', _11 => _11[prevoSpecies.id], 'optionalAccess', _12 => _12.learnset]) || {};
+				const prevoLsetData = _optionalChain([this, 'access', _11 => _11.dex, 'access', _12 => _12.data, 'access', _13 => _13.Learnsets, 'access', _14 => _14[prevoSpecies.id], 'optionalAccess', _15 => _15.learnset]) || {};
 				for (const moveid in prevoLsetData) {
 					if (!(moveid in learnsetData)) {
 						learnsetData[moveid] = prevoLsetData[moveid];
@@ -1554,7 +1588,7 @@
 				prevo = prevoSpecies.prevo;
 			}
 			const problems = [];
-			if (_optionalChain([set, 'access', _13 => _13.moves, 'optionalAccess', _14 => _14.length])) {
+			if (_optionalChain([set, 'access', _16 => _16.moves, 'optionalAccess', _17 => _17.length])) {
 				for (const move of set.moves) {
 					if (learnsetData[this.toID(move)] && !learnsetData[this.toID(move)].filter(v => !v.includes('S')).length) {
 						problems.push(`${species.name}'s move ${move} is obtainable only through events.`);
@@ -1960,7 +1994,21 @@
 		},
 		onModifySpecies(species, target) {
 			const newSpecies = this.dex.deepClone(species);
-			if (!newSpecies.prevo) return;
+			const baseSpecies = this.dex.species.get(species.baseSpecies);
+			if (!newSpecies.prevo) {
+				if (!baseSpecies.prevo) return;
+				const prevoSpecies = this.dex.species.get(baseSpecies.prevo);
+				let statid;
+				newSpecies.bst = 0;
+				for (statid in prevoSpecies.baseStats) {
+					const change = baseSpecies.baseStats[statid] - prevoSpecies.baseStats[statid];
+					const formeChange = newSpecies.baseStats[statid] - baseSpecies.baseStats[statid];
+					newSpecies.baseStats[statid] = this.clampIntRange(baseSpecies.baseStats[statid] + change, 1, 255);
+					newSpecies.baseStats[statid] = this.clampIntRange(newSpecies.baseStats[statid] + formeChange, 1, 255);
+					newSpecies.bst += newSpecies.baseStats[statid];
+				}
+				return newSpecies;
+			}
 			const prevoSpecies = this.dex.species.get(newSpecies.prevo);
 			let statid;
 			newSpecies.bst = 0;
@@ -2182,10 +2230,10 @@
 		},
 		onModifySpeciesPriority: 3,
 		onModifySpecies(species, target, source) {
-			if (source || !_optionalChain([target, 'optionalAccess', _15 => _15.side])) return;
+			if (source || !_optionalChain([target, 'optionalAccess', _18 => _18.side])) return;
 			const god = target.side.team.find(set => {
 				let godSpecies = this.dex.species.get(set.species);
-				const isNatDex = _optionalChain([this, 'access', _16 => _16.format, 'access', _17 => _17.ruleTable, 'optionalAccess', _18 => _18.has, 'call', _19 => _19('standardnatdex')]);
+				const isNatDex = _optionalChain([this, 'access', _19 => _19.format, 'access', _20 => _20.ruleTable, 'optionalAccess', _21 => _21.has, 'call', _22 => _22('standardnatdex')]);
 				const validator = this.dex.formats.getRuleTable(
 					this.dex.formats.get(`gen${this.gen}${isNatDex && this.gen >= 8 ? 'nationaldex' : 'ou'}`)
 				);
