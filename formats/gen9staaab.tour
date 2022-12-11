@@ -1,0 +1,5 @@
+/tour new [Gen 9] Stabmons, Elimination,,,[Gen 9] STAAABmons
+/tour rules !Obtainable Abilities, Ability Clause = 1, *Acupressure, *Belly Drum, *Shell Smash, *V-create, -Komala,  -Arena Trap, -Comatose, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Imposter, -Innards Out, -Moody, -Parental Bond, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Water Bubble, -Wonder Guard, -Stench, -Kings Rock, -Slaking, *Transform, +Wicked Blow, +Astral Barrage, +Glacial Lance
+/tour autostart 7
+/tour autodq 4
+/wall Glacial Lance, Astral Barrage, Wicked Blow, Fur Coat, Ice Scales, and Tinted Lens are legal
