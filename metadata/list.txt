@@ -51,8 +51,6 @@ gen8ggsketch
 gen8ggts
 gen8hcchaos
 gen8hcchaosnightmarefrontier
-gen8inhag
-gen8inhubers
 gen8mashupsmayhem
 gen8mnm1v1
 gen8mnm350
@@ -111,7 +109,6 @@ gen8stabcamo
 gen8stabcamoaaa
 gen8stabdoubles
 gen8stabgg
-gen8stabinh
 gen8stablc
 gen8stabmnm
 gen8stabns
@@ -122,7 +119,6 @@ gen8tsaaa
 gen8tsaaaabc
 gen8tsabc
 gen8tsbh
-gen8tsinh
 gen8tsns
 gen8tsnsstabaaa
 gen8tsstab
