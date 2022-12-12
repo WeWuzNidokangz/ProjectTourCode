@@ -49,8 +49,8 @@
 		mod: 'gen9',
 		ruleset: ['Same Type Clause', 'Terastal Clause', 'Standard'],
 		banlist: [
-			'Houndstone', 'Koraidon', 'Miraidon', 'Palafin', 'Moody', 'Shadow Tag', 'Booster Energy',
-			'Damp Rock', 'Focus Band', 'King\'s Rock', 'Quick Claw', 'Baton Pass',
+			'Annihilape', 'Chi-Yu', 'Houndstone', 'Iron Bundle', 'Koraidon', 'Miraidon', 'Palafin', 'Moody',
+			'Shadow Tag', 'Booster Energy', 'Damp Rock', 'Focus Band', 'King\'s Rock', 'Quick Claw', 'Baton Pass',
 		],
 	},
 	{
@@ -579,12 +579,10 @@
 		mod: 'mixandmega',
 		ruleset: ['Standard OMs', 'Evasion Items Clause', 'Evasion Abilities Clause', 'Sleep Moves Clause', 'Min Source Gen = 9'],
 		banlist: [
-			'Miraidon', 'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite', 'Medichamite',
-			'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Shed Tail', 'Zap Cannon',
+			'Koraidon', 'Miraidon', 'Beedrillite', 'Blazikenite', 'Gengarite', 'Kangaskhanite', 'Mawilite',
+			'Medichamite', 'Moody', 'Shadow Tag', 'Baton Pass', 'Electrify', 'Shed Tail', 'Zap Cannon',
 		],
-		restricted: [
-			'Flutter Mane', 'Gengar', 'Iron Bundle', 'Kilowattrel', 'Koraidon', 'Slaking',
-		],
+		restricted: ['Flutter Mane', 'Gengar', 'Iron Bundle', 'Kilowattrel', 'Slaking'],
 		onValidateTeam(team) {
 			const itemTable = new Set();
 			for (const set of team) {
