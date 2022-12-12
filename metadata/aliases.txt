@@ -1,4 +1,4 @@
-gen8stabmnm: stabnmega, stabandmega, snm
+gen9stabmnm: stabnmega, stabandmega, snm
 gen8randbtas: randbatsmayhem, randbtasmayhem, randbtas
 gen8ndlg: ndsuicidecup, ndsc
 gen8spaaa: shaaaredpower, sharedpoweraaa, shaaared
