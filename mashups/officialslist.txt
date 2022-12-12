@@ -13,6 +13,7 @@ gen8stabdoubles
 gen8stablc
 gen8stabubers
 gen8stabmnm
+gen9stabmnm
 gen8tsaaa
 gen8dppstabaaa
 gen8stabaaatiers
