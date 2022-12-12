@@ -8,6 +8,7 @@ gen8camolc
 gen8ggsp
 gen8pokeaaa
 gen8stabaaa
+gen9stabaaa
 gen8stabaaabl
 gen8stabdoubles
 gen8stablc
