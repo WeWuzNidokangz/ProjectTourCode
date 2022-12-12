@@ -11,7 +11,8 @@ gen8stabaaa:Pokemon can use almost any ability and any move of their typing. Tea
 gen8stabdoubles:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Doubles environment.
 gen8stablc:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in a Little Cup environment.
 gen8stabubers:Pokemon can use any move of their typing, in addition to the moves they can normally learn, in an Ubers environment.
-gen8stabmnm:Pokemon can use any move of their typing and mega evolve with any stone to gain the respective boosts. 
+gen8stabmnm:Pokemon can use any move of their typing and mega evolve with any stone to gain the respective boosts.
+gen9stabmnm:Pokemon can use any move of their typing and mega evolve with any stone to gain the respective boosts.
 gen8tsaaa:Pokemon can use any ability, barring the few that are banned. Those below OU get all their stats, excluding HP, boosted. UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.
 gen8abccamo:Pokemon gain access to moves that share the same starting letter as their name or the name of a pre-evolution, and change type to match their first two moves.
 gen8ndlg:The first player to lose all of their Pokemon wins. Combination of [Gen 7] Suicide Cup and "The Loser's Game". Vanilla samples: https://pokepast.es/bef93965053a9b89 https://pokepast.es/44fb834b0b4e4348 https://pokepast.es/6e81a23e4dd33dd5 https://pokepast.es/2242790ff0c1adf4
