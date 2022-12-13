@@ -1,5 +1,5 @@
-/tour create gen9STABmons, elim,,, [Gen 9] STABmons Re-Evolution 
-/tour rules reevolutionmod, -Gyarados, -Milotic, -Volcarona
+/tour create [Gen 9] Anything Goes, Elimination,,,[Gen 9] STABmons Re-Evolution 
+/tour rules [Gen 9] STABmons, Re-Evolution Mod, -Gyarados, -Milotic, -Volcarona
 /tour autostart 7
 /tour autodq 4
 /wall Terastalising triples the re-evolution effect
