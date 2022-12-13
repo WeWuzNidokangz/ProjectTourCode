@@ -1,11 +1,13 @@
 gen8aaadoubles
 gen8aaalc
+gen9aaalc
 gen8aaaubers
 gen8bhdoubles
 gen8bhlc
 gen8camodoubles
 gen8camolc
 gen8ggsp
+gen9ggsp
 gen8pokeaaa
 gen8stabaaa
 gen9stabaaa
@@ -13,6 +15,7 @@ gen8stabaaabl
 gen8stabdoubles
 gen8stablc
 gen8stabubers
+gen9stabubers
 gen8stabmnm
 gen9stabmnm
 gen8tsaaa
