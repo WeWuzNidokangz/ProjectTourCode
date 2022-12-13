@@ -135,5 +135,5 @@ gen9spaaa
 gen9spcamo
 gen9stabaaa
 gen9stabmnm
-gen9stabrevo
+gen9stabreevo
 gen9ultramix
