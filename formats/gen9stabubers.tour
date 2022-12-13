@@ -1,5 +1,5 @@
-/tour new [Gen 9] Ubers, Elimination,,,[Gen 9] STUBERS
-/tour rules STABmons Move Legality
+/tour new [Gen 9] Anything Goes, Elimination,,,[Gen 9] STUBERS
+/tour rules Standard, STABmons Move Legality, -AG, -King's Rock, -Baton Pass
 /tour autostart 7
 /tour autodq 4
 /wall All moves are legal
