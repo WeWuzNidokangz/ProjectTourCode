@@ -7,6 +7,7 @@ gen8bhlc
 gen8camodoubles
 gen8camolc
 gen8ggsp
+gen9ggsp
 gen8pokeaaa
 gen8stabaaa
 gen9stabaaa
