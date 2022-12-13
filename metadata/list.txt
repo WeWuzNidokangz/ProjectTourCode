@@ -131,7 +131,7 @@ gen9fpsp
 gen9ggsp
 gen9ndaagsp
 gen9spaaa
-gen9spc
+gen9spcamo
 gen9stabaaa
 gen9stabmnm
 gen9ultramix
