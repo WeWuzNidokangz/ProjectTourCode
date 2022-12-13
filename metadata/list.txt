@@ -139,4 +139,5 @@ gen9stabcs
 gen9stabmnm
 gen9stabreevo
 gen9stabsp
+gen9stabubers
 gen9ultramix
