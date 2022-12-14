@@ -138,7 +138,6 @@ gen9revaaa
 gen9spaaa
 gen9spcamo
 gen9stabaaa
-gen9stabcs
 gen9stabmnm
 gen9stabreevo
 gen9stabsp
