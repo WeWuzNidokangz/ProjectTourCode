@@ -73,9 +73,6 @@ gen8ndstab
 gen8ndstabaaa
 gen8nsscale
 gen8phlg
-gen8pokeaaa
-gen8pokeabccs
-gen8pokemnm
 gen8randbtas
 gen8randbtassuddendeath
 gen8reevoaaa
@@ -122,7 +119,6 @@ gen8tsns
 gen8tsnsstabaaa
 gen8tsstab
 gen8ultramix
-gen8ungodlygift
 gen8zuaaa
 gen8zustabaaa
 gen9aaadoubles
