@@ -77,7 +77,6 @@ gen8pokeaaa
 gen8pokeabccs
 gen8pokemnm
 gen8randbtas
-gen8randbtasbuiltin
 gen8randbtassuddendeath
 gen8reevoaaa
 gen8revaaa
