@@ -14,6 +14,7 @@ gen8stabaaa
 gen9stabaaa
 gen8stabaaabl
 gen8stabdoubles
+gen9stabdoubles
 gen8stablc
 gen8stabubers
 gen9stabubers
