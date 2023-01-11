@@ -5,6 +5,7 @@ gen7mixandmegadreammatch
 gen7randbtas
 gen7stabaaa
 gen8aaa
+gen8aaaabc
 gen8aaaag
 gen8aaadoubles
 gen8aaalc
@@ -15,6 +16,7 @@ gen8ag1v1
 gen8bh
 gen8bhdoubles
 gen8bhlc
+gen8btaaa
 gen8btag
 gen8btcamo
 gen8btsketch
@@ -26,11 +28,13 @@ gen8camolc
 gen8camopredlc
 gen8camosketch
 gen8cap1v1mayhem
+gen8capaaa
 gen8caprandbtas
 gen8capscale
 gen8capstabaaa
 gen8chimerarandbats24
 gen8distortionworld
+gen8flippedaaa
 gen8foxonlyfd
 gen8gg
 gen8hcchaos
@@ -45,8 +49,11 @@ gen8nsscale
 gen8phlg
 gen8randbtas
 gen8randbtassuddendeath
+gen8reevoaaa
+gen8revaaa
 gen8revbt
 gen8sketch1v1
+gen8sketchaaa
 gen8sketchag
 gen8sketchdoubles
 gen8sketchts
@@ -61,6 +68,8 @@ gen8stabns
 gen8stabubers
 gen8tmstab
 gen8tmubers
+gen8tsaaa
+gen8tsaaaabc
 gen8tsabc
 gen8tsns
 gen8tsnsstabaaa
