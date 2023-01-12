@@ -1,4 +1,4 @@
-/tour new [Gen 8] Balanced Hackmons, Elimination,,,[Gen 8] Tier Shift Balanced Hackmons
-/tour rules Tier Shift Mod, -Eviolite, -Regigigas, +Damp Rock, +Heat Rock 
+/tour new [Gen 8] Custom Game, Elimination,,,[Gen 8] Tier Shift Balanced Hackmons
+/tour rules !! Max Team Size = 6, !! Max Move Count = 4, !! Max Level = 100, OHKO Clause, Evasion Moves Clause, Forme Clause, HP Percentage Mod, Dynamax Clause, Sleep Moves Clause, Endless Battle Clause, Tier Shift Mod, -Nonexistent, -Calyrex-Shadow, -Cramorant-Gorging, -Darmanitan-Galar-Zen, -Eternatus-Eternamax, -Regigigas, -Shedinja, -Zacian-Crowned, -Arena Trap, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Innards Out, -Intrepid Sword, -Libero, -Magnet Pull, -Moody, -Neutralizing Gas, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Stakeout, -Water Bubble, -Wonder Guard, -Comatose + Sleep Talk, -Eviolite, -Rusted Sword, -Belly Drum, -Bolt Beak, -Court Change, -Double Iron Bash, -Octolock, -Shell Smash, -Transform
 /tour autostart 10
 /tour autodq 6

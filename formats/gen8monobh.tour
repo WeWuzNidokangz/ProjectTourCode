@@ -1,5 +1,5 @@
-/tour new [Gen 8] Balanced Hackmons, Elimination,,,[Gen 8] Monotype Balanced Hackmons
-/tour rules Same Type Clause, -Drizzle, -Eternatus, -Normalize
+/tour new [Gen 8] Custom Game, Elimination,,,[Gen 8] Monotype Balanced Hackmons
+/tour rules !! Max Team Size = 6, !! Max Move Count = 4, !! Max Level = 100, OHKO Clause, Evasion Moves Clause, Forme Clause, HP Percentage Mod, Dynamax Clause, Sleep Moves Clause, Endless Battle Clause, Same Type Clause, -Nonexistent, -Calyrex-Shadow, -Cramorant-Gorging, -Darmanitan-Galar-Zen, -Eternatus, -Eternatus-Eternamax, -Shedinja, -Zacian-Crowned, -Arena Trap, -Contrary, -Drizzle, -Gorilla Tactics, -Huge Power, -Illusion, -Innards Out, -Intrepid Sword, -Libero, -Magnet Pull, -Moody, -Neutralizing Gas, -Normalize, -Parental Bond, -Protean, -Pure Power, -Shadow Tag, -Stakeout, -Water Bubble, -Wonder Guard, -Comatose + Sleep Talk, -Rusted Sword, -Belly Drum, -Bolt Beak, -Court Change, -Double Iron Bash, -Octolock, -Shell Smash, -Transform
 /tour autostart 10
 /tour autodq 6
 /wall SAMPLE TEAMS AND RESOURCES: https://www.smogon.com/forums/threads/om-mashup-megathread.3657159/post-9124457

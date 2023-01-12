@@ -23,6 +23,7 @@ gen8btsketch
 gen8btts
 gen8camoaaa
 gen8camoag
+gen8camobh
 gen8camodoubles
 gen8camolc
 gen8camopredlc
@@ -39,6 +40,7 @@ gen8foxonlyfd
 gen8gg
 gen8hcchaos
 gen8hcchaosnightmarefrontier
+gen8monobh
 gen8monomayhem
 gen8ndaaa
 gen8ndlg
@@ -71,6 +73,7 @@ gen8tmubers
 gen8tsaaa
 gen8tsaaaabc
 gen8tsabc
+gen8tsbh
 gen8tsns
 gen8tsnsstabaaa
 gen8zuaaa
