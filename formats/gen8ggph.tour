@@ -1,4 +1,4 @@
-/tour new [Gen 8] Godly Gift, Elimination,,,[Gen 8] Godly Gift Pure Hackmons
-/tour rules !Obtainable, -Nonexistent, !Sleep Clause Mod, !Species Clause, !OHKO Clause, !Evasion Moves Clause, !Dynamax Clause, +Uber > 1, +AG + Uber > 1, +Blissey, +Chansey, +Toxapex, +Arena Trap, +Huge Power, +Pure Power, +Shadow Tag, +Baton Pass
+/tour new [Gen 8] Custom Game, Elimination,,,[Gen 8] Godly Gift Pure Hackmons
+/tour rules !! Max Team Size = 6, !! Max Move Count = 4, !! Max Level = 100, HP Percentage Mod, Endless Battle Clause, Godly Gift Mod, -Nonexistent
 /tour autostart 10
 /tour autodq 6

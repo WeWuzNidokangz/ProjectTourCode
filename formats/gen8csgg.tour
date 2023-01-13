@@ -1,4 +1,4 @@
-/tour create [Gen 8] Godly Gift, Elimination,,,[Gen 8] Category Swap Godly Gift
-/tour rules Category Swap Mod, +Calyrex-Shadow, +Crawdaunt, +Eternatus, +Hawlucha, +Marowak-Alola, +Melmetal, +Xerneas, +Zacian, -Draco Meteor, -Overheat
+/tour create [Gen 8] Anything Goes, Elimination,,,[Gen 8] Category Swap Godly Gift
+/tour rules Standard OMs, Sleep Moves Clause, Godly Gift Mod, Category Swap Mod, -Blissey, -Chansey, -Dragapult, -Kyogre, -Nidoking, -Nidoqueen, -Pikachu, -Toxapex, -Zacian-Crowned, -Arena Trap, -Huge Power, -Moody, -Pure Power, -Shadow Tag, -Swift Swim, -Bright Powder, -Focus Band, -King's Rock, -Lax Incense, -Quick Claw, -Baton Pass, -Draco Meteor, -Overheat
 /tour autostart 10
 /tour autodq 6
