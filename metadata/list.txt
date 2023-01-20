@@ -101,13 +101,14 @@ gen8tsaaaabc
 gen8tsabc
 gen8tsbh
 gen8tsns
-gen8tsstab
 gen8tsnsstabaaa
+gen8tsstab
 gen8zuaaa
 gen8zustabaaa
 gen9aaadoubles
 gen9aaalc
 gen9camoaaa
+gen9camovechaos
 gen9csstab
 gen9fpsp
 gen9ggmnm
