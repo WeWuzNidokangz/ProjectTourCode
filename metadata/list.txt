@@ -105,6 +105,7 @@ gen9aaadoubles
 gen9aaalc
 gen9camoaaa
 gen9camovechaos
+gen9chimerarandbats24
 gen9csstab
 gen9fpsp
 gen9ggmnm
