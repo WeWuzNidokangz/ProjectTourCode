@@ -55,12 +55,10 @@ gen8monomayhem
 gen8monostab
 gen8ndaaa
 gen8ndgg
-gen8ndlg
 gen8ndmegamons
 gen8ndstab
 gen8ndstabaaa
 gen8nsscale
-gen8phlg
 gen8randbtas
 gen8randbtassuddendeath
 gen8reevoaaa
@@ -94,8 +92,6 @@ gen8stabgg
 gen8stablc
 gen8stabns
 gen8stabubers
-gen8tmstab
-gen8tmubers
 gen8tsaaa
 gen8tsaaaabc
 gen8tsabc
