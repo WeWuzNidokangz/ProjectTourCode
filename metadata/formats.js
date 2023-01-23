@@ -106,7 +106,7 @@ const Formats = [
       "Accuracy Moves Clause",
       "!Sleep Clause Mod"
     ],
-    banlist: ["Cinderace", "Dragonite", "Koraidon", "Mimikyu", "Miraidon", "Scream Tail", "Moody", "Focus Band", "Focus Sash", "King's Rock", "Quick Claw", "Acupressure", "Perish Song"]
+    banlist: ["Chi-Yu", "Cinderace", "Dragonite", "Koraidon", "Mimikyu", "Miraidon", "Scream Tail", "Moody", "Focus Band", "Focus Sash", "King's Rock", "Quick Claw", "Acupressure", "Perish Song"]
   },
   {
     name: "[Gen 9] Anything Goes",
@@ -582,7 +582,7 @@ const Formats = [
     ],
     mod: "partnersincrime",
     gameType: "doubles",
-    ruleset: ["Standard Doubles", "Dynamax Clause"],
+    ruleset: ["Standard Doubles"],
     banlist: ["Flutter Mane", "Koraidon", "Miraidon", "Dancer", "Huge Power", "Moody", "Pure Power", "Shadow Tag", "Ally Switch", "Baton Pass", "Revival Blessing", "Swagger"],
     onBegin() {
       for (const pokemon of this.getAllPokemon()) {
@@ -727,22 +727,7 @@ const Formats = [
     ],
     mod: "mixandmega",
     ruleset: ["Standard OMs", "Evasion Items Clause", "Evasion Abilities Clause", "Sleep Moves Clause", "Min Source Gen = 9"],
-    banlist: [
-      "Koraidon",
-      "Miraidon",
-      "Beedrillite",
-      "Blazikenite",
-      "Gengarite",
-      "Kangaskhanite",
-      "Mawilite",
-      "Medichamite",
-      "Moody",
-      "Shadow Tag",
-      "Baton Pass",
-      "Electrify",
-      "Shed Tail",
-      "Zap Cannon"
-    ],
+    banlist: ["Koraidon", "Miraidon", "Beedrillite", "Blazikenite", "Gengarite", "Kangaskhanite", "Mawilite", "Medichamite", "Moody", "Shadow Tag", "Baton Pass", "Shed Tail", "Zap Cannon"],
     restricted: ["Flutter Mane", "Gengar", "Iron Bundle", "Kilowattrel", "Slaking"],
     onValidateTeam(team) {
       const itemTable = /* @__PURE__ */ new Set();
@@ -819,7 +804,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3710638/">NFE</a>`
     ],
     mod: "gen9",
-    ruleset: ["Standard OMs", "Not Fully Evolved", "Sleep Moves Clause", "Min Source Gen = 9"],
+    ruleset: ["Standard OMs", "Not Fully Evolved", "Sleep Moves Clause", "Terastal Clause", "Min Source Gen = 9"],
     banlist: [
       "Bisharp",
       "Chansey",
@@ -837,6 +822,17 @@ const Formats = [
   {
     section: "Challengeable OMs",
     column: 2
+  },
+  {
+    name: "[Gen 9] Camomons",
+    desc: `Pok&eacute;mon have their types set to match their first two moves.`,
+    threads: [
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3711340/">Camomons</a>`
+    ],
+    mod: "gen9",
+    searchShow: false,
+    ruleset: ["Standard OMs", "Sleep Clause Mod", "Evasion Items Clause", "Evasion Abilities Clause", "Terastal Clause", "Camomons Mod", "Min Source Gen = 9"],
+    banlist: ["Chien-Pao", "Koraidon", "Miraidon", "Palafin", "Roaring Moon", "Arena Trap", "Moody", "Shadow Tag", "Booster Energy", "King's Rock", "Baton Pass"]
   },
   {
     name: "[Gen 9] Cross Evolution",
@@ -982,8 +978,8 @@ const Formats = [
     mod: "gen9",
     searchShow: false,
     ruleset: ["Standard OMs", "Sleep Clause Mod", "Min Source Gen = 9"],
-    banlist: ["Koraidon", "Miraidon", "Palafin", "Covert Cloak", "Fake Out"],
-    restricted: ["Dynamic Punch", "Inferno", "Mud Slap", "Nuzzle", "Power Trip", "Rapid Spin", "Stored Power", "Zap Cannon"],
+    banlist: ["Houndstone", "Koraidon", "Miraidon", "Palafin", "Covert Cloak", "Fake Out"],
+    restricted: ["Dynamic Punch", "Flame Charge", "Fury Cutter", "Inferno", "Nuzzle", "Power Trip", "Rapid Spin", "Stored Power", "Zap Cannon"],
     validateSet(set, teamHas) {
       const item = set.item;
       const species = this.dex.species.get(set.species);
@@ -997,7 +993,9 @@ const Formats = [
       if (this.checkCanLearn(move, species, this.allSources(species), set)) {
         problems.push(`${species.name} can't learn ${move.name}.`);
       }
-      if ((move.secondaries?.some((secondary) => secondary.boosts?.accuracy && secondary.boosts.accuracy < 0) || move.multihit || move.id === "beatup" || move.flags["charge"] || move.priority > 0 || move.damageCallback) && !this.ruleTable.has(`+move:${move.id}`)) {
+      const accuracyLoweringMove = move.secondaries?.some((secondary) => secondary.boosts?.accuracy && secondary.boosts?.accuracy < 0);
+      const flinchMove = move.secondaries?.some((secondary) => secondary.volatileStatus === "flinch");
+      if (this.ruleTable.isRestricted(`move:${move.id}`) || (accuracyLoweringMove || move.ohko || move.multihit || move.id === "beatup" || move.flags["charge"] || move.priority > 0 || move.damageCallback || flinchMove) && !this.ruleTable.has(`+move:${move.id}`)) {
         problems.push(`The move ${move.name} can't be used as an item.`);
       }
       return problems.length ? problems : null;
@@ -1078,31 +1076,38 @@ const Formats = [
             move[property] = forte[property];
           }
         }
+        forte.onModifyMove?.call(this, move, pokemon, target);
       }
     },
     onModifyPriority(priority, source, target, move) {
-      if (move.category !== "Status" && source?.m.forte) {
-        if (source.hasAbility("Triage") && source.m.forte.flags["heal"]) {
+      const forte = source?.m.forte;
+      if (move.category !== "Status" && forte) {
+        if (source.hasAbility("Triage") && forte.flags["heal"]) {
           return priority + (move.flags["heal"] ? 0 : 3);
         }
-        return priority + source.m.forte.priority;
+        return priority + forte.priority;
+      }
+    },
+    onModifyTypePriority: 1,
+    onModifyType(move, pokemon, target) {
+      const forte = pokemon.m.forte;
+      if (move.category !== "Status" && forte) {
+        this.singleEvent("ModifyType", forte, null, pokemon, target, move, move);
       }
     },
     onHitPriority: 1,
     onHit(target, source, move) {
       const forte = source.m.forte;
       if (move?.category !== "Status" && forte) {
-        if (forte.onHit)
-          this.singleEvent("Hit", forte, {}, target, source, move);
-        if (forte.self?.onHit)
+        this.singleEvent("Hit", forte, {}, target, source, move);
+        if (forte.self)
           this.singleEvent("Hit", forte.self, {}, source, source, move);
-        if (forte.onAfterHit)
-          this.singleEvent("AfterHit", forte, {}, target, source, move);
+        this.singleEvent("AfterHit", forte, {}, target, source, move);
       }
     },
     onAfterSubDamage(damage, target, source, move) {
       const forte = source.m.forte;
-      if (move?.category !== "Status" && forte?.onAfterSubDamage) {
+      if (move?.category !== "Status" && forte) {
         this.singleEvent("AfterSubDamage", forte, null, target, source, move);
       }
     },
@@ -1113,7 +1118,7 @@ const Formats = [
     onAfterMoveSecondaryPriority: 1,
     onAfterMoveSecondarySelf(source, target, move) {
       const forte = source.m.forte;
-      if (move?.category !== "Status" && forte?.onAfterMoveSecondarySelf) {
+      if (move?.category !== "Status" && forte) {
         this.singleEvent("AfterMoveSecondarySelf", forte, null, source, target, move);
       }
     },
@@ -1121,7 +1126,7 @@ const Formats = [
     onBasePower(basePower, source, target, move) {
       const forte = source.m.forte;
       if (move.category !== "Status" && forte?.onBasePower) {
-        this.singleEvent("BasePower", forte, null, source, target, move, basePower);
+        forte.onBasePower.call(this, basePower, source, target, move);
       }
     },
     pokemon: {
@@ -1129,7 +1134,13 @@ const Formats = [
         const move = this.battle.dex.moves.get(this.m.forte);
         if (!move.exists)
           return Object.getPrototypeOf(this).getItem.call(this);
-        return { ...this.battle.dex.items.get("mail"), ignoreKlutz: true, onTakeItem: false };
+        return {
+          ...this.battle.dex.items.get("mail"),
+          name: move.name,
+          id: move.id,
+          ignoreKlutz: true,
+          onTakeItem: false
+        };
       }
     }
   },
@@ -1456,7 +1467,6 @@ const Formats = [
       "Komala",
       "Miraidon",
       "Ting-Lu",
-      "Anger Shell",
       "Arena Trap",
       "Armor Tail",
       "Contrary",
@@ -1534,6 +1544,151 @@ const Formats = [
         delete pokemon.volatiles[effect];
         pokemon.addVolatile(effect);
       }
+    }
+  },
+  {
+    name: "[Gen 9] The Loser's Game",
+    desc: `The first player to lose all of their Pok&eacute;mon wins.`,
+    threads: [
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3714223/">The Loser's Game</a>`
+    ],
+    mod: "gen9",
+    searchShow: false,
+    ruleset: ["Standard OMs", "Sleep Clause Mod", "!OHKO Clause", "Picked Team Size = 6", "Adjust Level = 100", "Min Source Gen = 9"],
+    banlist: ["Infiltrator", "Choice Scarf", "Explosion", "Final Gambit", "Healing Wish", "Lunar Dance", "Magic Room", "Memento", "Misty Explosion", "Self-Destruct"],
+    onValidateTeam(team) {
+      const familyTable = /* @__PURE__ */ new Set();
+      for (const set of team) {
+        let species = this.dex.species.get(set.species);
+        while (species.prevo) {
+          species = this.dex.species.get(species.prevo);
+        }
+        if (familyTable.has(species.id)) {
+          return [
+            `You are limited to one Pok&eacute;mon from each family by the Family Clause.`,
+            `(You have more than one evolution of ${species.name}.)`
+          ];
+        }
+        familyTable.add(species.id);
+      }
+    },
+    battle: {
+      tiebreak() {
+        if (this.ended)
+          return false;
+        this.inputLog.push(`>tiebreak`);
+        this.add("message", "Time's up! Going to tiebreaker...");
+        const notFainted = this.sides.map((side) => side.pokemon.filter((pokemon) => !pokemon.fainted).length);
+        this.add("-message", this.sides.map((side, i) => `${side.name}: ${notFainted[i]} Pokemon left`).join("; "));
+        const maxNotFainted = Math.max(...notFainted);
+        let tiedSides = this.sides.filter((side, i) => notFainted[i] === maxNotFainted);
+        if (tiedSides.length <= 1) {
+          return this.win(tiedSides[1]);
+        }
+        const hpPercentage = tiedSides.map((side) => side.pokemon.map((pokemon) => pokemon.hp / pokemon.maxhp).reduce((a, b) => a + b) * 100 / 6);
+        this.add("-message", tiedSides.map((side, i) => `${side.name}: ${Math.round(hpPercentage[i])}% total HP left`).join("; "));
+        const maxPercentage = Math.max(...hpPercentage);
+        tiedSides = tiedSides.filter((side, i) => hpPercentage[i] === maxPercentage);
+        if (tiedSides.length <= 1) {
+          return this.win(tiedSides[1]);
+        }
+        const hpTotal = tiedSides.map((side) => side.pokemon.map((pokemon) => pokemon.hp).reduce((a, b) => a + b));
+        this.add("-message", tiedSides.map((side, i) => `${side.name}: ${Math.round(hpTotal[i])} total HP left`).join("; "));
+        const maxTotal = Math.max(...hpTotal);
+        tiedSides = tiedSides.filter((side, i) => hpTotal[i] === maxTotal);
+        if (tiedSides.length <= 1) {
+          return this.win(tiedSides[1]);
+        }
+        return this.tie();
+      },
+      checkWin(faintData) {
+        const team1PokemonLeft = this.sides[0].pokemonLeft;
+        const team2PokemonLeft = this.sides[1].pokemonLeft;
+        if (!team1PokemonLeft && !team2PokemonLeft) {
+          this.win(faintData?.target.side || null);
+          return true;
+        }
+        for (const side of this.sides) {
+          if (!side.pokemonLeft) {
+            this.win(side);
+            return true;
+          }
+        }
+      }
+    }
+  },
+  {
+    name: "[Gen 9] Trademarked",
+    desc: `Sacrifice your Pok&eacute;mon's ability for a status move that activates on switch-in.`,
+    threads: [
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3714688/">Trademarked</a>`
+    ],
+    mod: "trademarked",
+    searchShow: false,
+    ruleset: ["Standard OMs", "Sleep Moves Clause", "Min Source Gen = 9"],
+    banlist: ["Flutter Mane", "Koraidon", "Miraidon", "Slaking", "Arena Trap", "Magnet Pull", "Moody", "Shadow Tag", "Baton Pass"],
+    restricted: [
+      "Baneful Bunker",
+      "Block",
+      "Copycat",
+      "Detect",
+      "Destiny Bond",
+      "Encore",
+      "Fairy Lock",
+      "Ingrain",
+      "Instruct",
+      "Mean Look",
+      "move:Metronome",
+      "Protect",
+      "Revival Blessing",
+      "Roar",
+      "Silk Trap",
+      "Spiky Shield",
+      "Sleep Talk",
+      "Shed Tail",
+      "Substitute",
+      "Whirlwind"
+    ],
+    onValidateTeam(team, format, teamHas) {
+      const problems = [];
+      for (const trademark in teamHas.trademarks) {
+        if (teamHas.trademarks[trademark] > 1) {
+          problems.push(`You are limited to 1 of each Trademark.`, `(You have ${teamHas.trademarks[trademark]} Pok\xE9mon with ${trademark} as a Trademark.)`);
+        }
+      }
+      return problems;
+    },
+    validateSet(set, teamHas) {
+      const dex = this.dex;
+      const ability = dex.moves.get(set.ability);
+      if (!ability.exists) {
+        return this.validateSet(set, teamHas);
+      }
+      if (this.ruleTable.isRestricted(`move:${ability.id}`)) {
+        return [`${ability.name} is restricted from being used as a trademark.`];
+      }
+      if (set.moves.map(this.toID).includes(ability.id)) {
+        return [`${set.name} may not use ${ability.name} as both a trademark and one of its moves simultaneously.`];
+      }
+      const customRules = this.format.customRules || [];
+      if (!customRules.includes("!obtainableabilities"))
+        customRules.push("!obtainableabilities");
+      const TeamValidator = require("../sim/team-validator").TeamValidator;
+      const validator = new TeamValidator(dex.formats.get(`${this.format.id}@@@${customRules.join(",")}`));
+      const moves = set.moves;
+      set.moves = [ability.id];
+      set.ability = dex.species.get(set.species).abilities["0"];
+      let problems = validator.validateSet(set, {}) || [];
+      if (problems.length)
+        return problems;
+      set.moves = moves;
+      set.ability = dex.species.get(set.species).abilities["0"];
+      problems = problems.concat(validator.validateSet(set, teamHas) || []);
+      set.ability = ability.id;
+      if (!teamHas.trademarks)
+        teamHas.trademarks = {};
+      teamHas.trademarks[ability.name] = (teamHas.trademarks[ability.name] || 0) + 1;
+      return problems.length ? problems : null;
     }
   },
   {
@@ -2040,329 +2195,6 @@ const Formats = [
       "Lax Incense",
       "Final Gambit"
     ]
-  },
-  {
-    name: "[Gen 8] Trademarked",
-    desc: `Sacrifice your Pok&eacute;mon's ability for a status move that activates on switch-in.`,
-    threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3656980/">Trademarked</a>`
-    ],
-    mod: "gen8",
-    searchShow: false,
-    challengeShow: false,
-    tournamentShow: false,
-    ruleset: ["Standard OMs", "Sleep Clause Mod"],
-    banlist: [
-      "Calyrex-Ice",
-      "Calyrex-Shadow",
-      "Darmanitan-Galar",
-      "Dialga",
-      "Dracovish",
-      "Dragapult",
-      "Eternatus",
-      "Kyurem-Black",
-      "Kyurem-White",
-      "Giratina",
-      "Giratina-Origin",
-      "Genesect",
-      "Groudon",
-      "Ho-Oh",
-      "Kartana",
-      "Kyogre",
-      "Lugia",
-      "Lunala",
-      "Magearna",
-      "Marowak-Alola",
-      "Marshadow",
-      "Melmetal",
-      "Mewtwo",
-      "Naganadel",
-      "Necrozma-Dawn-Wings",
-      "Necrozma-Dusk-Mane",
-      "Palkia",
-      "Pheromosa",
-      "Rayquaza",
-      "Reshiram",
-      "Solgaleo",
-      "Spectrier",
-      "Urshifu-Base",
-      "Victini",
-      "Xerneas",
-      "Yveltal",
-      "Zacian",
-      "Zacian-Crowned",
-      "Zamazenta",
-      "Zamazenta-Crowned",
-      "Zekrom",
-      "Zygarde-Base",
-      "Arena Trap",
-      "Moody",
-      "Neutralizing Gas",
-      "Power Construct",
-      "Shadow Tag",
-      "Baton Pass"
-    ],
-    restricted: [
-      "Baneful Bunker",
-      "Block",
-      "Copycat",
-      "Corrosive Gas",
-      "Detect",
-      "Destiny Bond",
-      "Disable",
-      "Encore",
-      "Fairy Lock",
-      "Hypnosis",
-      "Ingrain",
-      "Instruct",
-      "Lovely Kiss",
-      "King's Shield",
-      "Mat Block",
-      "Mean Look",
-      "Memento",
-      "move:Metronome",
-      "Obstruct",
-      "Octolock",
-      "Nature Power",
-      "Parting Shot",
-      "Psycho Shift",
-      "Protect",
-      "Roar",
-      "Sing",
-      "Skill Swap",
-      "Sleep Powder",
-      "Sleep Talk",
-      "Spiky Shield",
-      "Spore",
-      "Substitute",
-      "Switcheroo",
-      "Teleport",
-      "Trick",
-      "Whirlwind",
-      "Wish",
-      "Yawn"
-    ],
-    onValidateTeam(team, format, teamHas) {
-      const problems = [];
-      for (const trademark in teamHas.trademarks) {
-        if (teamHas.trademarks[trademark] > 1) {
-          problems.push(`You are limited to 1 of each Trademark.`, `(You have ${teamHas.trademarks[trademark]} Pok\xE9mon with ${trademark} as a Trademark.)`);
-        }
-      }
-      return problems;
-    },
-    validateSet(set, teamHas) {
-      const dex = this.dex;
-      const ability = dex.moves.get(set.ability);
-      if (!ability.exists) {
-        return this.validateSet(set, teamHas);
-      }
-      if (ability.category !== "Status") {
-        return [`${ability.name} is not a status move, and cannot be used as a trademark.`];
-      }
-      if (ability.forceSwitch || ability.selfSwitch) {
-        return [
-          `Force-switching and self-switching moves are banned from being used as trademarks.`,
-          `(${ability.name} is a ${ability.forceSwitch ? "force" : "self"}-switching move.)`
-        ];
-      }
-      const irrevokablyRestricted = [
-        "Assist",
-        "Copycat",
-        "Metronome",
-        "Mirror Move",
-        "Sleep Talk",
-        "Recycle",
-        "Trace",
-        "Skill Swap"
-      ];
-      for (const m of set.moves) {
-        const move = dex.moves.get(m);
-        if (irrevokablyRestricted.includes(move.name)) {
-          return [`${move.name} is banned from Trademark, irrespective of custom rules, because it can cause endless turns.`];
-        }
-      }
-      if (irrevokablyRestricted.includes(ability.name)) {
-        return [`${ability.name} cannot safely function as a trademark.`];
-      }
-      if (this.ruleTable.isRestricted(`move:${ability.id}`)) {
-        return [`${ability.name} is restricted from being used as a trademark.`];
-      }
-      if (set.moves.map(this.toID).includes(ability.id)) {
-        return [`${set.name} may not use ${ability.name} as both a trademark and one of its moves simultaneously.`];
-      }
-      const customRules = this.format.customRules || [];
-      if (!customRules.includes("!obtainableabilities"))
-        customRules.push("!obtainableabilities");
-      const TeamValidator = require("../sim/team-validator").TeamValidator;
-      const validator = new TeamValidator(dex.formats.get(`${this.format.id}@@@${customRules.join(",")}`));
-      const moves = set.moves;
-      set.moves = [ability.id];
-      set.ability = dex.species.get(set.species).abilities["0"];
-      let problems = validator.validateSet(set, {}) || [];
-      if (problems.length)
-        return problems;
-      set.moves = moves;
-      set.ability = dex.species.get(set.species).abilities["0"];
-      problems = problems.concat(validator.validateSet(set, teamHas) || []);
-      set.ability = ability.id;
-      if (!teamHas.trademarks)
-        teamHas.trademarks = {};
-      teamHas.trademarks[ability.name] = (teamHas.trademarks[ability.name] || 0) + 1;
-      return problems.length ? problems : null;
-    },
-    pokemon: {
-      getAbility() {
-        const move = this.battle.dex.moves.get(this.battle.toID(this.ability));
-        if (!move.exists)
-          return Object.getPrototypeOf(this).getAbility.call(this);
-        return {
-          id: move.id,
-          name: move.name,
-          onStart(pokemon) {
-            this.add("-activate", pokemon, "ability: " + move.name);
-            this.actions.useMove(move, pokemon);
-          },
-          toString() {
-            return "";
-          }
-        };
-      }
-    }
-  },
-  {
-    name: "[Gen 8] The Loser's Game",
-    desc: `The first player to lose all of their Pok&eacute;mon wins.`,
-    threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3657270/">The Loser's Game</a>`
-    ],
-    mod: "gen8",
-    searchShow: false,
-    ruleset: ["Standard OMs", "Sleep Clause Mod", "!OHKO Clause", "Picked Team Size = 6", "Adjust Level = 100"],
-    banlist: [
-      "Sandshrew-Alola",
-      "Shedinja",
-      "Infiltrator",
-      "Magic Guard",
-      "Choice Scarf",
-      "Explosion",
-      "Final Gambit",
-      "Healing Wish",
-      "Lunar Dance",
-      "Magic Room",
-      "Memento",
-      "Misty Explosion",
-      "Self-Destruct"
-    ],
-    onValidateTeam(team) {
-      const familyTable = /* @__PURE__ */ new Set();
-      for (const set of team) {
-        let species = this.dex.species.get(set.species);
-        while (species.prevo) {
-          species = this.dex.species.get(species.prevo);
-        }
-        if (familyTable.has(species.id)) {
-          return [
-            `You are limited to one Pok&eacute;mon from each family by the Family Clause.`,
-            `(You have more than one evolution of ${species.name}.)`
-          ];
-        }
-        familyTable.add(species.id);
-      }
-    },
-    battle: {
-      tiebreak() {
-        if (this.ended)
-          return false;
-        this.inputLog.push(`>tiebreak`);
-        this.add("message", "Time's up! Going to tiebreaker...");
-        const notFainted = this.sides.map((side) => side.pokemon.filter((pokemon) => !pokemon.fainted).length);
-        this.add("-message", this.sides.map((side, i) => `${side.name}: ${notFainted[i]} Pokemon left`).join("; "));
-        const maxNotFainted = Math.max(...notFainted);
-        let tiedSides = this.sides.filter((side, i) => notFainted[i] === maxNotFainted);
-        if (tiedSides.length <= 1) {
-          return this.win(tiedSides[1]);
-        }
-        const hpPercentage = tiedSides.map((side) => side.pokemon.map((pokemon) => pokemon.hp / pokemon.maxhp).reduce((a, b) => a + b) * 100 / 6);
-        this.add("-message", tiedSides.map((side, i) => `${side.name}: ${Math.round(hpPercentage[i])}% total HP left`).join("; "));
-        const maxPercentage = Math.max(...hpPercentage);
-        tiedSides = tiedSides.filter((side, i) => hpPercentage[i] === maxPercentage);
-        if (tiedSides.length <= 1) {
-          return this.win(tiedSides[1]);
-        }
-        const hpTotal = tiedSides.map((side) => side.pokemon.map((pokemon) => pokemon.hp).reduce((a, b) => a + b));
-        this.add("-message", tiedSides.map((side, i) => `${side.name}: ${Math.round(hpTotal[i])} total HP left`).join("; "));
-        const maxTotal = Math.max(...hpTotal);
-        tiedSides = tiedSides.filter((side, i) => hpTotal[i] === maxTotal);
-        if (tiedSides.length <= 1) {
-          return this.win(tiedSides[1]);
-        }
-        return this.tie();
-      },
-      faintMessages(lastFirst) {
-        if (this.ended)
-          return;
-        const length = this.faintQueue.length;
-        if (!length)
-          return false;
-        if (lastFirst) {
-          this.faintQueue.unshift(this.faintQueue[this.faintQueue.length - 1]);
-          this.faintQueue.pop();
-        }
-        let faintData;
-        while (this.faintQueue.length) {
-          faintData = this.faintQueue.shift();
-          const pokemon = faintData.target;
-          if (!pokemon.fainted && this.runEvent("BeforeFaint", pokemon, faintData.source, faintData.effect)) {
-            this.add("faint", pokemon);
-            pokemon.side.pokemonLeft--;
-            if (pokemon.side.totalFainted < 100)
-              pokemon.side.totalFainted++;
-            this.runEvent("Faint", pokemon, faintData.source, faintData.effect);
-            this.singleEvent("End", pokemon.getAbility(), pokemon.abilityState, pokemon);
-            pokemon.clearVolatile(false);
-            pokemon.fainted = true;
-            pokemon.isActive = false;
-            pokemon.isStarted = false;
-            pokemon.side.faintedThisTurn = pokemon;
-          }
-        }
-        if (this.gen <= 1) {
-          this.queue.clear();
-          for (const pokemon of this.getAllActive()) {
-            if (pokemon.volatiles["bide"] && pokemon.volatiles["bide"].damage) {
-              pokemon.volatiles["bide"].damage = 0;
-              this.hint("Desync Clause Mod activated!");
-              this.hint("In Gen 1, Bide's accumulated damage is reset to 0 when a Pokemon faints.");
-            }
-          }
-        } else if (this.gen <= 3 && this.gameType === "singles") {
-          for (const pokemon of this.getAllActive()) {
-            if (this.gen <= 2) {
-              this.queue.cancelMove(pokemon);
-            } else {
-              this.queue.cancelAction(pokemon);
-            }
-          }
-        }
-        if (!this.p1.pokemonLeft && !this.p2.pokemonLeft) {
-          this.win(faintData ? faintData.target.side.foe : null);
-          return true;
-        }
-        if (!this.p1.pokemonLeft) {
-          this.win(this.p1);
-          return true;
-        }
-        if (!this.p2.pokemonLeft) {
-          this.win(this.p2);
-          return true;
-        }
-        if (faintData) {
-          this.runEvent("AfterFaint", faintData.target, faintData.source, faintData.effect, length);
-        }
-        return false;
-      }
-    }
   },
   {
     section: "Retro Other Metagames",
@@ -4206,6 +4038,17 @@ const Formats = [
     searchShow: false,
     ruleset: ["Flat Rules", "Min Source Gen = 6"],
     banlist: ["Battle Bond"]
+  },
+  {
+    name: "[Gen 7 Let's Go] Doubles OU",
+    threads: [
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3671748/#post-8685222">LGPE Doubles OU</a>`
+    ],
+    mod: "gen7letsgo",
+    gameType: "doubles",
+    searchShow: false,
+    ruleset: ["Standard Doubles", "Sleep Clause Mod"],
+    banlist: ["Mewtwo"]
   },
   {
     name: "[Gen 7] Doubles Custom Game",
