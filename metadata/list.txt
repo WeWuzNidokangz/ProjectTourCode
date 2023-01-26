@@ -107,6 +107,7 @@ gen9camoaaa
 gen9camovechaos
 gen9chimerarandbats24
 gen9csstab
+gen9fortereevochaos
 gen9fpsp
 gen9ggmnm
 gen9ggsp
