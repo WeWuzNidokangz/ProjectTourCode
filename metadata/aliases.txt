@@ -14,3 +14,4 @@ gen8stabmnmsuspect: susnmega, snmsus, susnm
 gen8csgg: csgo, counterstrike, globaloffensive
 gen8tsaaa: ricemanschoice
 gen9ndaagsp: aagsp
+gen9camovechaos: camove
