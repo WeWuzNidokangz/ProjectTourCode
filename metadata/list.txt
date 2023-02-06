@@ -112,6 +112,7 @@ gen9fpsp
 gen9ggmnm
 gen9ggsp
 gen9ndaagsp
+gen9pokeaaa
 gen9randbtas
 gen9revaaa
 gen9spaaa
