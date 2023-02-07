@@ -1,0 +1,4 @@
+/tour new [Gen 9] Mix and Mega, Elimination,,,[Gen 9] Mix and Mega AG
+/tour rules !Species Clause, !Nickname Clause, !OHKO Clause, !Evasion Moves Clause, !Overflow Stat Mod, !Evasion Items Clause, !Evasion Abilities Clause, !Sleep Moves Clause, +Uber, +Beedrillite, +Blazikenite, +Gengarite, +Kangaskhanite, +Mawilite, +Medichamite, +Pidgeotite, +Moody, +Shadow Tag, +Baton Pass, +Shed Tail, +Zap Cannon, +Flutter Mane, +Gengar, +Iron Bundle, +Kilowattrel, +Koraidon, +Miraidon, +Slaking
+/tour autostart 10
+/tour autodq 6
