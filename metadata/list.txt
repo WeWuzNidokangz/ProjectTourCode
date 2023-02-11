@@ -1,7 +1,7 @@
 gen5randbtas
 gen5stabaaa
 gen6randbtas
-gen7convergencepokebilities
+gen7convergepoke
 gen7mixandmegadreammatch
 gen7randbtas
 gen7stabaaa
