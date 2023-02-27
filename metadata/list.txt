@@ -39,12 +39,10 @@ gen8capscale
 gen8capstabaaa
 gen8chimerarandbats24
 gen8csgg
-gen8distortionworld
 gen8flippedaaa
 gen8foxonlyfd
 gen8gg
 gen8ggaaa
-gen8ggns
 gen8ggph
 gen8ggsketch
 gen8ggts
@@ -59,7 +57,6 @@ gen8ndgg
 gen8ndmegamons
 gen8ndstab
 gen8ndstabaaa
-gen8nsscale
 gen8randbtas
 gen8randbtassuddendeath
 gen8reevoaaa
@@ -91,14 +88,11 @@ gen8stabcamoaaa
 gen8stabdoubles
 gen8stabgg
 gen8stablc
-gen8stabns
 gen8stabubers
 gen8tsaaa
 gen8tsaaaabc
 gen8tsabc
 gen8tsbh
-gen8tsns
-gen8tsnsstabaaa
 gen8tsstab
 gen8zuaaa
 gen8zustabaaa
