@@ -3941,7 +3941,7 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Paldea Pokedex",
     desc: "Only allows Pok&eacute;mon native to the Paldea region (SV)",
-    banlist: ["Meowth-Galar", "Tauros-Base", "Wooper-Base"],
+    banlist: ["Meowth-Galar", "Tauros-Base", "Wooper-Base", "Zorua-Hisui", "Zoroark-Hisui"],
     onValidateSet(set, format) {
       const paldeaDex = [
         "Sprigatito",
