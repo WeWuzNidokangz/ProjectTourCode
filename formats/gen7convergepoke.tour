@@ -1,4 +1,4 @@
 /tour new [Gen 7] OU, Elimination,,,[Gen 7] Convergence Pokebilities
-/tour rules [Gen 9] Pokebilities, Convergence Legality, !Obtainable Abilities, Sleep Moves Clause, -Alakazam-Mega, -Contrary, -Excadrill, -Greninja, -Magearna, -Porygon-Z, -Porygon2, -Shaymin, -Smeargle, -Arena Trap, -Comatose, -Drizzle, -Huge Power, -Imposter, -Moody, -Pure Power, -Shadow Tag, -Shell Smash, -Simple, -Spore, -Trace, -Belly Drum, -Extreme Speed
+/tour rules [Gen 9] Pokebilities, convergencelegality, !obtainableabilities, sleep moves clause, -shaymin, -Comfey, -Alakazam-Mega, -Excadrill,-Magearna, -Porygon-Z, -porygon2,  -smeargle,-clefable, -arenatrap, -shadowtag, -comatose, -drizzle, -moody, -pure power, -imposter, -trace, -huge power, -simple, -contrary, -shell smash,  -spore, -extreme speed,-belly drum
 /tour autostart 10
 /tour autodq 7
