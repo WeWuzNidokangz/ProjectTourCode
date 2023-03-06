@@ -69,6 +69,12 @@ const Formats = [
     banlist: ["RU", "NUBL"]
   },
   {
+    name: "[Gen 9] PU",
+    mod: "gen9",
+    ruleset: ["[Gen 9] NU"],
+    banlist: ["NU", "PUBL"]
+  },
+  {
     name: "[Gen 9] LC",
     threads: [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3710868/">Little Cup Metagame Discussion</a>`
@@ -147,6 +153,7 @@ const Formats = [
     ruleset: ["Standard", "!Evasion Items Clause"],
     banlist: [
       "Annihilape",
+      "Chi-Yu",
       "Flutter Mane",
       "Houndstone",
       "Koraidon",
@@ -177,6 +184,12 @@ const Formats = [
     mod: "gen9",
     ruleset: ["Flat Rules", "!! Adjust Level = 50", "Paldea Pokedex", "Min Source Gen = 9", "VGC Timer"],
     banlist: ["Sub-Legendary"]
+  },
+  {
+    name: "[Gen 9] Battle Stadium Singles Regulation C",
+    mod: "gen9",
+    searchShow: false,
+    ruleset: ["Flat Rules", "!! Adjust Level = 50", "Paldea Pokedex", "Min Source Gen = 9", "VGC Timer"]
   },
   {
     name: "[Gen 9] Custom Game",
@@ -253,6 +266,19 @@ const Formats = [
     gameType: "doubles",
     ruleset: ["Flat Rules", "!! Adjust Level = 50", "Paldea Pokedex", "Min Source Gen = 9", "VGC Timer", "Open Team Sheets"],
     banlist: ["Sub-Legendary"]
+  },
+  {
+    name: "[Gen 9] VGC 2023 Regulation C",
+    mod: "gen9",
+    gameType: "doubles",
+    ruleset: ["Flat Rules", "!! Adjust Level = 50", "Paldea Pokedex", "Min Source Gen = 9", "VGC Timer", "Open Team Sheets"]
+  },
+  {
+    name: "[Gen 9] Paldea Prologue",
+    mod: "gen9",
+    gameType: "doubles",
+    ruleset: ["Flat Rules", "!! Adjust Level = 50", "Paldea Pokedex", "Min Source Gen = 9", "VGC Timer", "Limit One Restricted"],
+    restricted: ["Restricted Legendary"]
   },
   {
     name: "[Gen 9] Doubles Custom Game",
@@ -466,15 +492,6 @@ const Formats = [
     }
   },
   {
-    name: "[Gen 8] National Dex AG",
-    threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3672423/">National Dex AG</a>`
-    ],
-    mod: "gen8",
-    searchShow: false,
-    ruleset: ["Standard NatDex"]
-  },
-  {
     section: "Pet Mods"
   },
   {
@@ -579,7 +596,7 @@ const Formats = [
     name: "[Gen 6] Draft",
     mod: "gen6",
     searchShow: false,
-    ruleset: ["Draft"],
+    ruleset: ["Draft", "Moody Clause", "Swagger Clause"],
     banlist: ["Soul Dew"]
   },
   {
@@ -594,8 +611,28 @@ const Formats = [
     ],
     mod: "gen9",
     ruleset: ["Standard OMs", "Sleep Clause Mod", "Min Source Gen = 9"],
-    banlist: ["Cloyster", "Houndstone", "Koraidon", "Miraidon", "Palafin", "Riolu", "Serene Grace", "Covert Cloak", "Baton Pass", "Fake Out"],
-    restricted: ["Dynamic Punch", "Flame Charge", "Fury Cutter", "Grass Knot", "Inferno", "Low Kick", "Nuzzle", "Power Trip", "Rapid Spin", "Spit Up", "Stored Power", "Zap Cannon"],
+    banlist: [
+      "Chi-Yu",
+      "Chien-Pao",
+      "Cloyster",
+      "Espathra",
+      "Flutter Mane",
+      "Houndstone",
+      "Iron Bundle",
+      "Koraidon",
+      "Miraidon",
+      "Palafin",
+      "Riolu",
+      "Weavile",
+      "Arena Trap",
+      "Moody",
+      "Serene Grace",
+      "Shadow Tag",
+      "Covert Cloak",
+      "Baton Pass",
+      "Fake Out"
+    ],
+    restricted: ["Dynamic Punch", "Fury Cutter", "Grass Knot", "Inferno", "Low Kick", "Nuzzle", "Power Trip", "Spit Up", "Stored Power", "Zap Cannon"],
     validateSet(set, teamHas) {
       const item = set.item;
       const species = this.dex.species.get(set.species);
@@ -695,6 +732,11 @@ const Formats = [
             move[property] = forte[property];
           }
         }
+        if (forte.onEffectiveness) {
+          move.onEffectiveness = function(typeMod, t, type, m) {
+            return forte.onEffectiveness.call(this, typeMod, t, type, m);
+          };
+        }
         forte.onModifyMove?.call(this, move, pokemon, target);
       }
     },
@@ -770,8 +812,25 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3715801/">Tera Donation</a>`
     ],
     mod: "gen9",
-    ruleset: ["Standard OMs", "Sleep Clause Mod", "Tera Type Preview", "Min Source Gen = 9"],
-    banlist: ["Flutter Mane", "Iron Bundle", "Koraidon", "Miraidon", "Palafin", "Arena Trap", "Moody", "Shadow Tag", "King's Rock", "Baton Pass"],
+    ruleset: ["Standard OMs", "Sleep Moves CLause", "Tera Type Preview", "Min Source Gen = 9"],
+    banlist: [
+      "Annihilape",
+      "Chi-Yu",
+      "Chien-Pao",
+      "Espathra",
+      "Flutter Mane",
+      "Houndstone",
+      "Iron Bundle",
+      "Koraidon",
+      "Miraidon",
+      "Palafin",
+      "Arena Trap",
+      "Moody",
+      "Shadow Tag",
+      "Booster Energy",
+      "King's Rock",
+      "Baton Pass"
+    ],
     onSwitchIn(pokemon) {
       if (this.turn === 0) {
         this.actions.terastallize(pokemon);
@@ -995,8 +1054,8 @@ const Formats = [
     mod: "gen9",
     ruleset: ["Standard OMs", "STABmons Move Legality", "Sleep Moves Clause", "Min Source Gen = 9"],
     banlist: [
-      "Chien-Pao",
       "Chi-Yu",
+      "Chien-Pao",
       "Cloyster",
       "Dragapult",
       "Dragonite",
@@ -1670,7 +1729,7 @@ const Formats = [
     mod: "thecardgame",
     searchShow: false,
     ruleset: ["Standard OMs", "Sleep Moves Clause", "Evasion Abilities Clause", "Evasion Items Clause", "Min Source Gen = 9"],
-    banlist: ["Annihilape", "Espathra", "Houndstone", "Koraidon", "Miraidon", "Palafin", "Arena Trap", "Moody", "Shadow Tag", "Baton Pass"],
+    banlist: ["Annihilape", "Cyclizar", "Dragonite", "Espathra", "Houndstone", "Koraidon", "Miraidon", "Noivern", "Palafin", "Arena Trap", "Moody", "Shadow Tag", "Baton Pass"],
     onBegin() {
       for (const pokemon of this.getAllPokemon()) {
         pokemon.hpType = pokemon.hpType.replace(/(Ghost|Fairy)/g, "Psychic").replace(/Bug/g, "Grass").replace(/Ice/g, "Water").replace(/(Rock|Ground)/g, "Fighting").replace(/Flying/g, "Normal").replace(/Poison/g, "Dark");
@@ -3564,6 +3623,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3675194/">SS Ubers Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["Standard", "Dynamax Clause"],
     banlist: ["AG", "Shadow Tag", "Baton Pass"]
   },
@@ -3575,6 +3635,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3674793/">UU Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["[Gen 8] OU"],
     banlist: ["OU", "UUBL", "Light Clay"]
   },
@@ -3586,6 +3647,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3676023/">RU Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["[Gen 8] UU"],
     banlist: ["UU", "RUBL"]
   },
@@ -3597,6 +3659,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3676265/">NU Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["[Gen 8] RU"],
     banlist: ["RU", "NUBL", "Drizzle", "Drought", "Slush Rush"]
   },
@@ -3607,6 +3670,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3676106/">PU Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["[Gen 8] NU"],
     banlist: ["NU", "PUBL"]
   },
@@ -3618,6 +3682,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3657374/">SS LC Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["Little Cup", "Standard", "Dynamax Clause"],
     banlist: [
       "Corsola-Galar",
@@ -3651,6 +3716,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3673165/">SS Monotype Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["Same Type Clause", "Standard", "Dynamax Clause"],
     banlist: [
       "Blaziken",
@@ -3791,6 +3857,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3672899/">AG Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["Obtainable", "Team Preview", "HP Percentage Mod", "Cancel Mod", "Endless Battle Clause"]
   },
   {
@@ -3851,6 +3918,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3666572/">SS National Dex Viability Rankings</a>`
     ],
     mod: "gen8",
+    searchShow: false,
     ruleset: ["Standard NatDex", "OHKO Clause", "Evasion Clause", "Species Clause", "Dynamax Clause", "Sleep Clause Mod"],
     banlist: ["ND Uber", "Arena Trap", "Moody", "Power Construct", "Shadow Tag", "King's Rock", "Razor Fang", "Quick Claw", "Baton Pass"]
   },
@@ -3874,6 +3942,7 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3696088/">BDSP OU Viability Rankings</a>`
     ],
     mod: "gen8bdsp",
+    searchShow: false,
     ruleset: ["Standard"],
     banlist: ["Uber", "Arena Trap", "Drizzle", "Moody", "Sand Veil", "Shadow Tag", "Snow Cloak", "King's Rock", "Razor Fang", "Baton Pass"]
   },
