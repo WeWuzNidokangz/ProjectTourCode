@@ -1,11 +1,13 @@
 gen9aaadoubles
 gen9aaalc
+gen9aaaubers
 gen9ggsp
 gen9pokeaaa
 gen9stabaaa
 gen9stabdoubles
 gen9stabubers
 gen9stabmnm
+gen9tsaaa
 gen8aaadoubles
 gen8aaalc
 gen8aaaubers
