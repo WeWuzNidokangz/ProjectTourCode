@@ -329,7 +329,7 @@ const Formats = [
     mod: "gen9",
     searchShow: false,
     ruleset: ["[Gen 9] National Dex UU"],
-    banlist: ["ND UU", "ND RUBL", "Drizzle"]
+    banlist: ["ND UU", "ND RUBL", "Drizzle", "Light Clay"]
   },
   {
     name: "[Gen 9] National Dex Monotype",
@@ -617,6 +617,7 @@ const Formats = [
       "Cloyster",
       "Espathra",
       "Flutter Mane",
+      "Great Tusk",
       "Houndstone",
       "Iron Bundle",
       "Koraidon",
@@ -629,10 +630,9 @@ const Formats = [
       "Serene Grace",
       "Shadow Tag",
       "Covert Cloak",
-      "Baton Pass",
-      "Fake Out"
+      "Baton Pass"
     ],
-    restricted: ["Dynamic Punch", "Fury Cutter", "Grass Knot", "Inferno", "Low Kick", "Nuzzle", "Power Trip", "Spit Up", "Stored Power", "Zap Cannon"],
+    restricted: ["Dynamic Punch", "Fury Cutter", "Grass Knot", "Inferno", "Low Kick", "Nuzzle", "Power Trip", "Reversal", "Spit Up", "Stored Power", "Zap Cannon"],
     validateSet(set, teamHas) {
       const item = set.item;
       const species = this.dex.species.get(set.species);
@@ -651,7 +651,7 @@ const Formats = [
       }
       const accuracyLoweringMove = move.secondaries?.some((secondary) => secondary.boosts?.accuracy && secondary.boosts?.accuracy < 0);
       const flinchMove = move.secondaries?.some((secondary) => secondary.volatileStatus === "flinch");
-      if (this.ruleTable.isRestricted(`move:${move.id}`) || (accuracyLoweringMove || move.ohko || move.multihit || move.id === "beatup" || move.flags["charge"] || move.priority > 0 || move.damageCallback || flinchMove) && !this.ruleTable.has(`+move:${move.id}`)) {
+      if (this.ruleTable.isRestricted(`move:${move.id}`) || (accuracyLoweringMove || move.ohko || move.multihit || move.id === "beatup" || move.flags["charge"] || move.priority > 0 || move.damageCallback || flinchMove || move.selfSwitch) && !this.ruleTable.has(`+move:${move.id}`)) {
         problems.push(`The move ${move.name} can't be used as an item.`);
       }
       return problems.length ? problems : null;
@@ -884,14 +884,19 @@ const Formats = [
     name: "[Gen 9] Almost Any Ability",
     desc: `Pok&eacute;mon have access to almost any ability.`,
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710568/">Almost Any Ability</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710568/">Almost Any Ability</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710571/">AAA Resources</a>`
     ],
     mod: "gen9",
     ruleset: ["Standard OMs", "!Obtainable Abilities", "Ability Clause = 1", "Sleep Moves Clause", "Terastal Clause", "Min Source Gen = 9"],
     banlist: [
       "Annihilape",
+      "Baxcalibur",
       "Dragapult",
       "Flutter Mane",
+      "Great Tusk",
+      "Gholdengo",
+      "Houndstone",
       "Iron Bundle",
       "Iron Hands",
       "Iron Valiant",
@@ -904,6 +909,7 @@ const Formats = [
       "Comatose",
       "Contrary",
       "Fur Coat",
+      "Good as Gold",
       "Gorilla Tactics",
       "Huge Power",
       "Ice Scales",
@@ -934,7 +940,8 @@ const Formats = [
     name: "[Gen 9] Balanced Hackmons",
     desc: `Anything directly hackable onto a set (EVs, IVs, forme, ability, item, and move) and is usable in local battles is allowed.`,
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710859/">Balanced Hackmons</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710859/">Balanced Hackmons</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712766/">BH Resources</a>`
     ],
     mod: "gen9",
     ruleset: ["-Nonexistent", "OHKO Clause", "Evasion Clause", "Species Clause", "Team Preview", "HP Percentage Mod", "Cancel Mod", "Sleep Moves Clause", "Endless Battle Clause"],
@@ -966,35 +973,39 @@ const Formats = [
   },
   {
     name: "[Gen 9] Mix and Mega",
-    desc: `Mega evolve any Pok&eacute;mon with any mega stone and no limit. Boosts based on mega evolution from gen 7.`,
+    desc: `Mega evolve any Pok&eacute;mon with any mega stone, or transform them with Primal orbs, Origin orbs, and Rusted items with no limit. Mega and Primal boosts based on form changes from gen 7.`,
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710921/">Mix and Mega</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710921/">Mix and Mega</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3716385/">Mix and Mega Resources</a>`
     ],
     mod: "mixandmega",
     ruleset: ["Standard OMs", "Evasion Items Clause", "Evasion Abilities Clause", "Sleep Moves Clause", "Min Source Gen = 9"],
-    banlist: ["Koraidon", "Miraidon", "Beedrillite", "Blazikenite", "Gengarite", "Kangaskhanite", "Mawilite", "Medichamite", "Moody", "Shadow Tag", "Baton Pass", "Shed Tail"],
-    restricted: ["Flutter Mane", "Gengar", "Iron Bundle", "Kilowattrel", "Slaking"],
+    banlist: ["Koraidon", "Miraidon", "Beedrillite", "Blazikenite", "Gengarite", "Kangaskhanite", "Mawilite", "Medichamite", "Moody", "Rusted Sword", "Shadow Tag", "Baton Pass", "Shed Tail"],
+    restricted: ["Flutter Mane", "Gengar", "Iron Bundle", "Kilowattrel", "Sandy Shocks", "Slaking"],
     onValidateTeam(team) {
       const itemTable = /* @__PURE__ */ new Set();
       for (const set of team) {
         const item = this.dex.items.get(set.item);
-        if (!item.megaStone)
+        if (!item.megaStone && !item.onPrimal && !item.forcedForme?.endsWith("Origin") && !item.name.startsWith("Rusted"))
           continue;
         const natdex = this.ruleTable.has("standardnatdex");
         if (natdex && item.id !== "ultranecroziumz")
           continue;
         const species = this.dex.species.get(set.species);
-        if (species.isNonstandard && !this.ruleTable.has(`+${this.toID(species.isNonstandard)}`)) {
+        if (species.isNonstandard && !this.ruleTable.has(`+pokemontag:${this.toID(species.isNonstandard)}`)) {
           return [`${species.baseSpecies} does not exist in gen 9.`];
         }
-        if (natdex && species.name.startsWith("Necrozma-") && item.id === "ultranecroziumz") {
+        if (item.itemUser?.includes(species.name) && !item.megaStone && !item.onPrimal || natdex && species.name.startsWith("Necrozma-") && item.id === "ultranecroziumz") {
           continue;
         }
         if (this.ruleTable.isRestrictedSpecies(species) || this.toID(set.ability) === "powerconstruct") {
           return [`${species.name} is not allowed to hold ${item.name}.`];
         }
         if (itemTable.has(item.id)) {
-          return [`You are limited to one of each mega stone.`, `(You have more than one ${item.name})`];
+          return [
+            `You are limited to one of each mega stone/orb/rusted item/sinnoh item.`,
+            `(You have more than one ${item.name})`
+          ];
         }
         itemTable.add(item.id);
       }
@@ -1005,9 +1016,9 @@ const Formats = [
       }
     },
     onSwitchIn(pokemon) {
-      const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
-      if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
-        this.add("-start", pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, "[silent]");
+      const originalFormeSecies = this.dex.species.get(pokemon.species.originalSpecies);
+      if (originalFormeSecies.exists && pokemon.m.originalSpecies !== originalFormeSecies.baseSpecies) {
+        this.add("-start", pokemon, originalFormeSecies.requiredItem || originalFormeSecies.requiredMove, "[silent]");
         const oSpecies = this.dex.species.get(pokemon.m.originalSpecies);
         if (oSpecies.types.length !== pokemon.species.types.length || oSpecies.types[1] !== pokemon.species.types[1]) {
           this.add("-start", pokemon, "typechange", pokemon.species.types.join("/"), "[silent]");
@@ -1015,7 +1026,7 @@ const Formats = [
       }
     },
     onSwitchOut(pokemon) {
-      const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
+      const oMegaSpecies = this.dex.species.get(pokemon.species.originalSpecies);
       if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
         this.add("-end", pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, "[silent]");
       }
@@ -1049,7 +1060,8 @@ const Formats = [
     name: "[Gen 9] STABmons",
     desc: `Pok&eacute;mon can use any move of their typing, in addition to the moves they can normally learn.`,
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710577/">STABmons</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710577/">STABmons</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3714664/">STABmons Resources</a>`
     ],
     mod: "gen9",
     ruleset: ["Standard OMs", "STABmons Move Legality", "Sleep Moves Clause", "Min Source Gen = 9"],
@@ -1065,6 +1077,7 @@ const Formats = [
       "Komala",
       "Koraidon",
       "Miraidon",
+      "Zoroark-Hisui",
       "Arena Trap",
       "Moody",
       "Shadow Tag",
@@ -1094,7 +1107,8 @@ const Formats = [
     name: "[Gen 9] NFE",
     desc: `Only Pok&eacute;mon that can evolve are allowed.`,
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710638/">NFE</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710638/">NFE</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712567/">NFE Resources</a>`
     ],
     mod: "gen9",
     ruleset: ["Standard OMs", "Not Fully Evolved", "Sleep Moves Clause", "Terastal Clause", "Min Source Gen = 9"],
@@ -1729,7 +1743,7 @@ const Formats = [
     mod: "thecardgame",
     searchShow: false,
     ruleset: ["Standard OMs", "Sleep Moves Clause", "Evasion Abilities Clause", "Evasion Items Clause", "Min Source Gen = 9"],
-    banlist: ["Annihilape", "Cyclizar", "Dragonite", "Espathra", "Houndstone", "Koraidon", "Miraidon", "Noivern", "Palafin", "Arena Trap", "Moody", "Shadow Tag", "Baton Pass"],
+    banlist: ["Annihilape", "Baxcalibur", "Chi-Yu", "Cyclizar", "Dragonite", "Espathra", "Houndstone", "Hydreigon", "Koraidon", "Miraidon", "Noivern", "Palafin", "Walking Wake", "Arena Trap", "Moody", "Shadow Tag", "Baton Pass"],
     onBegin() {
       for (const pokemon of this.getAllPokemon()) {
         pokemon.hpType = pokemon.hpType.replace(/(Ghost|Fairy)/g, "Psychic").replace(/Bug/g, "Grass").replace(/Ice/g, "Water").replace(/(Rock|Ground)/g, "Fighting").replace(/Flying/g, "Normal").replace(/Poison/g, "Dark");
@@ -1825,10 +1839,11 @@ const Formats = [
     mod: "trademarked",
     searchShow: false,
     ruleset: ["Standard OMs", "Sleep Moves Clause", "Min Source Gen = 9"],
-    banlist: ["Flutter Mane", "Koraidon", "Miraidon", "Slaking", "Arena Trap", "Magnet Pull", "Moody", "Shadow Tag", "Baton Pass"],
+    banlist: ["Flutter Mane", "Koraidon", "Miraidon", "Slaking", "Arena Trap", "Magnet Pull", "Moody", "Shadow Tag", "Baton Pass", "Revival Blessing"],
     restricted: [
       "Baneful Bunker",
       "Block",
+      "Chilly Reception",
       "Copycat",
       "Detect",
       "Destiny Bond",
@@ -1838,8 +1853,8 @@ const Formats = [
       "Instruct",
       "Mean Look",
       "move:Metronome",
+      "Parting Shot",
       "Protect",
-      "Revival Blessing",
       "Roar",
       "Silk Trap",
       "Spiky Shield",
@@ -1847,6 +1862,7 @@ const Formats = [
       "Shed Tail",
       "Shell Smash",
       "Substitute",
+      "Teleport",
       "Trick Room",
       "Whirlwind"
     ],
@@ -1900,101 +1916,6 @@ const Formats = [
   {
     section: "Retro Other Metagames",
     column: 2
-  },
-  {
-    name: "[Gen 7] Mix and Mega",
-    desc: `Mega Stones and Primal Orbs can be used on almost any Pok&eacute;mon with no Mega Evolution limit.`,
-    threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/posts/8778656/">USM Mix and Mega</a>`
-    ],
-    mod: "gen7mixandmega",
-    ruleset: ["Standard OMs", "Mega Rayquaza Clause", "Sleep Clause Mod"],
-    banlist: ["Shadow Tag", "Gengarite", "Baton Pass", "Electrify"],
-    restricted: [
-      "Arceus",
-      "Deoxys",
-      "Dialga",
-      "Dragonite",
-      "Giratina",
-      "Groudon",
-      "Ho-Oh",
-      "Kyogre",
-      "Kyurem",
-      "Landorus-Therian",
-      "Lugia",
-      "Lunala",
-      "Marshadow",
-      "Mewtwo",
-      "Naganadel",
-      "Necrozma",
-      "Palkia",
-      "Pheromosa",
-      "Rayquaza",
-      "Regigigas",
-      "Reshiram",
-      "Shuckle",
-      "Slaking",
-      "Solgaleo",
-      "Xerneas",
-      "Yveltal",
-      "Zekrom",
-      "Beedrillite",
-      "Blazikenite",
-      "Kangaskhanite",
-      "Mawilite",
-      "Medichamite",
-      "Pidgeotite",
-      "Ultranecrozium Z"
-    ],
-    unbanlist: ["Deoxys-Defense", "Kyurem-Base", "Necrozma-Base"],
-    onValidateTeam(team) {
-      const itemTable = /* @__PURE__ */ new Set();
-      for (const set of team) {
-        const item = this.dex.items.get(set.item);
-        if (!item.exists)
-          continue;
-        if (itemTable.has(item.id) && (item.megaStone || item.onPrimal)) {
-          return [
-            `You are limited to one of each Mega Stone and Primal Orb.`,
-            `(You have more than one ${item.name}.)`
-          ];
-        }
-        itemTable.add(item.id);
-      }
-    },
-    onValidateSet(set) {
-      const species = this.dex.species.get(set.species);
-      const item = this.dex.items.get(set.item);
-      if (!item.megaEvolves && !item.onPrimal && item.id !== "ultranecroziumz")
-        return;
-      if (species.baseSpecies === item.megaEvolves || item.onPrimal && item.itemUser?.includes(species.baseSpecies) || species.name.startsWith("Necrozma-") && item.id === "ultranecroziumz") {
-        return;
-      }
-      if (this.ruleTable.isRestricted(`item:${item.id}`) || this.ruleTable.isRestrictedSpecies(species) || set.ability === "Power Construct") {
-        return [`${set.species} is not allowed to hold ${item.name}.`];
-      }
-    },
-    onBegin() {
-      for (const pokemon of this.getAllPokemon()) {
-        pokemon.m.originalSpecies = pokemon.baseSpecies.name;
-      }
-    },
-    onSwitchIn(pokemon) {
-      const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
-      if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
-        this.add("-start", pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, "[silent]");
-        const oSpecies = this.dex.species.get(pokemon.m.originalSpecies);
-        if (oSpecies.types.length !== pokemon.species.types.length || oSpecies.types[1] !== pokemon.species.types[1]) {
-          this.add("-start", pokemon, "typechange", pokemon.species.types.join("/"), "[silent]");
-        }
-      }
-    },
-    onSwitchOut(pokemon) {
-      const oMegaSpecies = this.dex.species.get(pokemon.species.originalMega);
-      if (oMegaSpecies.exists && pokemon.m.originalSpecies !== oMegaSpecies.baseSpecies) {
-        this.add("-start", pokemon, oMegaSpecies.requiredItem || oMegaSpecies.requiredMove, "[silent]");
-      }
-    }
   },
   {
     name: "[Gen 7] STABmons",
@@ -3591,13 +3512,12 @@ const Formats = [
   },
   {
     name: "[Gen 4] Doubles OU",
-    threads: [`&bullet; <a href="https://www.smogon.com/forums/threads/3618411/">DPP Doubles</a>`],
+    threads: [`&bullet; <a href="https://www.smogon.com/forums/threads/3717286/">DPP Doubles</a>`],
     mod: "gen4",
     gameType: "doubles",
-    searchShow: false,
-    ruleset: ["[Gen 4] OU", "!Freeze Clause Mod"],
-    banlist: ["Explosion"],
-    unbanlist: ["Garchomp", "Latias", "Latios", "Manaphy", "Mew", "Salamence", "Wobbuffet", "Wynaut", "Swagger"]
+    ruleset: ["Standard", "!Sleep Clause Mod"],
+    banlist: ["AG", "Uber", "Soul Dew", "Dark Void"],
+    unbanlist: ["Garchomp", "Latios", "Manaphy", "Mew", "Salamence", "Wobbuffet", "Wynaut"]
   },
   {
     name: "[Gen 3] Doubles OU",

@@ -5328,8 +5328,10 @@ const Rulesets = {
     onBegin() {
       this.add("rule", "Mega Rayquaza Clause: You cannot mega evolve Rayquaza");
       for (const pokemon of this.getAllPokemon()) {
-        if (pokemon.species.id === "rayquaza")
+        if (pokemon.species.id === "rayquaza") {
           pokemon.canMegaEvo = null;
+          pokemon.canTerastallize = this.actions.canTerastallize(pokemon);
+        }
       }
     }
   },
@@ -6505,7 +6507,7 @@ const Rulesets = {
     onValidateSet(set, format) {
       const curSpecies = this.dex.species.get(set.species);
       const obtainableAbilityPool = /* @__PURE__ */ new Set();
-      const matchingSpecies = this.dex.species.all().filter((species) => !species.isNonstandard && species.types.every((type) => curSpecies.types.includes(type)) && species.types.length === curSpecies.types.length && !this.ruleTable.isBannedSpecies(species));
+      const matchingSpecies = this.dex.species.all().filter((species) => (!species.isNonstandard || this.ruleTable.has(`+pokemontag:${this.toID(species.isNonstandard)}`)) && species.types.every((type) => curSpecies.types.includes(type)) && species.types.length === curSpecies.types.length && !this.ruleTable.isBannedSpecies(species));
       for (const species of matchingSpecies) {
         for (const abilityName of Object.values(species.abilities)) {
           const abilityid = this.toID(abilityName);
@@ -6517,7 +6519,7 @@ const Rulesets = {
       }
     },
     checkCanLearn(move, species, setSources, set) {
-      const matchingSpecies = this.dex.species.all().filter((s) => !s.isNonstandard && s.types.every((type) => species.types.includes(type)) && s.types.length === species.types.length && !this.ruleTable.isBannedSpecies(s));
+      const matchingSpecies = this.dex.species.all().filter((s) => (!s.isNonstandard || this.ruleTable.has(`+pokemontag:${this.toID(s.isNonstandard)}`)) && s.types.every((type) => species.types.includes(type)) && s.types.length === species.types.length && !this.ruleTable.isBannedSpecies(s));
       const someCanLearn = matchingSpecies.some((s) => this.checkCanLearn(move, s, setSources, set) === null);
       if (someCanLearn)
         return null;
