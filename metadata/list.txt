@@ -101,7 +101,6 @@ gen9aaaubers
 gen9camoaaa
 gen9camovece
 gen9camovechaos
-gen9capmnm
 gen9chimerarandbats24
 gen9csstab
 gen9fortereevochaos
@@ -113,6 +112,7 @@ gen9ndaagsp
 gen9pokeaaa
 gen9randbtas
 gen9revaaa
+gen9revmnm
 gen9spaaa
 gen9spcamo
 gen9stabaaa
