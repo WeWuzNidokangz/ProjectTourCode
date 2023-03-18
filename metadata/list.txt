@@ -103,6 +103,7 @@ gen9camoaaa
 gen9camovece
 gen9camovechaos
 gen9capmnm
+gen9capmovechaos
 gen9chimerarandbats24
 gen9csstab
 gen9fortereevochaos
