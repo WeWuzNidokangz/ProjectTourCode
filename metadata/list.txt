@@ -98,6 +98,7 @@ gen8zustabaaa
 gen9aaadoubles
 gen9aaalc
 gen9aaaubers
+gen9brokenmayhem
 gen9camoaaa
 gen9camovece
 gen9camovechaos
@@ -109,6 +110,7 @@ gen9fpsp
 gen9ggmnm
 gen9ggsp
 gen9mnmag
+gen9nationaldex
 gen9ndaagsp
 gen9pokeaaa
 gen9randbtas
