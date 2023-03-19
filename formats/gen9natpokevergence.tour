@@ -1,0 +1,4 @@
+/tour new gen9pokebilities, elim,,, [Gen 9] National Dex Convergence Pokebilties
+/tour rules +Past, +Unobtainable, -ND uber, ND ag, convergencelegality, !obtainableabilities, Ability Clause = 1,sleep moves clause, -Excadrill, -Porygon-Z, -porygon2, -smeargle,-clefable,-comfey, -arenatrap, -shadowtag, -comatose, -drizzle, -moody, -pure power, -imposter, -trace, -huge power, -simple, -contrary, -shell smash,  -spore, -extreme speed,-belly drum, -dondozo, -Snow Warning+ Slush rush,-Rage Fist, - fur coat
+/tour autostart 10
+/tour autodq 7

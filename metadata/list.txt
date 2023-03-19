@@ -112,6 +112,7 @@ gen9fpsp
 gen9ggmnm
 gen9ggsp
 gen9mnmag
+gen9natpokevergence
 gen9ndaagsp
 gen9pokeaaa
 gen9randbtas
