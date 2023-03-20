@@ -17,3 +17,4 @@ gen9ndaagsp: aagsp
 gen9camovecap: capmove
 gen9camovece: cemove
 gen9camovechaos: camove
+gen9capconverge: capvergence
