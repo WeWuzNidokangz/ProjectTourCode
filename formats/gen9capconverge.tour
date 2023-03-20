@@ -1,4 +1,4 @@
 /tour new [Gen 9] CAP, Elimination,,,[Gen 9] CAPvergence
-/tour rules Convergence Legality
+/tour rules Convergence Legality, -Cyclizar, -Chi-Yu, -Dondozo, -Flutter Mane, -Iron Bundle, -Iron Hands, -Koraidon, -Miraidon, -Palafin, -Slaking, -Arena Trap, -Comatose, -Imposter, -Moody, -Pure Power, -Shadow Tag, -Speed Boost, -Baton Pass, -Extreme Speed, -Last Respects, -Rage Fist, -Revival Blessing, -Shell Smash, -Spore, -Transform, -Damp Rock, -King's Rock
 /tour autostart 10
 /tour autodq 7
