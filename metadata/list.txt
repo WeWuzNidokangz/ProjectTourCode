@@ -104,6 +104,7 @@ gen9camoaaa
 gen9camovecap
 gen9camovece
 gen9camovechaos
+gen9camovegg
 gen9capconverge
 gen9capmnm
 gen9chimerarandbats24
