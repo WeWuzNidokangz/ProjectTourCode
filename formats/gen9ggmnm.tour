@@ -1,4 +1,4 @@
-/tour new [Gen 9] Mix and Mega, Elimination,,,[Gen 9] Godly Mega
-/tour rules [Gen 9] Godly Gift, *Dragapult, *Slaking, -Baton Pass, +Miraidon, +Koraidon, *Miraidon, *Koraidon
-/tour autostart 7
-/tour autodq 4
+/tour new [Gen 9] Mix and Mega, Elimination,,,[Gen 9] Godly Gift Mix and Mega
+/tour rules Godly Gift Mod, +Dragapult, +Iron Bundle, +Miraidon, +Koraidon, *Garganacl, *Great Tusk, *Iron Hands, *Miraidon, *Koraidon, *Volcarona, -Blissey, -Chansey, +Arena Trap, +Booster Energy
+/tour autostart 10
+/tour autodq 6
