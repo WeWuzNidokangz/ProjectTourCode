@@ -28,6 +28,11 @@ const Formats = [
   },
   {
     name: "[Gen 9] OU",
+    threads: [
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710915/">SV OU Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712513/">SV OU Sample Teams</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712493/">SV OU Viability Rankings</a>`
+    ],
     mod: "gen9",
     ruleset: ["Standard"],
     banlist: ["Uber", "AG", "Arena Trap", "Moody", "Sand Veil", "Shadow Tag", "Snow Cloak", "King's Rock", "Baton Pass"]
@@ -35,16 +40,18 @@ const Formats = [
   {
     name: "[Gen 9] Ubers",
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710870/">Ubers Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710870/">Ubers Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712978/">Ubers Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: ["Standard"],
-    banlist: ["AG", "King's Rock", "Baton Pass"]
+    banlist: ["AG", "Moody", "King's Rock", "Baton Pass"]
   },
   {
     name: "[Gen 9] UU",
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3713709/">UU Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3713709/">UU Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3716435/">UU Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: ["[Gen 9] OU"],
@@ -53,7 +60,8 @@ const Formats = [
   {
     name: "[Gen 9] RU",
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3713711/">RU Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3713711/">RU Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3717138/">RU Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: ["[Gen 9] UU"],
@@ -62,7 +70,8 @@ const Formats = [
   {
     name: "[Gen 9] NU",
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3715408/">NU Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3715408/">NU Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3715712/">NU Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: ["[Gen 9] RU"],
@@ -77,7 +86,9 @@ const Formats = [
   {
     name: "[Gen 9] LC",
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710868/">Little Cup Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710868/">Little Cup Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712989/">Little Cup Sample Teams</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712664/">Little Cup Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: ["Little Cup", "Standard"],
@@ -86,7 +97,9 @@ const Formats = [
   {
     name: "[Gen 9] Monotype",
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710724/">Monotype Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710724/">Monotype Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3715794/">Monotype Sample Teams</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3714063/">Monotype Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: ["Standard", "Evasion Abilities Clause", "Same Type Clause", "Terastal Clause"],
@@ -96,7 +109,8 @@ const Formats = [
     name: "[Gen 9] 1v1",
     desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710864/">1v1 Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710864/">1v1 Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3712375/">1v1 Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: [
@@ -114,6 +128,7 @@ const Formats = [
       "Dragonite",
       "Flutter Mane",
       "Gholdengo",
+      "Greninja",
       "Koraidon",
       "Mimikyu",
       "Miraidon",
@@ -130,7 +145,8 @@ const Formats = [
   {
     name: "[Gen 9] Anything Goes",
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710911/">AG Metagame Discussion</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710911/">AG Metagame Discussion</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3714177/">AG Viability Rankings</a>`
     ],
     mod: "gen9",
     ruleset: ["Min Source Gen = 9", "Obtainable", "Team Preview", "HP Percentage Mod", "Cancel Mod", "Endless Battle Clause"]
@@ -139,7 +155,7 @@ const Formats = [
     name: "[Gen 9] CAP",
     mod: "gen9",
     ruleset: ["[Gen 9] OU", "+CAP"],
-    banlist: ["Crucibellite"]
+    banlist: ["Walking Wake", "Crucibellite"]
   },
   {
     name: "[Gen 9] Free-For-All",
@@ -272,13 +288,6 @@ const Formats = [
     mod: "gen9",
     gameType: "doubles",
     ruleset: ["Flat Rules", "!! Adjust Level = 50", "Paldea Pokedex", "Min Source Gen = 9", "VGC Timer", "Open Team Sheets"]
-  },
-  {
-    name: "[Gen 9] Paldea Prologue",
-    mod: "gen9",
-    gameType: "doubles",
-    ruleset: ["Flat Rules", "!! Adjust Level = 50", "Paldea Pokedex", "Min Source Gen = 9", "VGC Timer", "Limit One Restricted"],
-    restricted: ["Restricted Legendary"]
   },
   {
     name: "[Gen 9] Doubles Custom Game",
@@ -435,13 +444,14 @@ const Formats = [
     mod: "gen9",
     ruleset: ["-Nonexistent", "Standard NatDex", "Forme Clause", "Sleep Moves Clause", "Ability Clause = 2", "OHKO Clause", "Evasion Moves Clause", "Dynamax Clause", "CFZ Clause", "!Obtainable"],
     banlist: [
+      "Cramorant-Gorging",
+      "Calyrex-Shadow",
+      "Darmanitan-Galar-Zen",
       "Eternatus-Eternamax",
       "Groudon-Primal",
       "Rayquaza-Mega",
       "Shedinja",
-      "Cramorant-Gorging",
-      "Calyrex-Shadow",
-      "Darmanitan-Galar-Zen",
+      "Zygarde-Complete",
       "Arena Trap",
       "Contrary",
       "Gorilla Tactics",
@@ -612,9 +622,12 @@ const Formats = [
     mod: "gen9",
     ruleset: ["Standard OMs", "Sleep Clause Mod", "Min Source Gen = 9"],
     banlist: [
+      "Annihilape",
+      "Azumarill",
       "Chi-Yu",
       "Chien-Pao",
       "Cloyster",
+      "Dragonite",
       "Espathra",
       "Flutter Mane",
       "Great Tusk",
@@ -623,16 +636,15 @@ const Formats = [
       "Koraidon",
       "Miraidon",
       "Palafin",
-      "Riolu",
-      "Weavile",
       "Arena Trap",
       "Moody",
       "Serene Grace",
       "Shadow Tag",
       "Covert Cloak",
+      "Beat Up",
       "Baton Pass"
     ],
-    restricted: ["Dynamic Punch", "Fury Cutter", "Grass Knot", "Inferno", "Low Kick", "Nuzzle", "Power Trip", "Reversal", "Spit Up", "Stored Power", "Zap Cannon"],
+    restricted: ["Dynamic Punch", "Flail", "Fury Cutter", "Grass Knot", "Heavy Slam", "Inferno", "Low Kick", "Nuzzle", "Power Trip", "Reversal", "Spit Up", "Stored Power", "Zap Cannon"],
     validateSet(set, teamHas) {
       const item = set.item;
       const species = this.dex.species.get(set.species);
@@ -651,7 +663,8 @@ const Formats = [
       }
       const accuracyLoweringMove = move.secondaries?.some((secondary) => secondary.boosts?.accuracy && secondary.boosts?.accuracy < 0);
       const flinchMove = move.secondaries?.some((secondary) => secondary.volatileStatus === "flinch");
-      if (this.ruleTable.isRestricted(`move:${move.id}`) || (accuracyLoweringMove || move.ohko || move.multihit || move.id === "beatup" || move.flags["charge"] || move.priority > 0 || move.damageCallback || flinchMove || move.selfSwitch) && !this.ruleTable.has(`+move:${move.id}`)) {
+      const freezeMove = move.secondaries?.some((secondary) => secondary.status === "frz") || move.id === "triattack";
+      if (this.ruleTable.isRestricted(`move:${move.id}`) || (accuracyLoweringMove || move.ohko || move.multihit || move.id === "beatup" || move.flags["charge"] || move.priority > 0 || move.damageCallback || flinchMove || freezeMove || move.selfSwitch) && !this.ruleTable.has(`+move:${move.id}`)) {
         problems.push(`The move ${move.name} can't be used as an item.`);
       }
       return problems.length ? problems : null;
@@ -817,6 +830,7 @@ const Formats = [
       "Annihilape",
       "Chi-Yu",
       "Chien-Pao",
+      "Cyclizar",
       "Espathra",
       "Flutter Mane",
       "Houndstone",
@@ -828,6 +842,7 @@ const Formats = [
       "Moody",
       "Shadow Tag",
       "Booster Energy",
+      "Heat Rock",
       "King's Rock",
       "Baton Pass"
     ],
@@ -933,7 +948,8 @@ const Formats = [
       "Wonder Guard",
       "King's Rock",
       "Baton Pass",
-      "Revival Blessing"
+      "Revival Blessing",
+      "Shed Tail"
     ]
   },
   {
@@ -947,6 +963,7 @@ const Formats = [
     ruleset: ["-Nonexistent", "OHKO Clause", "Evasion Clause", "Species Clause", "Team Preview", "HP Percentage Mod", "Cancel Mod", "Sleep Moves Clause", "Endless Battle Clause"],
     banlist: [
       "Calyrex-Shadow",
+      "Zacian-Crowned",
       "Arena Trap",
       "Contrary",
       "Huge Power",
@@ -965,10 +982,11 @@ const Formats = [
       "Comatose + Sleep Talk",
       "Belly Drum",
       "Last Respects",
+      "Quiver Dance",
+      "Rage Fist",
       "Revival Blessing",
       "Shed Tail",
-      "Shell Smash",
-      "Rage Fist"
+      "Shell Smash"
     ]
   },
   {
@@ -981,7 +999,7 @@ const Formats = [
     mod: "mixandmega",
     ruleset: ["Standard OMs", "Evasion Items Clause", "Evasion Abilities Clause", "Sleep Moves Clause", "Min Source Gen = 9"],
     banlist: ["Koraidon", "Miraidon", "Beedrillite", "Blazikenite", "Gengarite", "Kangaskhanite", "Mawilite", "Medichamite", "Moody", "Rusted Sword", "Shadow Tag", "Baton Pass", "Shed Tail"],
-    restricted: ["Flutter Mane", "Gengar", "Iron Bundle", "Kilowattrel", "Sandy Shocks", "Slaking"],
+    restricted: ["Dragapult", "Flutter Mane", "Gengar", "Iron Bundle", "Kilowattrel", "Sandy Shocks", "Slaking"],
     onValidateTeam(team) {
       const itemTable = /* @__PURE__ */ new Set();
       for (const set of team) {
@@ -1036,7 +1054,8 @@ const Formats = [
     name: "[Gen 9] Godly Gift",
     desc: `Each Pok&eacute;mon receives one base stat from a God (AG/Uber Pok&eacute;mon) depending on its position in the team. If there is no Uber Pok&eacute;mon, it uses the Pok&eacute;mon in the first slot.`,
     threads: [
-      `&bullet; <a href="https://www.smogon.com/forums/threads/3710734/">Godly Gift</a>`
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3710734/">Godly Gift</a>`,
+      `&bullet; <a href="https://www.smogon.com/forums/threads/3718065/">Godly Gift Resources</a>`
     ],
     mod: "gen9",
     ruleset: ["Standard OMs", "Sleep Moves Clause", "Godly Gift Mod", "Min Source Gen = 9"],
@@ -1046,6 +1065,7 @@ const Formats = [
       "Great Tusk",
       "Iron Hands",
       "Iron Valiant",
+      "Walking Wake",
       "Arena Trap",
       "Huge Power",
       "Moody",
@@ -1077,6 +1097,7 @@ const Formats = [
       "Komala",
       "Koraidon",
       "Miraidon",
+      "Walking Wake",
       "Zoroark-Hisui",
       "Arena Trap",
       "Moody",
@@ -1132,14 +1153,15 @@ const Formats = [
   },
   {
     name: "[Gen 9] Cross Evolution",
-    desc: `Give a Pok&eacute;mon a Pok&eacute;mon name of the next evolution stage as a nickname to inherit stat changes, typing, abilities, and up to 2 moves from the next stage Pok&eacute;mon.`,
+    desc: `Give a Pok&eacute;mon a Pok&eacute;mon name of the next evolution stage as a nickname to inherit stat changes, typing, abilities, and moves from the next stage Pok&eacute;mon.`,
     threads: [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3710953/">Cross Evolution</a>`
     ],
     mod: "gen9",
     searchShow: false,
     ruleset: ["Standard OMs", "Ability Clause = 2", "Sleep Moves Clause", "Min Source Gen = 9"],
-    banlist: ["Arena Trap", "Huge Power", "Pure Power", "Shadow Tag", "Moody", "King's Rock", "Baton Pass"],
+    banlist: ["Scyther", "Sneasel", "Ursaring", "Arena Trap", "Huge Power", "Pure Power", "Shadow Tag", "Speed Boost", "Moody", "King's Rock", "Baton Pass", "Revival Blessing"],
+    restricted: ["Gallade", "Gholdengo"],
     onValidateTeam(team) {
       const names = /* @__PURE__ */ new Set();
       for (const set of team) {
@@ -1487,7 +1509,7 @@ const Formats = [
     gameType: "doubles",
     searchShow: false,
     ruleset: ["Standard Doubles"],
-    banlist: ["Flutter Mane", "Koraidon", "Miraidon", "Dancer", "Huge Power", "Moody", "Pure Power", "Shadow Tag", "Ally Switch", "Revival Blessing", "Swagger"],
+    banlist: ["Annihilape", "Chi-Yu", "Flutter Mane", "Koraidon", "Miraidon", "Dancer", "Huge Power", "Moody", "Pure Power", "Shadow Tag", "Ally Switch", "Revival Blessing", "Swagger"],
     onBegin() {
       for (const pokemon of this.getAllPokemon()) {
         pokemon.m.trackPP = /* @__PURE__ */ new Map();
@@ -2083,7 +2105,6 @@ const Formats = [
       "Compound Eyes",
       "Contrary",
       "Core Enforcer",
-      "Corrosive Gas",
       "Cosmic Power",
       "Cotton Guard",
       "Court Change",
@@ -2214,6 +2235,7 @@ const Formats = [
       "Fusion Flare",
       "Future Sight",
       "G-Max Cannonade",
+      "G-Max Centiferno",
       "G-Max Resonance",
       "G-Max Steelsurge",
       "G-Max Stonesurge",
@@ -2230,7 +2252,6 @@ const Formats = [
       "Genesect",
       "Genesis Supernova",
       "Gengar-Mega",
-      "Geomancy",
       "Gholdengo",
       "Ghostium Z",
       "Giga Drain",
@@ -2571,7 +2592,6 @@ const Formats = [
       "Shadow Bone",
       "Shadow Shield",
       "Shadow Sneak",
-      "Shadow Strike",
       "Shadow Tag",
       "Sharpedo-Mega",
       "Shaymin",
@@ -2681,11 +2701,13 @@ const Formats = [
       "Ting-Lu",
       "Tinted Lens",
       "Togekiss",
+      "Topsy-Turvy",
       "Torch Song",
       "Tornadus",
       "Tornadus-Therian",
       "Torterra",
       "Tough Claws",
+      "Toxic Debris",
       "Toxic Plate",
       "Toxic Spikes",
       "Toxic",
@@ -3515,9 +3537,9 @@ const Formats = [
     threads: [`&bullet; <a href="https://www.smogon.com/forums/threads/3717286/">DPP Doubles</a>`],
     mod: "gen4",
     gameType: "doubles",
-    ruleset: ["Standard", "!Sleep Clause Mod"],
-    banlist: ["AG", "Uber", "Soul Dew", "Dark Void"],
-    unbanlist: ["Garchomp", "Latios", "Manaphy", "Mew", "Salamence", "Wobbuffet", "Wynaut"]
+    ruleset: ["Standard"],
+    banlist: ["AG", "Uber", "Soul Dew", "Dark Void", "Sand Veil"],
+    unbanlist: ["Latios", "Manaphy", "Mew", "Salamence", "Wobbuffet", "Wynaut"]
   },
   {
     name: "[Gen 3] Doubles OU",
@@ -3529,7 +3551,7 @@ const Formats = [
     searchShow: false,
     ruleset: ["Standard", "!Switch Priority Clause Mod"],
     banlist: ["Uber", "Soul Dew", "Swagger"],
-    unbanlist: ["Deoxys-Defense", "Latias", "Wobbuffet", "Wynaut"]
+    unbanlist: ["Latias", "Wobbuffet", "Wynaut"]
   },
   {
     section: "Sw/Sh Singles",

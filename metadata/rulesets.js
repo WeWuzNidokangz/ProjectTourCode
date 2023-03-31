@@ -4367,14 +4367,18 @@ const Rulesets = {
     desc: `Forces all teams to have the same type. Usage: Force Monotype = [Type], e.g. "Force Monotype = Water"`,
     hasValue: true,
     onValidateRule(value) {
-      if (!this.dex.types.get(value).exists)
+      const type = this.dex.types.get(value);
+      if (!type.exists)
         throw new Error(`Misspelled type "${value}"`);
+      if (["Dark", "Steel"].includes(type.name) && this.dex.gen < 2 || type.name === "Fairy" && this.dex.gen < 6) {
+        throw new Error(`Invalid type "${type.name}" in Generation ${this.dex.gen}`);
+      }
     },
     onValidateSet(set) {
       const species = this.dex.species.get(set.species);
       const type = this.dex.types.get(this.ruleTable.valueRules.get("forcemonotype"));
       if (!species.types.map(this.toID).includes(type.id)) {
-        return [`${set.species} must have type ${type.name}`];
+        return [`${set.species} must have ${type.name} type.`];
       }
     }
   },
@@ -6363,9 +6367,8 @@ const Rulesets = {
                 basePower: 140,
                 category: "Physical",
                 priority: 0,
-                flags: {},
+                flags: { futuremove: 1 },
                 effectType: "Move",
-                isFutureMove: true,
                 type: "Steel"
               }
             });
@@ -6389,10 +6392,9 @@ const Rulesets = {
                 basePower: 120,
                 category: "Physical",
                 priority: 0,
-                flags: {},
+                flags: { futuremove: 1 },
                 ignoreImmunity: false,
                 effectType: "Move",
-                isFutureMove: true,
                 type: "Psychic"
               }
             });
@@ -6520,9 +6522,11 @@ const Rulesets = {
     },
     checkCanLearn(move, species, setSources, set) {
       const matchingSpecies = this.dex.species.all().filter((s) => (!s.isNonstandard || this.ruleTable.has(`+pokemontag:${this.toID(s.isNonstandard)}`)) && s.types.every((type) => species.types.includes(type)) && s.types.length === species.types.length && !this.ruleTable.isBannedSpecies(s));
+      console.log(matchingSpecies);
       const someCanLearn = matchingSpecies.some((s) => this.checkCanLearn(move, s, setSources, set) === null);
       if (someCanLearn)
         return null;
+      console.log("past null");
       return this.checkCanLearn(move, species, setSources, set);
     }
   }
