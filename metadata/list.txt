@@ -114,6 +114,7 @@ gen9fortestabaaa
 gen9fpsp
 gen9ggmnm
 gen9ggsp
+gen9mixandconverge
 gen9mnmag
 gen9ndaagsp
 gen9ndpokeconverge
