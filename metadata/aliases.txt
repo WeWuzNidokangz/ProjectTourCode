@@ -18,3 +18,4 @@ gen9camovecap: capmove
 gen9camovece: cemove
 gen9camovechaos: camove
 gen9capconverge: capvergence
+gen9mnmconverge: convergeandmega

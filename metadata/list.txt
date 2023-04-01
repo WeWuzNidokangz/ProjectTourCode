@@ -116,6 +116,7 @@ gen9ggmnm
 gen9ggsp
 gen9inhrev
 gen9mnmag
+gen9mnmconverge
 gen9ndaagsp
 gen9ndpokeconverge
 gen9pokeaaa
