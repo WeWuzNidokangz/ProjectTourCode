@@ -122,6 +122,7 @@ gen9ndpokeconverge
 gen9pokeaaa
 gen9randbtas
 gen9revaaa
+gen9reversegame
 gen9revmnm
 gen9spaaa
 gen9spcamo
