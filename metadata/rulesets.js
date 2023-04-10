@@ -4791,8 +4791,10 @@ const Rulesets = {
           hasOrbeetle = true;
         for (const moveid of set.moves) {
           const move = this.dex.moves.get(moveid);
-          if (move.status && move.status === "slp" && move.accuracy < 100)
+          const hasMissChanceOrNeverMisses = move.accuracy === true || move.accuracy < 100;
+          if (move.status && move.status === "slp" && hasMissChanceOrNeverMisses) {
             hasSleepMove = true;
+          }
         }
       }
       if (hasOrbeetle && hasSleepMove) {
@@ -6522,11 +6524,9 @@ const Rulesets = {
     },
     checkCanLearn(move, species, setSources, set) {
       const matchingSpecies = this.dex.species.all().filter((s) => (!s.isNonstandard || this.ruleTable.has(`+pokemontag:${this.toID(s.isNonstandard)}`)) && s.types.every((type) => species.types.includes(type)) && s.types.length === species.types.length && !this.ruleTable.isBannedSpecies(s));
-      console.log(matchingSpecies);
       const someCanLearn = matchingSpecies.some((s) => this.checkCanLearn(move, s, setSources, set) === null);
       if (someCanLearn)
         return null;
-      console.log("past null");
       return this.checkCanLearn(move, species, setSources, set);
     }
   }
