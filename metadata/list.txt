@@ -122,6 +122,7 @@ gen9mnmconverge
 gen9ndaagsp
 gen9ndpokeconverge
 gen9pokeaaa
+gen9pokemnm
 gen9randbtas
 gen9revaaa
 gen9revmnm
