@@ -20,3 +20,4 @@ gen9camovechaos: camove
 gen9capconverge: capvergence
 gen9mnmconverge: convergeandmega
 gen9csflippedaaa: reversegame
+gen9pokeaaa: gen9pokebilitiesaaa
