@@ -1,4 +1,4 @@
-/tour new [Gen 9] LC, Elimination,,,[Gen 9] Almost Any Ability Little Cup
-/tour rules !Obtainable Abilities, Ability Clause = 1, -Arena Trap, -Comatose, -Contrary, -Gorilla Tactics, -Huge Power, -Illusion, -Imposter, -Innards Out, -Moody, -Neutralizing Gas, -Parental Bond, -Pure Power, -Shadow Tag, -Simple, -Stakeout, -Speed Boost, -Water Bubble, -Wonder Guard, -Basculin, -Scyther, -Sneasel, -Sneasel-Hisui, -Tandemaus
+/tour new [Gen 9] LC, elim,,, [Gen 9] Almost Any Ability Little Cup
+/tour rules !Obtainable Abilities, Ability Clause = 1, Terastal Clause, -Arena Trap, -Comatose, -Contrary, -Fur Coat, -Gorilla Tactics, -Huge Power, -Ice Scales, -Illusion, -Imposter, -Innards Out, -Moody, -Neutralizing Gas, -Parental Bond, -Pure Power, -Shadow Tag, -Simple, -Speed Boost, -Unburden. -Water Bubble, -Wonder Guard, +Diglett-Base, +Flittle, +Meditite
 /tour autostart 7
 /tour autodq 4
