@@ -1,4 +1,6 @@
 const Rulesets = {
+  // Rulesets
+  ///////////////////////////////////////////////////////////////////
   standard: {
     effectType: "ValidatorRule",
     name: "Standard",
@@ -105,6 +107,7 @@ const Rulesets = {
       "HP Percentage Mod",
       "Cancel Mod",
       "Overflow Stat Mod"
+      // 'Min Source Gen = 9', - crashes for some reason
     ]
   },
   standardnatdex: {
@@ -122,7 +125,6 @@ const Rulesets = {
       "Cancel Mod",
       "Endless Battle Clause"
     ],
-    unbanlist: ["Adamant Crystal", "Griseous Core", "Lustrous Globe", "Bleakwind Storm", "Lunar Blessing", "Mystical Power", "Sandsear Storm", "Wildbolt Storm"],
     onValidateSet(set) {
       const species = this.dex.species.get(set.species);
       if (species.natDexTier === "Illegal") {
@@ -186,6 +188,7 @@ const Rulesets = {
       "HP Percentage Mod",
       "Cancel Mod"
     ]
+    // timer: {starting: 60 * 60, grace: 0, addPerTurn: 10, maxPerTurn: 100, timeoutAutoChoose: true},
   },
   obtainable: {
     effectType: "ValidatorRule",
@@ -193,6 +196,7 @@ const Rulesets = {
     desc: "Makes sure the team is possible to obtain in-game.",
     ruleset: ["Obtainable Moves", "Obtainable Abilities", "Obtainable Formes", "EV Limit = Auto", "Obtainable Misc"],
     banlist: ["Unreleased", "Unobtainable", "Nonexistent"],
+    // Mostly hardcoded in team-validator.ts
     onValidateTeam(team, format) {
       let kyuremCount = 0;
       let necrozmaDMCount = 0;
@@ -243,21 +247,25 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Obtainable Moves",
     desc: "Makes sure moves are learnable by the species."
+    // Hardcoded in team-validator.ts
   },
   obtainableabilities: {
     effectType: "ValidatorRule",
     name: "Obtainable Abilities",
     desc: "Makes sure abilities match the species."
+    // Hardcoded in team-validator.ts
   },
   obtainableformes: {
     effectType: "ValidatorRule",
     name: "Obtainable Formes",
     desc: "Makes sure in-battle formes only appear in-battle."
+    // Hardcoded in team-validator.ts
   },
   obtainablemisc: {
     effectType: "ValidatorRule",
     name: "Obtainable Misc",
     desc: "Validate all obtainability things that aren't moves/abilities (Hidden Power type, gender, IVs, events, duplicate moves).",
+    // Mostly hardcoded in team-validator.ts
     onChangeSet(set) {
       const species = this.dex.species.get(set.species);
       if (species.gender) {
@@ -3941,7 +3949,35 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Paldea Pokedex",
     desc: "Only allows Pok&eacute;mon native to the Paldea region (SV)",
-    banlist: ["Meowth-Galar", "Tauros-Base", "Wooper-Base", "Zorua-Hisui", "Zoroark-Hisui"],
+    banlist: [
+      "Arcanine-Hisui",
+      "Avalugg-Hisui",
+      "Basculin-White-Striped",
+      "Braviary-Hisui",
+      "Diglett-Alola",
+      "Dugtrio-Alola",
+      "Electrode-Hisui",
+      "Gimmighoul-Roaming",
+      "Goodra-Hisui",
+      "Grimer-Alola",
+      "Growlithe-Hisui",
+      "Lilligant-Hisui",
+      "Meowth-Galar",
+      "Muk-Alola",
+      "Persian-Alola",
+      "Qwilfish-Hisui",
+      "Raichu-Alola",
+      "Sliggoo-Hisui",
+      "Slowbro-Galar",
+      "Slowking-Galar",
+      "Slowpoke-Galar",
+      "Sneasel-Hisui",
+      "Voltorb-Hisui",
+      "Tauros-Base",
+      "Wooper-Base",
+      "Zorua-Hisui",
+      "Zoroark-Hisui"
+    ],
     onValidateSet(set, format) {
       const paldeaDex = [
         "Sprigatito",
@@ -4404,6 +4440,7 @@ const Rulesets = {
         return [`Your team must contain ${species.name}.`];
       }
     }
+    // hardcoded in sim/side
   },
   evlimits: {
     effectType: "ValidatorRule",
@@ -4479,6 +4516,7 @@ const Rulesets = {
         throw new Error(`The "Tera Type Preview" rule${this.ruleTable.blame("teratypepreview")} requires Team Preview.`);
       }
     }
+    // implemented in team preview
   },
   onevsone: {
     effectType: "Rule",
@@ -4497,7 +4535,6 @@ const Rulesets = {
     name: "Little Cup",
     desc: "Only allows Pok&eacute;mon that can evolve and don't have any prior evolutions",
     ruleset: ["Max Level = 5"],
-    banlist: ["Stantler"],
     onValidateSet(set) {
       const species = this.dex.species.get(set.species || set.name);
       if (species.prevo && this.dex.species.get(species.prevo).gen <= this.gen) {
@@ -4511,6 +4548,8 @@ const Rulesets = {
   blitz: {
     effectType: "Rule",
     name: "Blitz",
+    // THIS 100% INTENTIONALLY SAYS TEN SECONDS PER TURN
+    // IGNORE maxPerTurn. addPerTurn IS 5, TRANSLATING TO AN INCREMENT OF 10.
     desc: "Super-fast 'Blitz' timer giving 30 second Team Preview and 10 seconds per turn.",
     onBegin() {
       this.add("rule", "Blitz: Super-fast timer");
@@ -4809,6 +4848,7 @@ const Rulesets = {
     effectType: "Rule",
     name: "Endless Battle Clause",
     desc: "Prevents players from forcing a battle which their opponent cannot end except by forfeit",
+    // implemented in sim/battle.js, see https://dex.pokemonshowdown.com/articles/battlerules#endlessbattleclause for the specification.
     onBegin() {
       this.add("rule", "Endless Battle Clause: Forcing endless battles is banned");
     }
@@ -5255,11 +5295,14 @@ const Rulesets = {
     onBegin() {
       this.add("rule", "Desync Clause Mod: Desyncs changed to move failure.");
     }
+    // Hardcoded in gen1/moves.ts
+    // Can't be disabled (no precedent for how else to handle desyncs)
   },
   deoxyscamouflageclause: {
     effectType: "Rule",
     name: "Deoxys Camouflage Clause",
     desc: "Reveals the Deoxys forme when it is sent in battle.",
+    // Hardcoded into effect, cannot be disabled.
     onBegin() {
       this.add("rule", "Deoxys Camouflage Clause: Reveals the Deoxys forme when it is sent in battle.");
     }
@@ -5326,6 +5369,7 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Enforce Same Tera Type",
     desc: "Forces Pok&eacute;mon to have a Tera Type matching one of their original types."
+    // implemented in sametypeclause
   },
   megarayquazaclause: {
     effectType: "Rule",
@@ -5430,6 +5474,7 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "OM Unobtainable Moves",
     desc: "Allows special move legality rules to allow moves which are otherwise unobtainable without hacking or glitches",
+    // Hardcoded in team-validator.ts
     onValidateRule() {
       if (!this.ruleTable.checkCanLearn?.[0]) {
         throw new Error(`A format with the "OM Unobtainable Moves"${this.ruleTable.blame("omunobtainablemoves")} rule must also have a special move legality rule.`);
@@ -5567,11 +5612,13 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Allow Tradeback",
     desc: "Allows Gen 1 pokemon to have moves from their Gen 2 learnsets"
+    // Implemented in team-validator.js
   },
   allowavs: {
     effectType: "ValidatorRule",
     name: "Allow AVs",
     desc: "Tells formats with the 'gen7letsgo' mod to take Awakening Values into consideration when calculating stats"
+    // implemented in TeamValidator#validateStats
   },
   nfeclause: {
     effectType: "ValidatorRule",
@@ -5605,16 +5652,19 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Sketch Post-Gen 7 Moves",
     desc: "Allows Pok\xE9mon who learn Sketch to learn any Gen 8+ move (normally, Sketch is not usable in Gen 8+)."
+    // Implemented in sim/team-validator.ts
   },
   mimicglitch: {
     effectType: "ValidatorRule",
     name: "Mimic Glitch",
     desc: "Allows any Pokemon with access to Assist, Copycat, Metronome, Mimic, or Transform to gain access to almost any other move."
+    // Implemented in sim/team-validator.ts
   },
   overflowstatmod: {
     effectType: "Rule",
     name: "Overflow Stat Mod",
     desc: "Caps stats at 654 after a positive nature, or 655 after a negative nature"
+    // Implemented in sim/battle.ts
   },
   formeclause: {
     effectType: "ValidatorRule",
@@ -5813,6 +5863,7 @@ const Rulesets = {
     name: "Picked Team Size",
     desc: "Team size (number of pokemon) that can be brought out of Team Preview",
     hasValue: "positive-integer",
+    // hardcoded in sim/side
     onValidateRule() {
       if (!(this.ruleTable.has("teampreview") || this.ruleTable.has("teamtypepreview"))) {
         throw new Error(`The "Picked Team Size" rule${this.ruleTable.blame("pickedteamsize")} requires Team Preview.`);
@@ -5824,24 +5875,28 @@ const Rulesets = {
     name: "Min Team Size",
     desc: "Minimum team size (number of pokemon) that can be brought into Team Preview (or into the battle, in formats without Team Preview)",
     hasValue: "positive-integer"
+    // hardcoded in sim/team-validator
   },
   evlimit: {
     effectType: "ValidatorRule",
     name: "EV Limit",
     desc: "Maximum total EVs on each pokemon.",
     hasValue: "integer"
+    // hardcoded in sim/team-validator
   },
   maxteamsize: {
     effectType: "ValidatorRule",
     name: "Max Team Size",
     desc: "Maximum team size (number of pokemon) that can be brought into Team Preview (or into the battle, in formats without Team Preview)",
     hasValue: "positive-integer"
+    // hardcoded in sim/team-validator
   },
   maxmovecount: {
     effectType: "ValidatorRule",
     name: "Max Move Count",
     desc: "Max number of moves allowed on a single pokemon (defaults to 4 in a normal game)",
     hasValue: "positive-integer"
+    // hardcoded in sim/team-validator
   },
   maxtotallevel: {
     effectType: "Rule",
@@ -5890,24 +5945,28 @@ const Rulesets = {
         throw new Error(`A Max Total Level of ${maxTotalLevel}${ruleTable.blame("maxtotallevel")} is too low with ${maxTeamSize}${maxTeamSizeBlame} Pok\xE9mon at min level ${ruleTable.minLevel}${ruleTable.blame("minlevel")}`);
       }
     }
+    // hardcoded in sim/side
   },
   minlevel: {
     effectType: "ValidatorRule",
     name: "Min Level",
     desc: "Minimum level of brought Pok\xE9mon",
     hasValue: "positive-integer"
+    // hardcoded in sim/team-validator
   },
   maxlevel: {
     effectType: "ValidatorRule",
     name: "Max Level",
     desc: "Maximum level of brought Pok\xE9mon (if you're using both this and Adjust Level, this will control what level moves you have access to)",
     hasValue: "positive-integer"
+    // hardcoded in sim/team-validator
   },
   defaultlevel: {
     effectType: "ValidatorRule",
     name: "Default Level",
     desc: "Default level of brought Pok\xE9mon (normally should be equal to Max Level, except Custom Games have a very high max level but still default to 100)",
     hasValue: "positive-integer"
+    // hardcoded in sim/team-validator
   },
   adjustlevel: {
     effectType: "ValidatorRule",
@@ -5915,6 +5974,7 @@ const Rulesets = {
     desc: "All Pok\xE9mon will be set to exactly this level (but unlike Max Level and Min Level, it will still be able to learn moves from above this level) (when using this, Max Level is the level of the pokemon before it's level-adjusted down)",
     hasValue: "positive-integer",
     mutuallyExclusiveWith: "adjustleveldown"
+    // hardcoded in sim/team-validator
   },
   adjustleveldown: {
     effectType: "ValidatorRule",
@@ -5922,6 +5982,7 @@ const Rulesets = {
     desc: "Any Pok\xE9mon above this level will be set to this level (but unlike Max Level, it will still be able to learn moves from above this level)",
     hasValue: "positive-integer",
     mutuallyExclusiveWith: "adjustlevel"
+    // hardcoded in sim/team-validator
   },
   stadiumitemsclause: {
     effectType: "ValidatorRule",
@@ -5933,6 +5994,7 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Nintendo Cup 2000 Move Legality",
     desc: "Prevents Pok\xE9mon from having moves that would only be obtainable in Pok\xE9mon Crystal."
+    // Implemented in mods/gen2/rulesets.ts
   },
   aptclause: {
     effectType: "ValidatorRule",
@@ -5944,6 +6006,7 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Nintendo Cup 1997 Move Legality",
     desc: "Bans move combinations on Pok\xE9mon that weren't legal in Nintendo Cup 1997."
+    // Implemented in mods/gen1jpn/rulesets.ts
   },
   noswitching: {
     effectType: "Rule",
@@ -5972,6 +6035,8 @@ const Rulesets = {
         throw new Error(`Crazyhouse Rule cannot be added because a team can potentially have ${potentialMaxTeamSize} Pokemon on one team, which is more than the server limit of 24.`);
       }
     },
+    // In order to prevent a case of the clones, housekeeping is needed.
+    // This is especially needed to make sure one side doesn't end up with too many Pokemon.
     onBeforeSwitchIn(pokemon) {
       if (this.turn < 1 || !pokemon.side.faintedThisTurn)
         return;
@@ -6117,7 +6182,7 @@ const Rulesets = {
   tiershiftmod: {
     effectType: "Rule",
     name: "Tier Shift Mod",
-    desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/RUBL get +10, RU/NUBL get +20, NU/PUBL get +30, and PU or lower get +40.`,
+    desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/RUBL get +15, RU/NUBL get +20, NU/PUBL get +25, and PU or lower get +30.`,
     ruleset: ["Overflow Stat Mod"],
     onBegin() {
       this.add("rule", "Tier Shift Mod: Pok\xE9mon get stat buffs depending on their tier, excluding HP.");
@@ -6126,24 +6191,23 @@ const Rulesets = {
       if (!species.baseStats)
         return;
       const boosts = {
-        uu: 10,
-        rubl: 10,
+        uu: 15,
+        rubl: 15,
         ru: 20,
         nubl: 20,
-        nu: 30,
-        publ: 30,
-        pu: 40,
-        nfe: 40,
-        lc: 40
+        nu: 25,
+        publ: 25,
+        pu: 30,
+        nfe: 30,
+        lc: 30
       };
-      let tier = this.toID(species.tier);
+      const isNatDex = this.ruleTable.has("standardnatdex");
+      let tier = this.toID(isNatDex ? species.natDexTier : species.tier);
       if (!(tier in boosts))
         return;
       if (target) {
-        if (target.set.item === "lightclay")
-          return;
-        if (["drizzle", "drought", "snowwarning"].includes(target.set.ability) && boosts[tier] > 20)
-          tier = "nubl";
+        if (this.toID(target.set.item) === "lightclay")
+          tier = "rubl";
       }
       const pokemon = this.dex.deepClone(species);
       pokemon.bst = pokemon.baseStats["hp"];
