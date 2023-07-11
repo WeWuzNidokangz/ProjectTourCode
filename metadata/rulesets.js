@@ -40,7 +40,7 @@ const Rulesets = {
     name: "Flat Rules",
     desc: "The in-game Flat Rules: Adjust Level Down 50, Species Clause, Item Clause, -Mythical, -Restricted Legendary, Bring 6 Pick 3-6 depending on game type.",
     ruleset: ["Obtainable", "Team Preview", "Species Clause", "Nickname Clause", "Item Clause", "Adjust Level Down = 50", "Picked Team Size = Auto", "Cancel Mod"],
-    banlist: ["Mythical", "Restricted Legendary"]
+    banlist: ["Mythical", "Restricted Legendary", "Greninja-Bond"]
   },
   limittworestricted: {
     effectType: "ValidatorRule",
@@ -4491,7 +4491,7 @@ const Rulesets = {
     onTeamPreview() {
       this.add("clearpoke");
       for (const pokemon of this.getAllPokemon()) {
-        const details = pokemon.details.replace(", shiny", "").replace(/(Arceus|Gourgeist|Pumpkaboo|Xerneas|Silvally|Urshifu|Dudunsparce)(-[a-zA-Z?-]+)?/g, "$1-*").replace(/(Zacian|Zamazenta)(?!-Crowned)/g, "$1-*");
+        const details = pokemon.details.replace(", shiny", "").replace(/(Greninja|Gourgeist|Pumpkaboo|Xerneas|Silvally|Urshifu|Dudunsparce)(-[a-zA-Z?-]+)?/g, "$1-*").replace(/(Zacian|Zamazenta)(?!-Crowned)/g, "$1-*");
         this.add("poke", pokemon.side.id, details, "");
       }
       this.makeRequest("teampreview");
@@ -5760,7 +5760,7 @@ const Rulesets = {
       this.add("clearpoke");
       for (const side of this.sides) {
         for (const pokemon of side.pokemon) {
-          const details = pokemon.details.replace(", shiny", "").replace(/(Arceus|Gourgeist|Pumpkaboo|Silvally|Urshifu)(-[a-zA-Z?-]+)?/g, "$1-*");
+          const details = pokemon.details.replace(", shiny", "").replace(/(Arceus|Greninja|Gourgeist|Pumpkaboo|Silvally|Urshifu)(-[a-zA-Z?-]+)?/g, "$1-*");
           this.add("poke", pokemon.side.id, details, "");
         }
         let buf = "raw|";
@@ -6504,6 +6504,9 @@ const Rulesets = {
         let species = this.dex.species.get(set.species);
         if (typeof species.battleOnly === "string")
           species = this.dex.species.get(species.battleOnly);
+        if (species.baseSpecies === "Zamazenta" && this.toID(set.item) === "rustedshield" || species.baseSpecies === "Zacian" && this.toID(set.item) === "rustedshield") {
+          species = this.dex.species.get(`${species.baseSpecies}-Crowned`);
+        }
         if (set.item && this.dex.items.get(set.item).megaStone) {
           const item = this.dex.items.get(set.item);
           if (item.megaEvolves === species.baseSpecies) {
