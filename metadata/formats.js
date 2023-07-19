@@ -138,7 +138,9 @@ const Formats = [
       "Sneasel-Hisui",
       "Stantler",
       "Moody",
-      "Baton Pass"
+      "Baton Pass",
+      "Sticky Web",
+      "Tinkatink + Knock Off"
     ]
   },
   {
@@ -262,7 +264,7 @@ const Formats = [
     ],
     mod: "gen9",
     ruleset: ["[Gen 9] PU"],
-    banlist: ["PU", "Basculin-White-Striped", "Beartic", "Electrode", "Fraxure", "Girafarig", "Grumpig", "Leafeon", "Qwilfish-Hisui", "Sneasel-Hisui", "Vigoroth"]
+    banlist: ["PU", "Basculin-White-Striped", "Beartic", "Electrode", "Fraxure", "Frogadier", "Girafarig", "Grumpig", "Leafeon", "Qwilfish-Hisui", "Sneasel-Hisui", "Vigoroth"]
   },
   {
     name: "[Gen 9] LC UU",
@@ -448,7 +450,7 @@ const Formats = [
     mod: "gen9",
     gameType: "doubles",
     ruleset: ["Standard Doubles", "Little Cup", "Sleep Clause Mod"],
-    banlist: ["Dunsparce", "Murkrow", "Qwilfish-Hisui", "Scyther", "Sneasel", "Sneasel-Hisui"]
+    banlist: ["Basculin-White-Striped", "Dunsparce", "Murkrow", "Qwilfish-Hisui", "Scyther", "Sneasel", "Sneasel-Hisui", "Tinkatink + Knock Off"]
   },
   {
     name: "[Gen 9] 2v2 Doubles",
@@ -478,6 +480,7 @@ const Formats = [
       "Giratina",
       "Giratina-Origin",
       "Groudon",
+      "Iron Hands",
       "Koraidon",
       "Kyogre",
       "Magearna",
@@ -573,7 +576,7 @@ const Formats = [
     ],
     mod: "gen9",
     ruleset: ["[Gen 9] National Dex"],
-    banlist: ["ND OU", "ND UUBL", "Battle Bond"]
+    banlist: ["ND OU", "ND UUBL", "Battle Bond", "Drizzle", "Drought"]
   },
   {
     name: "[Gen 9] National Dex RU",
@@ -583,7 +586,7 @@ const Formats = [
     mod: "gen9",
     searchShow: false,
     ruleset: ["[Gen 9] National Dex UU"],
-    banlist: ["ND UU", "ND RUBL", "Drizzle", "Heat Rock", "Light Clay"]
+    banlist: ["ND UU", "ND RUBL", "Heat Rock", "Light Clay"]
   },
   {
     name: "[Gen 9] National Dex Monotype",
@@ -667,6 +670,7 @@ const Formats = [
       "King's Rock",
       "Leppa Berry",
       "Quick Claw",
+      "Razor Fang",
       "Smooth Rock",
       "Terrain Extender",
       "Acupressure",
@@ -731,6 +735,7 @@ const Formats = [
       "Zekrom",
       "Commander",
       "Power Construct",
+      "Assist",
       "Swagger"
     ]
   },
@@ -938,9 +943,8 @@ const Formats = [
       `&bullet; <a href="https://www.smogon.com/forums/threads/3722355/">Force of the Fallen</a>`
     ],
     mod: "gen9",
-    ruleset: ["Standard OMs", "Sleep Moves Clause", "Min Source Gen = 9"],
+    ruleset: ["Standard OMs", "Sleep Moves Clause", "Terastal Clause", "Min Source Gen = 9"],
     banlist: [
-      "Annihilape",
       "Arceus",
       "Calyrex-Ice",
       "Calyrex-Shadow",
@@ -951,6 +955,7 @@ const Formats = [
       "Enamorus-Base",
       "Espathra",
       "Eternatus",
+      "Falinks",
       "Flutter Mane",
       "Giratina",
       "Giratina-Origin",
@@ -960,6 +965,7 @@ const Formats = [
       "Koraidon",
       "Kyogre",
       "Landorus-Base",
+      "Lilligant-Hisui",
       "Magearna",
       "Mewtwo",
       "Miraidon",
@@ -969,6 +975,7 @@ const Formats = [
       "Rayquaza",
       "Regieleki",
       "Spectrier",
+      "Sneasler",
       "Zacian",
       "Zacian-Crowned",
       "Zamazenta-Crowned",
@@ -979,9 +986,10 @@ const Formats = [
       "King's Rock",
       "Baton Pass",
       "Last Respects",
+      "Rage Fist",
       "Shed Tail"
     ],
-    restricted: ["Extreme Speed", "Revival Blessing", "Transform"],
+    restricted: ["Belly Drum", "Extreme Speed", "Quiver Dance", "Population Bomb", "Revival Blessing", "Shell Smash"],
     onValidateSet(set, format, setHas, teamHas) {
       const lastMoveslot = this.dex.moves.get(set.moves[set.moves.length - 1]);
       if (this.ruleTable.isRestricted(`move:${lastMoveslot.id}`)) {
@@ -993,7 +1001,7 @@ const Formats = [
         pokemon.m.trueLastMoveSlot = pokemon.baseMoveSlots[pokemon.baseMoveSlots.length - 1];
       }
     },
-    onAfterFaint(length, target, source, effect) {
+    onFaint(target) {
       const allies = target.side.pokemon.filter((ally) => ally && target !== ally);
       for (const ally of allies) {
         ally.moveSlots = ally.baseMoveSlots = [...ally.baseMoveSlots, target.m.trueLastMoveSlot];
@@ -1034,6 +1042,7 @@ const Formats = [
       "Regieleki",
       "Slaking",
       "Spectrier",
+      "Torkoal",
       "Ursaluna",
       "Urshifu-Base",
       "Zacian",
@@ -1727,7 +1736,25 @@ const Formats = [
     mod: "gen9",
     searchShow: false,
     ruleset: ["Standard OMs", "Ability Clause = 2", "Sleep Moves Clause", "Min Source Gen = 9"],
-    banlist: ["Girafarig", "Miraidon", "Scyther", "Sneasel-Base", "Ursaring", "Arena Trap", "Huge Power", "Ice Scales", "Pure Power", "Shadow Tag", "Speed Boost", "Moody", "King's Rock", "Baton Pass", "Revival Blessing"],
+    banlist: [
+      "Basculin-White-Striped",
+      "Girafarig",
+      "Miraidon",
+      "Scyther",
+      "Sneasel",
+      "Sneasel-Hisui",
+      "Ursaring",
+      "Arena Trap",
+      "Huge Power",
+      "Ice Scales",
+      "Pure Power",
+      "Shadow Tag",
+      "Speed Boost",
+      "Moody",
+      "King's Rock",
+      "Baton Pass",
+      "Revival Blessing"
+    ],
     restricted: ["Gallade", "Gholdengo"],
     onValidateTeam(team) {
       const names = /* @__PURE__ */ new Set();
@@ -1909,7 +1936,25 @@ const Formats = [
       "Beat Up",
       "Last Respects"
     ],
-    restricted: ["Dynamic Punch", "Flail", "Fury Cutter", "Grass Knot", "Heavy Slam", "Inferno", "Last Respects", "Low Kick", "Nuzzle", "Power Trip", "Reversal", "Spit Up", "Stored Power", "Zap Cannon"],
+    restricted: ["Dynamic Punch", "Flail", "Fury Cutter", "Grass Knot", "Heavy Slam", "Inferno", "Low Kick", "Nuzzle", "Power Trip", "Reversal", "Spit Up", "Stored Power", "Zap Cannon"],
+    onValidateTeam(team) {
+      const itemTable = /* @__PURE__ */ new Set();
+      for (const set of team) {
+        const forte = this.toID(set.item);
+        if (!forte)
+          continue;
+        const move = this.dex.moves.get(forte);
+        if (move.exists && move.id !== "metronome") {
+          if (itemTable.has(forte)) {
+            return [
+              `You are limited to one of each move in the item slot per team.`,
+              `(You have more than one ${move.name}.)`
+            ];
+          }
+          itemTable.add(forte);
+        }
+      }
+    },
     validateSet(set, teamHas) {
       const item = set.item;
       const species = this.dex.species.get(set.species);
@@ -1925,6 +1970,9 @@ const Formats = [
       }
       if (set.moves.map(this.toID).includes(move.id)) {
         problems.push(`Moves in the item slot can't be in the moveslots as well.`);
+      }
+      if (this.ruleTable.has(`-move:${move.id}`)) {
+        problems.push(`The move ${move.name} is fully banned.`);
       }
       const accuracyLoweringMove = move.secondaries?.some((secondary) => secondary.boosts?.accuracy && secondary.boosts?.accuracy < 0);
       const flinchMove = move.secondaries?.some((secondary) => secondary.volatileStatus === "flinch");
@@ -2421,24 +2469,17 @@ const Formats = [
     ],
     mod: "sharedpower",
     searchShow: false,
-    ruleset: ["Standard OMs", "Evasion Abilities Clause", "Evasion Items Clause", "Sleep Moves Clause", "Min Source Gen = 9"],
+    ruleset: ["Standard OMs", "Evasion Abilities Clause", "Evasion Items Clause", "Sleep Moves Clause", "Terastal Clause", "Min Source Gen = 9"],
     banlist: [
       "Arceus",
-      "Calyrex-Ice",
       "Calyrex-Shadow",
       "Chien-Pao",
       "Dragonite",
-      "Eternatus",
       "Gholdengo",
-      "Giratina",
-      "Giratina-Origin",
-      "Groudon",
       "Koraidon",
       "Komala",
-      "Kyogre",
-      "Mewtwo",
       "Miraidon",
-      "Palkia-Origin",
+      "Raichu-Alola",
       "Rayquaza",
       "Zacian",
       "Zacian-Crowned",
@@ -2446,10 +2487,9 @@ const Formats = [
       "Zamazenta-Crowned",
       "Arena Trap",
       "Armor Tail",
+      "Chlorophyll",
       "Contrary",
       "Dazzling",
-      "Drought",
-      "Electric Surge",
       "Fur Coat",
       "Guts",
       "Huge Power",
@@ -4406,7 +4446,7 @@ const Formats = [
     ],
     mod: "gen4",
     ruleset: ["Standard", "Freeze Clause Mod"],
-    banlist: ["AG", "Uber", "Arena Trap", "Sand Veil", "Swinub + Snow Cloak", "Piloswine + Snow Cloak", "Mamoswine + Snow Cloak", "Soul Dew", "Baton Pass", "Swagger"]
+    banlist: ["AG", "Uber", "Arena Trap", "Sand Veil", "Swinub + Snow Cloak", "Piloswine + Snow Cloak", "Mamoswine + Snow Cloak", "Quick Claw", "Soul Dew", "Baton Pass", "Swagger"]
   },
   {
     name: "[Gen 3] OU",
@@ -5932,7 +5972,7 @@ const Formats = [
     searchShow: false,
     ruleset: ["[Gen 4] OU", "!Freeze Clause Mod"],
     banlist: ["OU", "UUBL"],
-    unbanlist: ["Arena Trap", "Swagger"]
+    unbanlist: ["Arena Trap", "Quick Claw", "Swagger"]
   },
   {
     name: "[Gen 4] NU",
@@ -6202,8 +6242,8 @@ const Formats = [
     ],
     mod: "gen3",
     searchShow: false,
-    ruleset: ["Standard"],
-    banlist: ["Uber", "OU", "UUBL", "UU", "NUBL", "NU"]
+    ruleset: ["Standard", "Baton Pass Clause"],
+    banlist: ["Uber", "OU", "UUBL", "UU", "NUBL", "NU", "PUBL"]
   },
   {
     name: "[Gen 3] LC",
