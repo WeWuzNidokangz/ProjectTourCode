@@ -1,0 +1,4 @@
+/tour new [Gen 9] Pokebilities, Elimination,,,[Gen 9] Convergence Pokebilities
+/tour rules Convergence Legality,!Obtainable Abilities,Ability Clause = 2,Sleep Moves Clause,AAA Restricted Abilities,-Dondozo,-Zamazenta,-Comatose,*Guts,-Drizzle + Regenerator,-Drizzle + Swift Swim,*Fur Coat,*Huge Power,*Imposter,*Pure Power,-Sand Stream ++ Sand Rush,-Simple,-Snow Warning + Slush Rush,-Speed Boost,-Belly Drum,-Extreme Speed,-Quiver Dance, -Rage Fist,-Shell Smash,-Shift Gear,-Victory Dance,-Damp Rock,-Heat Rock,-Icy Rock,-Smooth Rock,-Electrify,-Last Respects,-Population Bomb,-Transform,-Revival Blessing,-Regenerator > 2,-Uber,+Annihilape,+Houndstone,+Palafin,+Magearna,-Regieleki
+/tour autostart 10
+/tour autodq 7
