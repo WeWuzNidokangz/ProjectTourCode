@@ -126,6 +126,7 @@ gen9ndaagsp
 gen9ndpokeconverge
 gen9picaaa
 gen9pokeaaa
+gen9pokeconverge
 gen9pokemnm
 gen9randbtas
 gen9randbtassuddendeath
