@@ -1,5 +1,5 @@
-/tour new [Gen 9] Tera Donation, Elimination,,,[Gen 9] Type Chaos
-/tour rules !Nickname Clause, STABmons Move Legality, Revelationmons Mod, Bonus Type Rule, +Cyclizar, +Hoopa-Unbound, -Azumarill, -Barraskewda, -Cloyster, -Dragapult, -Enamorus-Base, -Garchomp, -Magearna, -Ursaluna, -Walking Wake, -Zamazenta, -Zoroark-Hisui, -Shed Tail, *Acupressure, *Astral Barrage, *Belly Drum, *Dire Claw, *Extreme Speed, *Fillet Away, *Gigaton Hammer, *Last Respects, *No Retreat, *Revival Blessing, *Shell Smash, *Shift Gear, *V-create, *Victory Dance, *Wicked Blow
+/tour new gen9teradonation, Elimination,,, Type Chaos
+/tour rules !nickname clause, camomons mod, stabmons move legality, revelationmons mod, bonus type mod, +cyclizar, -azumarill, -barraskewda, -cloyster, -dragapult, -enamorus-base, -garchomp, -noivern, -magearna, -ursaluna, -walking wake, -zamazenta, -zoroark-hisui, -shed tail, *acupressure, *astral barrage, *belly drum, *dire claw, *extreme speed, *fillet away, *gigaton hammer, *last respects, *no retreat, *revival blessing, *shell smash, *shift gear, *v-create, *victory dance, *wicked blow
 /tour autostart 7
 /tour autodq 5
-/wall this is Tera Donation, STABmons, Revelationmons, and Bonus Type
+/wall this is Tera Donation, STABmons, Camomons, Revelationmons, and Bonus Type. Pokémon have their types set to match their first two moves. The moves in the next slot(s) of a Pokémon's set have their types changed to match the Pokémon's type(s). The first Pokémon out changes its first move to its Tera Type.
