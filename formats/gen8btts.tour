@@ -1,4 +1,4 @@
 /tour new [Gen 8] OU, Elimination,,,[Gen 8] Bonus Type Tier Shift
-/tour rules Bonus Type Rule, Tier Shift Mod, !Nickname Clause, -Damp Rock, -Eviolite, -Heat Rock
+/tour rules Bonus Type Mod, Tier Shift Mod, !Nickname Clause, -Damp Rock, -Eviolite, -Heat Rock
 /tour autostart 7
 /tour autodq 4

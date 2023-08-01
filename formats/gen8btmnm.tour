@@ -1,5 +1,5 @@
 /tour new [Gen 8] Mix and Mega, Elimination,,,[Gen 8] Bonus Type Mix and Mega
-/tour rules Bonus Type Rule, !Nickname Clause, *Zygarde, *Dragonite, *Dracovish, *Kartana, -Shedinja, +Eternatus, *Eternatus
+/tour rules Bonus Type Mod, !Nickname Clause, *Zygarde, *Dragonite, *Dracovish, *Kartana, -Shedinja, +Eternatus, *Eternatus
 /tour autostart 10
 /tour autodq 6
 /wall Mega Stones that change secondary types will still change the secondary type. If the bonus type is a Pokemon's secondary type, mega-evolving using Aggronite will not remove that type.

@@ -1,4 +1,4 @@
 /tour new [Gen 8] OU, Elimination,,,[Gen 8] Bonus Revelation Mons
-/tour rules Bonus Type Rule, Revelationmons Mod, -Bolt Beak, -Boomburst, -U-turn, -Volt Switch, -Dragonite, -Shedinja, +Cinderace
+/tour rules Bonus Type Mod, Revelationmons Mod, -Bolt Beak, -Boomburst, -U-turn, -Volt Switch, -Dragonite, -Shedinja, +Cinderace
 /tour autostart 10
 /tour autodq 6
