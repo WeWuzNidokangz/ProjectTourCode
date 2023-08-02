@@ -1,5 +1,5 @@
-/tour create [Gen 9] Tera Donation, Elimination,,, [Gen 9] Spirit of Giving
-/tour rules Force of the Fallen Mod, Godly Gift Mod, +Annihilape, +Arceus, +Calyrex-Ice, +Chi-Yu, +Chien-Pao, +Dialga, +Dialga-Origin, +Espathra, +Eternatus, +Flutter Mane, +Giratina, +Giratina-Origin, +Groudon, +Iron Bundle, +Koraidon, +Kyogre, +Landorus-Base, +Magearna, +Mewtwo, +Miraidon, +Palafin, +Palkia, +Palkia-Origin, +Rayquaza, +Regieleki, +Spectrier, +Zacian, +Zacian-Crowned, +Zamazenta-Crowned, -Blissey, -Chansey, -Enamorus-Base, -Falinks, -Kingambit, -Komala, -Lilligant-Hisui, -Sneasler, -Toxapex, -Ursaluna, -Zamazenta-Base, -Huge Power, -Pure Power, -Rage Fist, -Shed Tail
+/tour create [Gen 9] Tera Donation, elim,,, [Gen 9] Spirit of Giving
+/tour rules  Force of the Fallen Mod,Godly Gift Mod,+Annihilape,+Arceus,+Calyrex-Ice,+Chi-Yu,+Chien-Pao,+Dialga,+Dialga-Origin,+Espathra,+Eternatus,+Flutter Mane,+Giratina,+Giratina-Origin,+Groudon,+Iron Bundle,+Koraidon,+Kyogre,+Landorus-Base,+Magearna,+Mewtwo,+Miraidon,+Palafin,+Palkia,+Palkia-Origin,+Rayquaza,+Regieleki,+Spectrier,+Zacian,+Zacian-Crowned,+Zamazenta-Crowned,-Blissey,-Chansey,-Kingambit,-Toxapex,-Ursaluna,-Zamazenta-Base, -Huge Power, -Pure Power, -falinks, -komala, -lilliganthisui, -sneasler,-lastrespects, -ragefist, -shedtail, *bellydrum, *extremespeed, *populationbomb, *quiverdance, *revivalblessing, *shellsmash, -boosterenergy, -kingsrock
 /tour autostart 10
 /tour autodq 7
 /wall This is Tera Donation + Godly Gift + Force of the Fallen
