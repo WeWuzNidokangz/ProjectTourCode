@@ -122,6 +122,7 @@ gen9inhrev
 gen9mnmag
 gen9mnmconverge
 gen9mnmlc
+gen9nationadexconvergencepokebilities
 gen9ndaagsp
 gen9ndpokeconverge
 gen9picaaa
@@ -142,6 +143,6 @@ gen9stabmnm
 gen9stabreevo
 gen9stabsp
 gen9stabubers
-gen9typechaos
 gen9tsaaa
+gen9typechaos
 gen9ultramix
