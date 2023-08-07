@@ -21,4 +21,4 @@ gen9capconverge: capvergence
 gen9mnmconverge: convergeandmega
 gen9csflippedaaa: reversegame
 gen9pokeaaa: pokebilitiesaaa
-gen9ndpokeconverge: ndpc, gen9nationaldexpokeconverge
+gen9ndpokeconverge: ndpc, gen9nationaldexpokeconverge,gen9nationadexconvergencepokebilities
