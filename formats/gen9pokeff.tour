@@ -1,0 +1,4 @@
+/tour create [Gen 9] Pokebilities, Elimination,,,[Gen 9] Frantic Pokebilities
+/tour rules Frantic Fusions Mod, !Obtainable Abilities, !Nickname Clause, Terastal Clause, Sleep Moves Clause, -CAP, -Past, -Annihilape, -Blissey, -Chansey, -Chien-Pao, -Dondozo, -Ditto, -Hoopa-Unbound, -Iron Hands, -Iron Valiant, -Komala, -Magearna, -Numel, -Persian-Alola, -Slaking, -Ting-Lu, -Toxapex, -Ursaluna, -Urshifu, -Zamazenta, -Zamazenta-Crowned, -Contrary, -Huge Power, -Illusion, -Magnet Pull, -Pure Power, -Stakeout, -Stench, -Speed Boost, -Revival Blessing, -Eviolite, -Quick Claw, -Drizzle + Swift Swim, -Drought + Protosynthesis, -Drought + Chlorophyll, -Electric Surge + Quark Drive, -Sandstream + Sand Rush, -Snow Warning + Slush Rush, -Surge Surfer + Electric Surge, -Unburden
+/tour autostart 8
+/tour autodq 7
