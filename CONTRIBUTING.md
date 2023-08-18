@@ -35,7 +35,7 @@ Every rule addition with \+\-\* should additionally be ordered with broad change
  
   
 
-Good example:-
+Good example:
 
   
 
@@ -50,7 +50,7 @@ Good example:-
 > Thundurus, Urshifu, Zeraora, Zygarde, Volcarona
 > 
 > Removed bans - Darmanitan, Darmanitan-Galar, Dracovish, Gengar,
-> Landorus-Base, Mamoswine, Porygon-Z,Urshifu-Rapid-Strike  Zygarde-10%, 
+> Landorus-Base, Mamoswine, Porygon-Z,Urshifu-Rapid-Strike, Zygarde-10%
 > 
 > Added restrictions -  Glacial Lance, No Retreat, Oblivion
 > Wing, Transform
@@ -61,8 +61,7 @@ Good example:-
 
   
 
-Bad example:-
-
+Bad example:
   
 
 > This tournament includes:
