@@ -6642,20 +6642,15 @@ const Rulesets = {
         return [`${species.name} is illegal.`];
       }
       const problemPokemon = this.dex.species.all().filter((s) => (s.name === "Xerneas" || s.battleOnly || s.forme === "Eternamax") && !(s.isMega || s.isPrimal || ["Greninja-Ash", "Necrozma-Ultra"].includes(s.name)) && !(this.ruleTable.has(`+pokemon:${s.id}`) || this.ruleTable.has(`+basepokemon:${this.toID(s.baseSpecies)}`)));
-      const problems = [];
       if (problemPokemon.includes(species)) {
         if (species.requiredItem && this.toID(set.item) !== this.toID(species.requiredItem)) {
-          problems.push(`${set.name ? `${set.name} (${species.name})` : species.name} is required to hold ${species.requiredItem}.`);
+          return [`${set.name ? `${set.name} (${species.name})` : species.name} is required to hold ${species.requiredItem}.`];
         }
         if (species.requiredMove && !set.moves.map(this.toID).includes(this.toID(species.requiredMove))) {
-          problems.push(`${set.name ? `${set.name} (${species.name})` : species.name} is required to have ${species.requiredMove}.`);
+          return [`${set.name ? `${set.name} (${species.name})` : species.name} is required to have ${species.requiredMove}.`];
         }
         set.species = species.id === "xerneas" ? "Xerneas-Neutral" : species.id === "zygardecomplete" ? "Zygarde" : species.battleOnly;
         species = this.dex.species.get(set.species);
-        if (species.baseSpecies === "Xerneas" && this.toID(set.ability) !== "fairyaura") {
-          problems.push(`${set.name ? `${set.name} (${species.name})` : species.name} is ability-locked into Fairy Aura.`);
-          set.ability = "Fairy Aura";
-        }
       }
       for (const moveid of set.moves) {
         const move = this.dex.moves.get(moveid);
@@ -6667,7 +6662,9 @@ const Rulesets = {
       if (item.isNonstandard && item.isNonstandard !== "Unobtainable" && !this.ruleTable.has(`+item:${item.id}`)) {
         return [`${item.name} is illegal.`];
       }
-      return problems;
+      if (species.baseSpecies === "Xerneas" && this.toID(set.ability) !== "fairyaura") {
+        return [`${set.name ? `${set.name} (${species.name})` : species.name} is ability-locked into Fairy Aura.`];
+      }
     }
   },
   speciesrevealclause: {
@@ -6677,6 +6674,64 @@ const Rulesets = {
     // Hardcoded into effect, cannot be disabled, ties into team preview
     onBegin() {
       this.add("rule", "Species Reveal Clause: Reveals a Pok\xE9mon's true species in hackmons-based metagames.");
+    }
+  },
+  franticfusionsmod: {
+    effectType: "Rule",
+    name: "Frantic Fusions Mod",
+    desc: `Pok&eacute;mon nicknamed after another Pok&eacute;mon get their stats buffed by 1/4 of that Pok&eacute;mon's stats, barring HP, and access to their abilities.`,
+    onBegin() {
+      this.add("rule", "Frantic Fusions Mod: Pok\xE9mon nicknamed after another Pok\xE9mon get buffed stats and more abilities.");
+    },
+    onValidateSet(set) {
+      const species = this.dex.species.get(set.species);
+      const fusion = this.dex.species.get(set.name);
+      const abilityPool = new Set(Object.values(species.abilities));
+      if (fusion.exists) {
+        for (const ability2 of Object.values(fusion.abilities)) {
+          abilityPool.add(ability2);
+        }
+      }
+      const ability = this.dex.abilities.get(set.ability);
+      if (!abilityPool.has(ability.name)) {
+        return [`${species.name} only has access to the following abilities: ${Array.from(abilityPool).join(", ")}.`];
+      }
+    },
+    onValidateTeam(team, format) {
+      const donors = new import_lib.Utils.Multiset();
+      for (const set of team) {
+        const species = this.dex.species.get(set.species);
+        const fusion = this.dex.species.get(set.name);
+        if (fusion.name === species.name)
+          continue;
+        donors.add(fusion.name);
+      }
+      for (const [fusionName, number] of donors) {
+        if (number > 1) {
+          return [`You can only fuse with any Pok\xE9 once.`, `(You have ${number} Pok\xE9mon fused with ${fusionName}.)`];
+        }
+        if (this.ruleTable.isBannedSpecies(this.dex.species.get(fusionName))) {
+          return [`Pok\xE9mon can't fuse with banned Pok\xE9mon.`, `(${fusionName} is banned.)`];
+        }
+      }
+    },
+    onModifySpecies(species, target, source, effect) {
+      if (!target)
+        return;
+      const newSpecies = this.dex.deepClone(species);
+      const fusionName = target.set.name;
+      if (!fusionName || fusionName === newSpecies.name)
+        return;
+      const fusionSpecies = this.dex.deepClone(this.dex.species.get(fusionName));
+      newSpecies.bst = newSpecies.baseStats.hp;
+      for (const stat in newSpecies.baseStats) {
+        if (stat === "hp")
+          continue;
+        const addition = Math.floor(fusionSpecies.baseStats[stat] / 4);
+        newSpecies.baseStats[stat] = this.clampIntRange(newSpecies.baseStats[stat] + addition, 1, 255);
+        newSpecies.bst += newSpecies.baseStats[stat];
+      }
+      return newSpecies;
     }
   }
 };
