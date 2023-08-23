@@ -25,11 +25,11 @@ Please write the names of formats and bans of Pokemon, items, etc with proper sp
 Although lower-case parameters without alphanumeric characters ("IDs") are recognised by the tour code parser, the formatting used in tour codes is mostly preserved when it is shown to users in the "This tournament includes:" boxout. If the rules are formatted correctly, they will be easier for users to read, and maintain a sense of consistency and familiarity with how built-in format descriptions are displayed with the !tier/!om command.
 
 The preferred order of operations is:
-1. Addition of rules - Standard OMs, Ability Clause = 2, Alphabet Cup Move Legality, etc.
-1. Removal of rules - !Obtainable Abilities, !Obtainable Moves, etc.
-1. Bans - -Landorus-Base, -Sword of Ruin, -King's Rock, -Acupressure, etc.
-1. Unbans - +Keldeo, +Fur Coat, +Pidgeotite, +Gigaton Hammer, etc.
-1. Restrictions - \*Dragonite, \*Belly Drum, etc 
+1. Addition of rules: Standard OMs, Ability Clause = 2, Alphabet Cup Move Legality, etc.
+2. Removal of rules: !Obtainable Abilities, !Obtainable Moves, etc.
+3. Bans: -Landorus-Base, -Sword of Ruin, -King's Rock, -Acupressure, etc.
+4. Unbans: +Keldeo, +Fur Coat, +Pidgeotite, +Gigaton Hammer, etc.
+5. Restrictions: \*Dragonite, \*Belly Drum, etc.
 
 Every rule addition with \+\-\* should additionally be ordered with broad changes (ex. +CAP), [pokemon, abilities, items, moves](https://github.com/smogon/pokemon-showdown/pull/9427#issuecomment-1449031093) and sorted alphabetically within type.
  
