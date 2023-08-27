@@ -67,6 +67,7 @@ gen8sketchag
 gen8sketchdoubles
 gen8sketchts
 gen8sketchubers
+gen8ssbchimera
 gen8ssbmayhemblitz
 gen8stab
 gen8stabaaa
