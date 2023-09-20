@@ -1,4 +1,4 @@
 /tour new [Gen 9] Shared Power, Elimination,,,[Gen 9] ShAAAred Power
-/tour rules !Obtainable Abilities, Ability Clause = 1, -Comatose, -Desolate Land, -Fur Coat,  -Good As Gold,-Hadron Engine, -Innards Out, -Orichalcum Pulse, -Parental Bond, -Primordial Sea, -Quick Draw, -Simple, -Steelworker, -Surge Surfer,  -Teravolt,-Triage, -Turboblaze, -Water Bubble -Wonder Guard, -Slaking, +Gholdengo, +Komala, +Koraidon,  +Miraidon, +Numel, +Persian-Alola,  +Raichu-Alola
+/tour rules !Obtainable Abilities, Ability Clause = 1, -Comatose, -Desolate Land, -Fur Coat, -Good As Gold, -Hadron Engine, -Innards Out, -Orichalcum Pulse, -Parental Bond, -Primordial Sea, -Quick Draw, -Simple, -Steelworker, -Surge Surfer, -Teravolt, -Triage, -Turboblaze, -Water Bubble, -Wonder Guard, -Slaking, +Gholdengo, +Komala, +Koraidon, +Miraidon, +Numel, +Persian-Alola, +Raichu-Alola
 /tour autostart 10
 /tour autodq 7
