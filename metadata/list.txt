@@ -138,7 +138,6 @@ gen9randbtas
 gen9randbtassuddendeath
 gen9revaaa
 gen9revmnm
-gen9shaaaredpower
 gen9spaaa
 gen9spcamo
 gen9spiritofgiving
