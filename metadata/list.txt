@@ -110,6 +110,7 @@ gen9camovecap
 gen9camovece
 gen9camovechaos
 gen9camovegg
+gen9camovepoke
 gen9camoveubers
 gen9capce
 gen9capconverge
