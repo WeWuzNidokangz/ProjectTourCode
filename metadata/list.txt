@@ -111,6 +111,7 @@ gen9camovece
 gen9camovechaos
 gen9camovegg
 gen9camoveubers
+gen9capce
 gen9capconverge
 gen9capmnm
 gen9chimerarandbats24
