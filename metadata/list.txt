@@ -137,6 +137,7 @@ gen9pokeaaa
 gen9pokeconverge
 gen9pokeff
 gen9pokemnm
+gen9ppaaa
 gen9randbtas
 gen9randbtassuddendeath
 gen9revaaa
