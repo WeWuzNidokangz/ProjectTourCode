@@ -100,7 +100,7 @@ gen9aaaag
 gen9aaadoubles
 gen9aaalc
 gen9aaaubers
-gen9abcuup
+gen9abcuu
 gen9absolutechaos
 gen9alphabetsoup
 gen9brokenmayhem
@@ -120,7 +120,6 @@ gen9cappokeaaa
 gen9chimerarandbats24
 gen9csflippedaaa
 gen9csstab
-gen9ffstab
 gen9ffubers
 gen9fortereevochaos
 gen9fortestabaaa
