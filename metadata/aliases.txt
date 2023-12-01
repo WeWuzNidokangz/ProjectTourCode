@@ -25,3 +25,4 @@ gen9camoconverge: camovergence
 gen9spaaa: shaaaredpower, sharedpoweraaa, shaaared
 gen9cappokeaaa: capokeaaa
 gen9abcuu: abcuup
+gen9inhcup: inherimonscup
