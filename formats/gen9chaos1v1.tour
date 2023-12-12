@@ -1,4 +1,4 @@
-/tour new gen9randombattle,elim,,,[Gen 9] Chaos Bo3 1v1
-/Tour rules mayhem, re-evolution mod, bonus type mod, revelationmons mod, Tier shift mod, Best of = 3, 1v1
-/Tour autostart 5
-/Tour autodq 3
+/tour new [Gen 9] Random Battle Mayhem, Elimination,,,[Gen 9] Chaos Bo3 1v1
+/tour rules [Gen 9] 1v1, Re-Evolution Mod, Bonus Type Mod, Revelationmons Mod, Tier Shift Mod, Best of = 3
+/tour autostart 5
+/tour autodq 2
