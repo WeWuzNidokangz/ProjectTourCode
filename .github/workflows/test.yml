@@ -43,10 +43,6 @@ jobs:
       - name: Install actions/core
         run: npm install @actions/core
 
-      # Install actions/github
-      - name: Install actions/github
-        run: npm install @actions/github
-
       # Generate custom battle tests for Showdown 
       - name: Generate Showdown Custom Tests
         run: node $GITHUB_WORKSPACE/test/create-custom-tests.js
