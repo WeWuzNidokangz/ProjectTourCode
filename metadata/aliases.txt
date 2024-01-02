@@ -23,4 +23,6 @@ gen9pokeaaa: pokebilitiesaaa
 gen9ndpokeconverge: ndpc, gen9nationaldexpokeconverge,gen9nationadexconvergencepokebilities
 gen9camoconverge: camovergence
 gen9spaaa: shaaaredpower, sharedpoweraaa, shaaared
-gen9cappokeaaa: gen9capokeaaa
+gen9cappokeaaa: capokeaaa
+gen9abcuu: abcuup
+gen9inhcup: inherimonscup
