@@ -48,7 +48,7 @@ jobs:
       - name: Inject Showdown Custom Tests
         run: |
           echo Injecting custom tests...
-          cp $GITHUB_WORKSPACE/test/operationtourcode.js /home/runner/work/OTC_SandboxMirror/OTC_SandboxMirror/pokemon-showdown/test/sim/misc/operationtourcode.js
+          cp $GITHUB_WORKSPACE/test/operationtourcode.js /home/runner/work/OTC/OTC/pokemon-showdown/test/sim/misc/operationtourcode.js
           echo Finished injecting custom tests
 
       # Install mocha
@@ -58,4 +58,4 @@ jobs:
       # Execute custom battle tests
       - name: Run Showdown Custom Tests
         run: npx mocha -g "OperationTourCode"
-        working-directory: /home/runner/work/OTC_SandboxMirror/OTC_SandboxMirror/pokemon-showdown
+        working-directory: /home/runner/work/OTC/OTC/pokemon-showdown
