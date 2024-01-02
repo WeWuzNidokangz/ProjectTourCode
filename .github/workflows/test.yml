@@ -33,11 +33,15 @@ jobs:
           repository: smogon/pokemon-showdown
           path: pokemon-showdown
 
-      # Set up Node
+      # Install Node
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '16.x'
+
+      # Install actions/core
+      - name: Install actions/core
+        run: npm install -g @actions/core
 
       # Generate custom battle tests for Showdown 
       - name: Generate Showdown Custom Tests
