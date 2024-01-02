@@ -78,7 +78,7 @@ fs.readdirSync('./').forEach(sFilename => {
     }
 
     if(bParseError) {
-        core.setFailed(`${sFilename} triggered challenge code parse error: ${output} (${sFilename})`);
+        core.setFailed(`${sFilename} triggered challenge code parse error: ${output}`);
     }
     else {
         var sPostNewText;
