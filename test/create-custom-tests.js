@@ -11,7 +11,8 @@ const OTC = require('./api/otc_api.js');
 
 // Get list of specific changed tour files (for PR)
 var allChangedTourFiles = process.env.ALL_CHANGED_TOUR_FILES;
-if (undefined === allChangedTourFiles) { // Fallback to command-line
+const bProcessEnvWasUndefined = (undefined === allChangedTourFiles);
+if (bProcessEnvWasUndefined) { // Fallback to command-line
     console.log(`(Param fell back to command line...)`);
     allChangedTourFiles = process.argv[2];
 }
@@ -26,6 +27,8 @@ if(allChangedTourFiles) {
             targetTourNameArray[nTourItr] = targetTourNameArray[nTourItr].replace('formats/', '').replace(OTC.TourExt, '');
         }
     }
+} else if (!bProcessEnvWasUndefined) {
+    allChangedTourFiles = [];
 }
 
 const sTourNameList = fs.readFileSync('./../metadata/list.txt', {encoding: 'utf8'});
