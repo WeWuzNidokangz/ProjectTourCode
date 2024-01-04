@@ -11,7 +11,7 @@ const OTC = require('./api/otc_api.js');
 
 // Get list of specific changed tour files (for PR)
 var allChangedTourFiles = process.env.ALL_CHANGED_TOUR_FILES;
-if (!allChangedTourFiles) { // Fallback to command-line
+if (undefined === allChangedTourFiles) { // Fallback to command-line
     console.log(`(Param fell back to command line...)`);
     allChangedTourFiles = process.argv[2];
 }
