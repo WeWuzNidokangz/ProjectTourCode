@@ -58,7 +58,7 @@ jobs:
 
       # Generate custom battle tests for Showdown (PR tours only)
       - name:  Generate Showdown Custom Tests (PR Tours)
-        if: steps.changed-tour-files.outputs.any_changed == 'true'
+        if: github.event_name == 'pull_request'
         env:
           ALL_CHANGED_TOUR_FILES: ${{ steps.changed-tour-files.outputs.all_changed_files }}
         run: |
@@ -70,7 +70,7 @@ jobs:
 
       # Generate custom battle tests for Showdown (all listed tours)
       - name: Generate Showdown Custom Tests (All Listed Tours)
-        if: steps.changed-tour-files.outputs.any_changed != 'true'
+        if: github.event_name != 'pull_request'
         run: node $GITHUB_WORKSPACE/test/create-custom-tests.js
         working-directory: test
 
