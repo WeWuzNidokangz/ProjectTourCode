@@ -19,6 +19,9 @@ if (bProcessEnvWasUndefined) { // Fallback to command-line
 console.log(`allChangedTourFiles: ${allChangedTourFiles}`);
 
 let targetTourNameArray = null;
+if (!bProcessEnvWasUndefined) {
+    targetTourNameArray = [];
+}
 if(allChangedTourFiles) {
     allChangedTourFiles = allChangedTourFiles.replace('allChangedTourFiles=', '');
     if('' !== allChangedTourFiles) {
@@ -27,8 +30,6 @@ if(allChangedTourFiles) {
             targetTourNameArray[nTourItr] = targetTourNameArray[nTourItr].replace('formats/', '').replace(OTC.TourExt, '');
         }
     }
-} else if (!bProcessEnvWasUndefined) {
-    allChangedTourFiles = [];
 }
 
 const sTourNameList = fs.readFileSync('./../metadata/list.txt', {encoding: 'utf8'});
