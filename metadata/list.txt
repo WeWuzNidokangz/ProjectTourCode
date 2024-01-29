@@ -143,6 +143,7 @@ gen9ndpokeconverge
 gen9picaaa
 gen9pokeaaa
 gen9pokeconverge
+gen9pokebh
 gen9pokeff
 gen9pokemnm
 gen9ppaaa
