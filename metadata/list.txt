@@ -141,6 +141,7 @@ gen9mnmconverge
 gen9mnmlc
 gen9ndaagsp
 gen9ndpokeconverge
+gen9picaa
 gen9picaaa
 gen9pokeaaa
 gen9pokebh
