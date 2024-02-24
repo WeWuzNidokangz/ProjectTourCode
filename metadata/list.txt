@@ -132,6 +132,7 @@ gen9fpsp
 gen9gglc
 gen9ggmnm
 gen9ggsp
+gen9godlypower
 gen9ilovemath
 gen9inhcup
 gen9inhrev
