@@ -17,6 +17,7 @@ gen9camovecap: capmove
 gen9camovece: cemove
 gen9camovechaos: camove
 gen9capconverge: capvergence
+gen9ggsp: godlypower
 gen9mnmconverge: convergeandmega
 gen9csflippedaaa: reversegame
 gen9pokeaaa: pokebilitiesaaa
