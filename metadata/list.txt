@@ -125,6 +125,7 @@ gen9csstab
 gen9doublesungodlygift
 gen9ffstab
 gen9ffubers
+gen9forestab
 gen9fortereevochaos
 gen9fortestabaaa
 gen9fortissimons
