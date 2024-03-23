@@ -132,13 +132,13 @@ gen9fortestabaaa
 gen9fortissimons
 gen9fotfsp
 gen9fpsp
-gen9futurepotential
 gen9gglc
 gen9ggmnm
 gen9ggsp
 gen9ilovemath
 gen9inhcup
 gen9inhrev
+gen9lcbh
 gen9megaconverge
 gen9mightymega
 gen9mnmag
@@ -151,6 +151,7 @@ gen9pokeaaa
 gen9pokebh
 gen9pokeconverge
 gen9pokeff
+gen9pokelc
 gen9pokemnm
 gen9ppaaa
 gen9randbtas
