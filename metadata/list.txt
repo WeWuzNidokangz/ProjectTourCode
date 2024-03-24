@@ -151,6 +151,7 @@ gen9pokeaaa
 gen9pokebh
 gen9pokeconverge
 gen9pokeff
+gen9pokelc
 gen9pokemnm
 gen9ppaaa
 gen9randbtas
