@@ -7444,7 +7444,12 @@ const Rulesets = {
   uselessmovesclause: {
     effectType: "ValidatorRule",
     name: "Useless Moves Clause"
-    // implemented in /mods/moderngen1/rulesets.ts
+    // implemented in /mods/moderngen2/rulesets.ts
+  },
+  uselessitemsclause: {
+    effectType: "ValidatorRule",
+    name: "Useless Items Clause"
+    // implemented in /mods/moderngen2/rulesets.ts
   }
 };
 //# sourceMappingURL=rulesets.js.map
