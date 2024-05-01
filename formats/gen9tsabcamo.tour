@@ -1,0 +1,5 @@
+/tour new [gen9] type split,elim,,,[gen 9] Type Split + STABmons + Camomons
+/tour rules STABmons move legality, Camomons Mod, +Annihilape, +Archaludon, -Araquanid, -Basculegion-F, -Darkrai, -Enamorus-base, -Kyurem-Black, -Manaphy, -Pecharunt, -Zacian, -Zekrom, *Acupressure, *Belly Drum, *Dire Claw, *Extreme Speed, *Fillet Away, *Gigaton Hammer, *No Retreat, *Revival Blessing, *Shell Smash, *Shift Gear, *Triple Arrows, *V-Create, *Victory Dance, *Volt Switch
+/tour autostart 8
+/tour autodq 5
+!om type split
