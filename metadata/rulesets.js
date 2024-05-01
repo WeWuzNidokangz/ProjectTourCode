@@ -106,8 +106,8 @@ const Rulesets = {
       "Endless Battle Clause",
       "HP Percentage Mod",
       "Cancel Mod",
-      "Overflow Stat Mod"
-      // 'Min Source Gen = 9', - crashes for some reason
+      "Overflow Stat Mod",
+      "Min Source Gen = 9"
     ]
   },
   standardnatdex: {
@@ -7450,6 +7450,67 @@ const Rulesets = {
     effectType: "ValidatorRule",
     name: "Useless Items Clause"
     // implemented in /mods/moderngen2/rulesets.ts
+  },
+  ferventimpersonationmod: {
+    effectType: "Rule",
+    name: "Fervent Impersonation Mod",
+    onValidateTeam(team, format, teamHas) {
+      const exhaustedSpecies = /* @__PURE__ */ new Set();
+      for (const set of team) {
+        const species = this.dex.species.get(set.species);
+        const impersonation = this.dex.species.get(set.name);
+        if (exhaustedSpecies.has(species.baseSpecies) || exhaustedSpecies.has(impersonation.baseSpecies) && impersonation.baseSpecies !== species.baseSpecies) {
+          return [`You have more than one Pok\xE9mon nicknamed after ${impersonation.baseSpecies}.`];
+        }
+        exhaustedSpecies.add(species.baseSpecies);
+        if (impersonation.exists && impersonation.baseSpecies !== species.baseSpecies) {
+          exhaustedSpecies.add(impersonation.baseSpecies);
+        }
+      }
+    },
+    onValidateSet(set) {
+      const species = this.dex.species.get(set.species);
+      const impersonation = this.dex.species.get(set.name);
+      if (this.ruleTable.isRestrictedSpecies(species)) {
+        return [
+          `${species.name} can't be used as a base species.`,
+          `(Restricted Pok\xE9mon can only be used as impersonations.)`
+        ];
+      }
+      const rt = this.ruleTable;
+      if (this.toID(set.name) !== species.id && this.toID(set.name) !== impersonation.id || impersonation.isNonstandard && !(rt.has(`+pokemontag:${this.toID(impersonation.isNonstandard)}`) || rt.has(`+pokemon:${impersonation.id}`) || rt.has(`+basepokemon:${this.toID(impersonation.baseSpecies)}`))) {
+        return [`All Pok\xE9mon must either have no nickname or must be nicknamed after a Pok\xE9mon.`];
+      }
+    },
+    checkCanLearn(move, species, setSources, set) {
+      const impersonation = this.dex.species.get(set.name);
+      const baseCheckCanLearn = this.checkCanLearn(move, species, setSources, set);
+      if (baseCheckCanLearn)
+        return baseCheckCanLearn;
+      return this.checkCanLearn(move, impersonation, setSources, set);
+    },
+    onResidualOrder: 29,
+    onResidual(pokemon) {
+      if (pokemon.transformed || !pokemon.hp)
+        return;
+      const oldAbilityName = pokemon.getAbility().name;
+      const oldPokemon = pokemon.species;
+      const impersonation = this.dex.species.get(pokemon.set.name);
+      if (pokemon.species.id === impersonation.id || pokemon.hp > pokemon.maxhp / 2)
+        return;
+      this.add("-activate", pokemon, "ability: Power Construct");
+      pokemon.formeChange(impersonation.name, this.effect, true);
+      pokemon.baseMaxhp = Math.floor(Math.floor(
+        2 * pokemon.species.baseStats["hp"] + pokemon.set.ivs["hp"] + Math.floor(pokemon.set.evs["hp"] / 4) + 100
+      ) * pokemon.level / 100 + 10);
+      const newMaxHP = pokemon.volatiles["dynamax"] ? 2 * pokemon.baseMaxhp : pokemon.baseMaxhp;
+      pokemon.hp = this.clampIntRange(newMaxHP - (pokemon.maxhp - pokemon.hp), 1, newMaxHP);
+      pokemon.maxhp = newMaxHP;
+      this.add("-heal", pokemon, pokemon.getHealth, "[silent]");
+      const oldAbilityKey = Object.keys(oldPokemon.abilities).find((x) => oldPokemon.abilities[x] === oldAbilityName) || "0";
+      const newAbility = impersonation.abilities[oldAbilityKey] || impersonation.abilities["0"];
+      pokemon.setAbility(newAbility, null, true);
+    }
   }
 };
 //# sourceMappingURL=rulesets.js.map
