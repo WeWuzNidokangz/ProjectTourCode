@@ -1,4 +1,5 @@
 /tour new [Gen 9] Trademarked,elim,,, [Gen 9] Tradeabilities
-/tour rules [Gen 9] Pokebilities, *Burning Bulwark, *Endure, -Azumarill, +Annihilape, +Ogerpon-Hearthflame, +Regieleki, +Spectrier, +Urshifu-Base
+/tour rules [Gen 9] Pokebilities, Burning Bulwark,Endure, *Pain Split, -Recycle + Eject Button, -Recycle + Eject Pack, -Azumarill, +Annihilape, +Ogerpon-Hearthflame, +Regieleki, +Spectrier, +Urshifu-Base
 /tour autostart 10
 /tour autodq 7
+/wall this is Trademarked + Pokebilities
