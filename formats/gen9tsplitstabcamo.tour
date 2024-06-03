@@ -1,5 +1,5 @@
 /tour new [Gen 9] Type Split,Elimination,,,[Gen 9] Type Split + STABmons + Camomons
-/tour rules STABmons Move Legality, Camomons Mod, +Annihilape, +Archaludon, -Araquanid, -Calyrex-Ice, -Darkrai, -Enamorus-Base, -Hoopa-Unbound, -Kyurem, -Kyurem-Black, -Manaphy, -Pecharunt, -Zacian, -Zekrom, *Acupressure, *Belly Drum, *Dire Claw, *Extreme Speed, *Fillet Away, *Gigaton Hammer, *No Retreat, *Revival Blessing, *Shell Smash, *Shift Gear, *Triple Arrows, *V-Create, *Victory Dance
+/tour rules STABmons Move Legality, Camomons Mod, +Annihilape, +Archaludon, -Araquanid, -Calyrex-Ice, -Darkrai, -Enamorus-Base, -Hoopa-Unbound, -Inteleon, -Kyurem, -Kyurem-Black, -Latias, -Manaphy, -Pecharunt, -Zacian, -Zekrom, *Acupressure, *Belly Drum, *Dire Claw, *Extreme Speed, *Fillet Away, *Gigaton Hammer, *Lumina Crash, *No Retreat, *Revival Blessing, *Shell Smash, *Shift Gear, *Triple Arrows, *V-Create, *Victory Dance
 /tour autostart 8
 /tour autodq 5
 !om Type Split
