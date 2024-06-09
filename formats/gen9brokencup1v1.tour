@@ -1,4 +1,4 @@
 /tour new [Gen 9] Broken Cup,Elimination,,,[Gen 9] Broken Cup 1v1 (Best of 5)
 /tour autostart 5
 /tour autodq 2
-/tour rules Best Of = 5, Max Team Size = 3, Picked Team Size = 1, Team Preview
+/tour rules Best Of = 5, Max Team Size = 3, Picked Team Size = 1, Team Preview, -Wonder Guard
