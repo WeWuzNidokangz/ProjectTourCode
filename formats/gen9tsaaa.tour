@@ -1,4 +1,4 @@
-/tour new [Gen 9] Anything Goes,Elimination,,,[Gen 9] Tier Shift AAA
+/tour create [Gen 9] Anything Goes,Elimination,,,[Gen 9] Tier Shift AAA
 /tour rules Standard OMs,Tier Shift Mod,!Obtainable Abilities,Sleep Moves Clause,Ability Clause = 1,Terastal Clause,-Arena Trap,-Comatose,-Contrary,-Fur Coat,-Gorilla Tactics,-Huge Power,-Ice Scales,-Illusion,-Imposter,-Innards Out,-Moody,-Neutralizing Gas,-Parental Bond,-Pure Power,-Shadow Tag,-Simple,-Speed Boost,-Triage,-Water Bubble,-Wonder Guard,-Kings Rock,-Baton Pass,-Arceus-*,-Calyrex-Shadow,-Deoxys-Attack,-Eternatus,-Ho-Oh,-Koraidon,-Miraidon,-Necrozma-Dusk-Mane,-Pikachu,-Rayquaza,-Regigigas,-Slaking
 /tour autostart 9
 /tour autodq 7
