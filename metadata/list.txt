@@ -152,6 +152,7 @@ gen9pokeconverge
 gen9pokeff
 gen9pokelc
 gen9pokemnm
+gen9pokemovesfotf
 gen9ppaaa
 gen9randbtas
 gen9randbtassuddendeath
