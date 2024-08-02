@@ -5242,7 +5242,7 @@ const Rulesets = {
     onValidateTeam(team) {
       if (this.format.id === "gen8multibility")
         return;
-      const abilityTable = /* @__PURE__ */ new Map();
+      const abilityTable = new this.dex.Multiset();
       const base = {
         airlock: "cloudnine",
         armortail: "queenlymajesty",
@@ -5270,13 +5270,13 @@ const Rulesets = {
           continue;
         if (ability in base)
           ability = base[ability];
-        if ((abilityTable.get(ability) || 0) >= num) {
+        if (abilityTable.get(ability) >= num) {
           return [
             `You are limited to ${num} of each ability by Ability Clause.`,
             `(You have more than ${num} ${this.dex.abilities.get(ability).name} variant${num === 1 ? "" : "s"})`
           ];
         }
-        abilityTable.set(ability, (abilityTable.get(ability) || 0) + 1);
+        abilityTable.add(ability);
       }
     }
   },
@@ -6221,7 +6221,7 @@ const Rulesets = {
       return null;
     },
     onValidateTeam(team) {
-      const sketches = new import_lib.Utils.Multiset();
+      const sketches = new this.dex.Multiset();
       for (const set of team) {
         if (set.sketchMove) {
           sketches.add(set.sketchMove);
@@ -6702,52 +6702,24 @@ const Rulesets = {
       }
     },
     onFaint(target, source, effect) {
-      if (!target.m.numSwaps) {
-        target.m.numSwaps = 0;
-      }
+      var _a;
+      (_a = target.m).numSwaps || (_a.numSwaps = 0);
       target.m.numSwaps++;
-      if (effect && effect.effectType === "Move" && source.side.pokemon.length < 24 && source.side !== target.side && target.m.numSwaps < 4) {
-        const hpCost = this.clampIntRange(Math.floor(target.baseMaxhp * target.m.numSwaps / 4), 1);
-        if (hpCost === target.baseMaxhp) {
-          target.m.outofplay = true;
-          return;
-        }
-        source.side.pokemonLeft++;
-        source.side.pokemon.length++;
-        const newPoke = new import_pokemon.Pokemon(target.set, source.side);
-        const newPos = source.side.pokemon.length - 1;
-        const doNotCarryOver = [
-          "fullname",
-          "side",
-          "fainted",
-          "status",
-          "hp",
-          "illusion",
-          "transformed",
-          "position",
-          "isActive",
-          "faintQueued",
-          "subFainted",
-          "getHealth",
-          "getDetails",
-          "moveSlots",
-          "ability"
-        ];
-        for (const [key, value] of Object.entries(target)) {
-          if (doNotCarryOver.includes(key))
-            continue;
-          newPoke[key] = value;
-        }
-        newPoke.maxhp = newPoke.baseMaxhp;
-        newPoke.hp = newPoke.baseMaxhp - hpCost;
-        newPoke.clearVolatile();
-        newPoke.position = newPos;
-        source.side.pokemon[newPos] = newPoke;
-        this.add("poke", source.side.pokemon[newPos].side.id, source.side.pokemon[newPos].details, "");
-        this.add("-message", `${target.name} was captured by ${newPoke.side.name}!`);
-      } else {
+      if (effect?.effectType !== "Move" || source.side.pokemon.length >= 24 || source.side === target.side || target.m.numSwaps >= 4) {
         target.m.outofplay = true;
+        return;
       }
+      const hpCost = this.clampIntRange(Math.floor(target.baseMaxhp * target.m.numSwaps / 4), 1);
+      if (hpCost >= target.baseMaxhp) {
+        target.m.outofplay = true;
+        return;
+      }
+      const newPoke = source.side.addPokemon({ ...target.set, item: target.item });
+      newPoke.baseMoveSlots = target.baseMoveSlots;
+      newPoke.hp = this.clampIntRange(newPoke.maxhp - hpCost, 1);
+      newPoke.clearVolatile();
+      this.add("poke", newPoke.side.id, newPoke.details, "");
+      this.add("-message", `${target.name} was captured by ${newPoke.side.name}!`);
     }
   },
   chimera1v1rule: {
@@ -7351,7 +7323,7 @@ const Rulesets = {
       }
     },
     onValidateTeam(team, format) {
-      const donors = new import_lib.Utils.Multiset();
+      const donors = new this.dex.Multiset();
       for (const set of team) {
         const species = this.dex.species.get(set.species);
         const fusion = this.dex.species.get(set.name);
@@ -7496,7 +7468,7 @@ const Rulesets = {
       const oldAbilityName = pokemon.getAbility().name;
       const oldPokemon = pokemon.species;
       const impersonation = this.dex.species.get(pokemon.set.name);
-      if (pokemon.species.id === impersonation.id || pokemon.hp > pokemon.maxhp / 2)
+      if (pokemon.species.baseSpecies === impersonation.baseSpecies || pokemon.hp > pokemon.maxhp / 2)
         return;
       this.add("-activate", pokemon, "ability: Power Construct");
       pokemon.formeChange(impersonation.name, this.effect, true);
@@ -7510,6 +7482,7 @@ const Rulesets = {
       const oldAbilityKey = Object.keys(oldPokemon.abilities).find((x) => oldPokemon.abilities[x] === oldAbilityName) || "0";
       const newAbility = impersonation.abilities[oldAbilityKey] || impersonation.abilities["0"];
       pokemon.setAbility(newAbility, null, true);
+      pokemon.baseAbility = pokemon.ability;
     }
   }
 };
