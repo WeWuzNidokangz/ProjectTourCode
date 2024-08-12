@@ -1,0 +1,4 @@
+/tour new [Gen 9] LC, Elimination,,,[Gen 9] Scalemons LC
+/tour rules Scalemons Mod, +Aipom, +Dunsparce, +Girafarig, +Gligar, +Misdreavus, +Murkrow, +Porygon, +Qwilfish-Hisui, +Rufflet, +Scraggy, +Scyther, +Sneasel-Hisui, +Stantler, -Azurill
+/tour autostart 10
+/tour autodq 7
