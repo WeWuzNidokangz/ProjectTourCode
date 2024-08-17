@@ -174,6 +174,7 @@ gen9tradeabilities
 gen9tsaaa
 gen9tsmnm
 gen9tsplitstabcamo
+gen9tspokeaaa
 gen9typechaos
 gen9ultramix
 gen9ungodlygift
