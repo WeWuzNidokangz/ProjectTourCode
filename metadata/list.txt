@@ -127,6 +127,7 @@ gen9fortereevochaos
 gen9fortestabaaa
 gen9fortissimons
 gen9fotfsp
+gen9foxonlyfd
 gen9fpsp
 gen9futurepotential
 gen9gglc
