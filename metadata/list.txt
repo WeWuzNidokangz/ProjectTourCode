@@ -129,6 +129,7 @@ gen9fortissimons
 gen9fotfsp
 gen9foxonlyfd
 gen9fpsp
+gen9franticpotential
 gen9futurepotential
 gen9gglc
 gen9ggmnm
