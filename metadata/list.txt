@@ -146,8 +146,11 @@ gen9mightymega
 gen9mnmag
 gen9mnmconverge
 gen9mnmlc
+gen9ndaaa
 gen9ndaagsp
+gen9ndgg
 gen9ndpokeconverge
+gen9ndstab
 gen9picaaa
 gen9pokeaaa
 gen9pokebh
