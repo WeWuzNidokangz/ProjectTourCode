@@ -119,6 +119,7 @@ gen9chaos1v1
 gen9chimerarandbats24
 gen9csflippedaaa
 gen9csstab
+gen9doublesbh
 gen9doublesungodlygift
 gen9ffstab
 gen9ffubers
@@ -146,11 +147,8 @@ gen9mightymega
 gen9mnmag
 gen9mnmconverge
 gen9mnmlc
-gen9ndaaa
 gen9ndaagsp
-gen9ndgg
 gen9ndpokeconverge
-gen9ndstab
 gen9picaaa
 gen9pokeaaa
 gen9pokebh
