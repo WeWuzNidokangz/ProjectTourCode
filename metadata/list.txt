@@ -185,3 +185,4 @@ gen9tspokeaaa
 gen9typechaos
 gen9ultramix
 gen9ungodlygift
+gen9yugioh
