@@ -1,5 +1,5 @@
 /tour new [Gen 9] The Card Game, Elimination,,,[Gen 9] Yu-Gi-Oh!
-/tour rules Convergence Legality,[Gen 9] Pokebilities,!Obtainable Abilities,AAA Restricted Abilities,-Crucibelle-Mega,-Heat Rock,+CAP,-Chuggalong,-Persistent,*Pure Power,*Huge Power,-Chlorophyll + Drought,-Swift Swim + Drizzle,-Comatose,*Contrary,*Poison Heal,-Dondozo,-Water Bubble,*Ice Scales,-Darkrai,-Deoxys-Speed,-Inteleon,-Iron Hands,-Lilligant-Hisui,-Miasmaw,-Urshifu-Rapid-Strike,-Zamazenta,-Drizzle,-Imposter,*Shadow Tag,*Speed Boost,-Light Clay,-Extreme Speed,-Population Bomb,-Quiver Dance,-Rage Fist,-Shell Smash,-Spore,-Transform,-Shift Gear,-Simple,-Fur Coat
+/tour rules Convergence Legality,[Gen 9] Pokebilities,!Obtainable Abilities,AAA Restricted Abilities,+CAP,-Chuggalong,-Crucibelle-Mega,-Darkrai,-Deoxys-Speed,-Dondozo, -Inteleon,-Iron Hands,-Lilligant-Hisui,-Miasmaw,-Urshifu-Rapid-Strike,-Zamazenta,-Chlorophyll + Drought,-Comatose,*Contrary,-Drizzle,*Fur Coat,*Huge Power,*Ice Scales,*Imposter,*Persistent,*Poison Heal,*Pure Power,*Simple, *Speed Boost,*Tinted Lens,*Water Bubble,-Extreme Speed,-Population Bomb,-Quiver Dance,-Rage Fist,-Shell Smash,-Spore,-Transform,-Shift Gear,-Heat Rock,-Light Clay
 /tour autostart 10
 /tour autodq 7 
 /wall This is The Card Game, Convergence Pokebilities, and Cap
