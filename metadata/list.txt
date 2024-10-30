@@ -134,6 +134,7 @@ gen9franticpotential
 gen9futurepotential
 gen9gglc
 gen9ggmnm
+gen9ggpic
 gen9ggsp
 gen9godlygoobers
 gen9ilovemath
